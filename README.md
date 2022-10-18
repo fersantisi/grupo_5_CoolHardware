@@ -18,7 +18,7 @@ Mucha curiosidad por cómo las cosas funcionan. Desarma todo desde que tiene mem
 - Pablo Chandi  
 25 años, oriundo de Buenos Aires, Argentina.
 Fan del futbol y del asado.
-Es Gamer desde que tiene memoria.
+Es Gamer desde que nació.
 
 - Ignacio Oreiro  
 20 años, vivo en Caballito, Argentina.
