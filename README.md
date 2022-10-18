@@ -10,18 +10,18 @@ Por supuesto, para aquellos usuarios que ya tienen conocimientos avanzados, o qu
 
 Integrantes:
 
-- Fernando Santisi
-26 años, Buenos Aires, Argentina. 
+- Fernando Santisi  
+26 años, Buenos Aires, Argentina.
 Fan de la música, de los perros, de River Plate y de la Fórmula 1.
 Mucha curiosidad por cómo las cosas funcionan. Desarma todo desde que tiene memoria.
 
-- Pablo Chandi
+- Pablo Chandi  
 25 años, oriundo de Buenos Aires, Argentina.
 Fan del futbol y del asado.
 Es Gamer desde que tiene memoria.
 
-- Ignacio Oreiro
-20 años, vivo en caballito, argentina
+- Ignacio Oreiro  
+20 años, vivo en Caballito, Argentina.
 Fanático de la lectura, los videojuego, y el anime.
 Usa la compu de nacimiento. 
 
