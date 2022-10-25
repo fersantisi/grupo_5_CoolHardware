@@ -1,7 +1,64 @@
+:root{
+    --jet: #2e2e2e;
+    --dark-liver: #4c4a52;
+    --rythm: #79799a;
+    --blue-yonder: #5b7395;
+    --independence: #494562;
+    --platinum: #E2E2E2;
+}
+
 *{
     font-family: 'Lato', sans-serif;
     margin:0px;
     padding:0px;
-    list-style: none
-    
+    list-style: none;
+}
+
+body{
+    background-color: var(--jet);
+}
+
+.logo{
+    background-color: var(--independence);
+    border-radius: 20px;
+    width: 250px;
+    margin: 10px auto;
+
+}
+.logo img{
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+}
+
+nav{
+    margin:auto;
+    width: 95%;
+    background-color: var(--dark-liver);
+    color: var(--platinum);
+    border-radius: 20px 20px 0 0;
+    padding: 1% 0;
+}
+
+nav span{
+    display: flex;
+    justify-content: space-between; 
+}
+
+nav .fa-bars{
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+nav .fa-cart-shopping{
+    font-size: 1.75em;
+    margin-right: 20px;
+    padding-top: 2.5px;
+}
+
+.banner img{
+    display: block;
+    width: 95%;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
 }
