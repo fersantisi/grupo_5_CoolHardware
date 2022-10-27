@@ -15,3 +15,27 @@ app.get("/",(req, res) =>{
     
 });
 
+app.get("/login",(req, res) =>{
+    console.log('Entre al home');
+    res.sendFile(path.resolve('./views/login.html'));
+    
+});
+
+app.get("/productCart",(req, res) =>{
+    console.log('Entre al home');
+    res.sendFile(path.resolve('./views/productCart.html'));
+    
+});
+
+app.get("/productDetail",(req, res) =>{
+    console.log('Entre al home');
+    res.sendFile(path.resolve('./views/productDetail.html'));
+    
+});
+
+app.get("/register",(req, res) =>{
+    console.log('Entre al home');
+    res.sendFile(path.resolve('./views/register.html'));
+    
+});
+
