@@ -17,6 +17,10 @@
 
 body{
     background-color: var(--jet);
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
 .logo{
@@ -62,4 +66,24 @@ nav .fa-cart-shopping{
     width: 95%;
     margin: auto;
     border-radius: 0 0 20px 20px;
+}
+
+article.card{
+    margin: auto;
+    color: var(--platinum);
+    padding: 10px;
+    text-align: center;
+    border: solid 2px var(--dark-liver);
+    border-radius: 20px 20px 20px 20px;
+    margin: 10px 0px 10px 0px;
+    
+}
+
+.card-titulo {
+    color: var(--platinum);
+    padding: 10px;
+}
+.card-img{
+    width: 200px;
+    border-radius: 10px;
 }
