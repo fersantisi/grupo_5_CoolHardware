@@ -12,14 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <header>
-
+        <div class = "logo">
+            <img src = "images/logo.svg" alt = "logo-banner">
+        </div>
+        <nav>
+            <span>
+                <i class="fas fa-bars"></i>
+                <!-- <nav></nav> -->
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+            
+        </nav>
+        <div class="banner">
+            <img src="images/black-friday-banner.webp" alt="banner">
+        </div>
     </header>
     <main>
+        <!-- register form -->
+        <form action="#" method="post">
+            <!--    UserData -->
+            <legend class="forms-data-titles">Datos del usuario</legend>
 
+                <input class="forms-userData-inputs" type="text" name="nombre" placeholder="Nombre y apellido" required>
+
+                <input class="forms-userData-inputs" type="text" name="username" placeholder="Nombre de usuario" required>
+
+                <input class="forms-userData-inputs" type="text" name="e-mail" placeholder="E-mail" required>
+
+        </form>
     </main>
     <footer>
 
