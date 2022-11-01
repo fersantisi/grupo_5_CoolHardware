@@ -1,4 +1,4 @@
-:root{
+:root {
     --jet: #2e2e2e;
     --dark-liver: #4c4a52;
     --rythm: #79799a;
@@ -7,15 +7,15 @@
     --platinum: #E2E2E2;
 }
 
-*{
+* {
     font-family: 'Lato', sans-serif;
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--jet);
     width: 90%;
     text-align: center;
@@ -23,21 +23,22 @@ body{
     margin: auto;
 }
 
-.logo{
+.logo {
     background-color: var(--independence);
     border-radius: 20px;
     width: 250px;
     margin: 10px auto;
 
 }
-.logo img{
+
+.logo img {
     display: block;
     width: 250px;
     margin: 10px auto;
 }
 
-nav{
-    margin:auto;
+nav {
+    margin: auto;
     width: 100%;
     background-color: var(--dark-liver);
     color: var(--platinum);
@@ -45,24 +46,24 @@ nav{
     padding: 1% 0;
 }
 
-nav span{
+nav span {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-nav .fa-bars{
+nav .fa-bars {
     font-size: 2em;
     margin-left: 20px;
 }
 
-nav .fa-cart-shopping{
+nav .fa-cart-shopping {
     font-size: 1.75em;
     margin-right: 20px;
     padding-top: 2.5px;
 }
 
 
-nav .fa-user{
+nav .fa-user {
     font-size: 1.75em;
     margin-right: 217px;
     padding-top: 1.5px;
@@ -70,18 +71,18 @@ nav .fa-user{
     text-decoration: none;
 }
 
-.nav-icons-href{
+.nav-icons-href {
     content: 24.5px;
     text-decoration: none;
 }
 
-.banner img{
+.banner img {
     display: block;
     width: 100%;
     border-radius: 0 0 20px 20px;
 }
 
-article.card{
+article.card {
     margin: auto;
     color: var(--platinum);
     padding: 10px;
@@ -89,14 +90,15 @@ article.card{
     border: solid 2px var(--dark-liver);
     border-radius: 20px 20px 20px 20px;
     margin: 10px 0px 10px 0px;
-    
+
 }
 
 .card-titulo {
     color: var(--platinum);
     padding: 10px;
 }
-.card-img{
+
+.card-img {
     width: 200px;
     border-radius: 10px;
 }
@@ -121,4 +123,30 @@ button {
 
 
 
-/* register style */
+/* logIn style */
+.form {
+    z-index: 10;
+    top: auto;
+    position: relative;
+    bottom: 241px;
+}
+
+.forms-data-titles {
+    color: var(--platinum);
+    display: flex;
+    margin-left: 21px;
+    margin-bottom: 9px;
+    margin-top: 9px;
+    font-size: 1.3em;
+}
+
+.forms-userData-inputs {}
+
+
+.fa-right-to-bracket{
+    color: var(--platinum);
+}
+
+.fa-lock{
+    color: var(--platinum);
+}
