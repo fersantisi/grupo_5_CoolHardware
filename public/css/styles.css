@@ -61,6 +61,20 @@ nav .fa-cart-shopping{
     padding-top: 2.5px;
 }
 
+
+nav .fa-user{
+    font-size: 1.75em;
+    margin-right: 217px;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+.nav-icons-href{
+    content: 24.5px;
+    text-decoration: none;
+}
+
 .banner img{
     display: block;
     width: 100%;
@@ -96,3 +110,15 @@ button {
     padding: 5px;
     margin: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* register style */
