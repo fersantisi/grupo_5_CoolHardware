@@ -49,6 +49,7 @@ nav {
 nav span {
     display: flex;
     justify-content: space-between;
+    font-size: 10px;
 }
 
 nav .fa-bars {
@@ -74,6 +75,7 @@ nav .fa-user {
 .nav-icons-href {
     content: 24.5px;
     text-decoration: none;
+    width: 20px;
 }
 
 .banner img {
