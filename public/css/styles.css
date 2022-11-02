@@ -130,20 +130,44 @@ button {
     z-index: 10;
     top: auto;
     position: relative;
-    bottom: 241px;
+    bottom: 485px;
+    padding: 0 40px;
 }
 
 .forms-data-titles {
     color: var(--platinum);
     display: flex;
     margin-left: 21px;
-    margin-bottom: 9px;
-    margin-top: 9px;
+    margin-bottom: 11px;
+    margin-top: 11px;
     font-size: 1.3em;
 }
+.forms-userData-style{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
 
-.forms-userData-inputs {}
 
+.forms-userData-inputs {
+    width: 90%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+.forms-userData-style label{
+    color: white;
+}
+
+.form-banner{
+    height: 500px;
+    width: 90%;
+    border-radius: 0 0 20px 20px;
+}
 
 .fa-right-to-bracket{
     color: var(--platinum);
@@ -151,4 +175,12 @@ button {
 
 .fa-lock{
     color: var(--platinum);
+}
+
+.forms-data-forgotPass{
+    color: white;
+}
+
+.singin-up{
+    color: white;
 }

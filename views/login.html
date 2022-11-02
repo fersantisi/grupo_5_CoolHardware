@@ -29,7 +29,7 @@
             </span>
             
         </nav>
-        <div class="banner">
+        <div class="form-banner">
             <img src="images/background-black-design-14.webp" alt="banner">
         </div>
     </header>
@@ -40,10 +40,21 @@
             <!--    UserData -->
             <legend class="forms-data-titles">Iniciar sesion</legend>
 
-            <i class="fa-solid fa-right-to-bracket"></i> <input class="forms-userData-inputs" type="text" name="username" placeholder="username" required>
+            <div class="forms-userData-style"><i class="fa-solid fa-right-to-bracket"></i> <input class="forms-userData-inputs" type="text" name="username" placeholder="username" required>
+            <label for="">User Name</label>
+            </div>
 
-            <i class="fa-solid fa-lock"></i><input class="forms-userData-inputs" type="text" name="username" placeholder="Nombre de usuario" required>
+            <div class="forms-userData-style"><i class="fa-solid fa-lock"></i><input class="forms-userData-inputs" type="text" name="username" placeholder="Nombre de usuario" required>
+            <label for="">Contraseña</label>
+            </div>
 
+            <div class="forms-data-forgotPass">Olvidaste tu contraseña?</div>
+
+            <input type="submit" value="Login">
+
+            <div class="singin-up">
+                Todavia no tenes cuenta?<a href="/register">Registrate aca!</a>
+            </div>
 
         </form>
     </main>
