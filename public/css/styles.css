@@ -23,6 +23,10 @@ body {
     margin: auto;
 }
 
+h2{
+    font-size: 18px;
+}
+
 .logo {
     background-color: var(--independence);
     border-radius: 20px;
@@ -46,10 +50,20 @@ nav {
     padding: 1% 0;
 }
 
-nav span {
+header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: row;
     font-size: 10px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li{
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 nav .fa-bars {
@@ -66,7 +80,7 @@ nav .fa-cart-shopping {
 
 nav .fa-user {
     font-size: 1.75em;
-    margin-left: -245px;
+    margin-left: 5px;
     padding-top: 1.5px;
     color: var(--platinum);
     text-decoration: none;
@@ -84,6 +98,11 @@ nav .fa-user {
     border-radius: 0 0 20px 20px;
 }
 
+main section div.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 article.card {
     margin: auto;
     color: var(--platinum);
@@ -91,7 +110,8 @@ article.card {
     text-align: center;
     border: solid 2px var(--dark-liver);
     border-radius: 20px 20px 20px 20px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px;
+    width: 40%;
 
 }
 
@@ -101,7 +121,7 @@ article.card {
 }
 
 .card-img {
-    width: 200px;
+    width: 80%;
     border-radius: 10px;
 }
 
@@ -114,7 +134,6 @@ button {
     padding: 5px;
     margin: 10px;
 }
-
 
 
 
@@ -151,4 +170,9 @@ button {
 
 .fa-lock{
     color: var(--platinum);
+}
+
+
+@media screen and () {
+    
 }
