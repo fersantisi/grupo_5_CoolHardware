@@ -145,66 +145,94 @@ button {
 
 
 /* logIn style */
-.form {
-    z-index: 10;
-    top: auto;
-    position: relative;
-    bottom: 485px;
+
+.form-banner img{
+    width: 100%;
+}
+
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    border-radius: 10px;
+}
+
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form{
     padding: 0 40px;
+    box-sizing: border-box;
 }
 
-.forms-data-titles {
-    color: var(--platinum);
-    display: flex;
-    margin-left: 21px;
-    margin-bottom: 11px;
-    margin-top: 11px;
-    font-size: 1.3em;
-}
-.forms-userData-style{
+form .txt_field{
     position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    border-bottom: 2px solid #adadad; 
+    margin: 30px 0 ;
 }
 
-
-.forms-userData-inputs {
-    width: 90%;
+.txt_field input{
+    width: 100%;
     padding: 0 5px;
-    height: 40px;
-    font-size: 1.5em;
+    height: 40px; 
+    font-size: 16px;
     border: none;
     background: none;
     outline: none;
-    color: white;
-}
-.forms-userData-style label{
-    color: white;
 }
 
-.form-banner img{
-    height: 500px;
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
     width: 100%;
-    border-radius: 0 0 20px 20px;
 }
 
-.fa-right-to-bracket{
-    color: var(--platinum);
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
 }
 
-.fa-lock{
-    color: var(--platinum);
+.pass:hover{
+    
 }
 
-.forms-data-forgotPass{
-    color: white;
-}
-
-.singin-up{
-    color: white;
-}
 
 
 @media screen and () {
     
 }
+
