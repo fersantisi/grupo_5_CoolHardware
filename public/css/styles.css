@@ -179,6 +179,30 @@ main button {
     text-decoration: line-through;
 }
 
+footer i{
+    color: var(--platinum);
+    font-size: 2em;
+}
+
+footer{
+    display: flex;
+}
+
+.social-media, .contact-info{
+    width: 50%;
+}
+
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .social-media ul li{
+    margin: 5px;
+    width: 40%;
+}
+
 
 
 
