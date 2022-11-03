@@ -41,25 +41,27 @@
 
     <main>
         <!-- register form -->
-        <form class="form" action="#" method="post">
-            <!--    UserData -->
-            <legend class="forms-data-titles">Iniciar sesion</legend>
+        <div class="center"></div>
+        <h1>Inicio de sesion</h1>
 
-            <div class="forms-userData-style"><i class="fa-solid fa-right-to-bracket"></i> <input class="forms-userData-inputs" type="text" name="username" placeholder="username" required>
-            <label for="">User Name</label>
+        <form action="POST">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label> Nombre de usuario</label>
             </div>
 
-            <div class="forms-userData-style"><i class="fa-solid fa-lock"></i><input class="forms-userData-inputs" type="text" name="username" placeholder="Nombre de usuario" required>
-            <label for="">Contraseña</label>
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Contraseña</label>
             </div>
-
-            <div class="forms-data-forgotPass">Olvidaste tu contraseña?</div>
-
+            <div class="pass">Olvidaste tu contraseña?</div>
             <input type="submit" value="Login">
-
-            <div class="singin-up">
-                Todavia no tenes cuenta?<a href="/register">Registrate aca!</a>
+            <div class="singinup_link">
+                No tenes cuenta? <a href="#">Singinup</a>
             </div>
+
 
         </form>
     </main>
