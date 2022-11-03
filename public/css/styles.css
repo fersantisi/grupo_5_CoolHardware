@@ -24,7 +24,7 @@ body {
 }
 
 h2{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .logo {
@@ -32,16 +32,19 @@ h2{
     border-radius: 20px;
     width: 250px;
     margin: 10px auto;
+    padding: 0 10px;
 
 }
 
 .logo img {
     display: block;
-    width: 250px;
+    width: 100%;
     margin: 10px auto;
 }
 
 nav {
+    display: flex;
+    font-size: 10px;
     margin: auto;
     width: 100%;
     background-color: var(--dark-liver);
@@ -50,37 +53,73 @@ nav {
     padding: 1% 0;
 }
 
-header nav {
+.nav-left, .nav-right {
     display: flex;
-    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-right{
+    justify-content: flex-end;
+}
+
+nav .sites{
+    display: flex;
     flex-direction: row;
-    font-size: 10px;
+    align-items: center;
 }
 
-header nav ul {
+nav .sites li.nav-icons{
+    margin: 0 10px;
+}
+
+nav .sites .search-bar{
     display: flex;
+    align-items: center;
 }
 
-header nav ul li{
-    margin-left: 81px;
-    margin-right: 78px;
+nav .sites .search-bar input{
+    float: right;
+    border: 0;
+    width: 0%;
+    transition: width 300ms;
+}
+
+nav .sites .search-bar:hover input{
+    width: 150%;
+}
+
+nav .sites .search-bar input:focus{
+    width: 150%;
 }
 
 nav .fa-bars {
-    font-size: 2em;
-    margin-left: 20px;
+    font-size: 3em;
+    margin-left: 10px;
 }
 
 nav .fa-cart-shopping {
-    font-size: 1.75em;
-    margin-right: 20px;
+    font-size: 2.625em;
+    margin-right: 10px;
     padding-top: 2.5px;
+    text-decoration: none;
+    color: var(--platinum);
 }
 
+nav button{
+    background: none;
+    border: none;
+    padding-top: 1.5px;
+}
+
+nav button .fa-search{
+    font-size: 2em;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
 
 nav .fa-user {
-    font-size: 1.75em;
-    margin-left: -147px;
+    font-size: 2.625em;
     padding-top: 1.5px;
     color: var(--platinum);
     text-decoration: none;
@@ -101,6 +140,7 @@ nav .fa-user {
 main section div.container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 article.card {
@@ -110,14 +150,14 @@ article.card {
     text-align: center;
     border: solid 2px var(--dark-liver);
     border-radius: 20px 20px 20px 20px;
-    margin: 10px;
-    width: 40%;
+    margin: 10px 0;
+    width: 100%;
 
 }
 
 .card-titulo {
     color: var(--platinum);
-    padding: 10px;
+    margin: 20px 0 0;
 }
 
 .card-img {
@@ -125,9 +165,9 @@ article.card {
     border-radius: 10px;
 }
 
-button {
+main button {
     color: var(--platinum);
-    background-color: var(--rythm);
+    background-color: var(--independence);
     font-size: 15px;
     border: solid var(--platinum) 1px;
     border-radius: 20px 20px 20px 20px;
@@ -135,6 +175,9 @@ button {
     margin: 10px;
 }
 
+.card-price-normal{
+    text-decoration: line-through;
+}
 
 
 
@@ -205,6 +248,6 @@ button {
 }
 
 
-@media screen and () {
+/* @media screen and () {
     
-}
+} */

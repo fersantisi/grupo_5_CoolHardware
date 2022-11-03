@@ -18,14 +18,24 @@
 <body>
     <header>
         <div class = "logo">
-            <img src = "images/logo.svg" alt = "logo-banner">
+            <a href="/"><img src = "images/logo.svg" alt = "logo-banner"></a>
         </div>
         <nav>
-            <ul>
-                <li><i class="fas fa-bars"></i></li>
-                <li><a class="nav-icons-href" href="/login"><i class="fa-solid fa-user"></i></a></li>
-                <li><i class="fa-solid fa-cart-shopping"></i></li>
-            </ul>
+            <section class="nav-left">
+                <ul class="sites">
+                    <li class="nav-icons"><i class="fas fa-bars"></i></li>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/login"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </section>
+            <section class="nav-right">
+                <ul class="sites">
+                    <div class="search-bar">
+                        <li class="nav-input"><input type="text" placeholder="Buscar aquí"></li>
+                        <li class="nav-icons"><button><i class="fas fa-search"></i></button></i></li>
+                    </div>
+                    <li class="nav-icons"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </section>
         </nav>
         <div class="banner">
             <img src="images/black-friday-banner.webp" alt="banner">
@@ -52,9 +62,9 @@
                     </div>
                     <div>
                         <h2 class="card-name-prod">Notebook Asus TUF Gaming</h2>
-                        <h3 class="card-price-normal">$760.000</h3>
+                        <h4 class="card-price-normal">$760.000</h4>
                         <p class="card-desc-prod">50% OFF</p>
-                        <h5 class="card-price-discount">$380.000</h5>
+                        <h3 class="card-price-discount">$380.000</h3>
                     </div>
                     <button>Comprar</button>
                     <button>Agregar al carrito</button>  
@@ -66,9 +76,9 @@
                     </div>
                     <div>
                         <h2 class="card-name-prod">Monitor LED Asus TUF 25"</h2>
-                        <h3 class="card-price-normal">$320.000</h3>
+                        <h4 class="card-price-normal">$320.000</h4>
                         <p class="card-desc-prod">50% OFF</p>
-                        <h5 class="card-price-discount">$160.000</h5>
+                        <h3 class="card-price-discount">$160.000</h3>
                     </div>
                     <div>
                     <button>Comprar</button>
@@ -82,9 +92,9 @@
                     </div>
                     <div>
                         <h2 class="card-name-prod">Procesador AMD Ryzen 7 </h2>
-                        <h3 class="card-price-normal">$120.000</h3>
+                        <h4 class="card-price-normal">$120.000</h4>
                         <p class="card-desc-prod">50% OFF</p>
-                        <h5 class="card-price-discount">$60.000</h5>
+                        <h3 class="card-price-discount">$60.000</h3>
                     </div>
                     <button>Comprar</button>
                     <button>Agregar al carrito</button>  
@@ -96,9 +106,9 @@
                     </div>
                     <div>
                         <h2 class="card-name-prod"> CORSAIR HS35 STEREO</h2>
-                        <h3 class="card-price-normal">$21.000</h3>
+                        <h4 class="card-price-normal">$21.000</h4>
                         <p class="card-desc-prod">50% OFF</p>
-                        <h5 class="card-price-discount">$11.000</h5>
+                        <h3 class="card-price-discount">$11.000</h3>
                     </div>
                     <div>
                     <button>Comprar</button>
