@@ -62,8 +62,8 @@ header nav ul {
 }
 
 header nav ul li{
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 81px;
+    margin-right: 78px;
 }
 
 nav .fa-bars {
@@ -80,7 +80,7 @@ nav .fa-cart-shopping {
 
 nav .fa-user {
     font-size: 1.75em;
-    margin-left: 5px;
+    margin-left: -147px;
     padding-top: 1.5px;
     color: var(--platinum);
     text-decoration: none;
@@ -182,9 +182,9 @@ button {
     color: white;
 }
 
-.form-banner{
+.form-banner img{
     height: 500px;
-    width: 90%;
+    width: 100%;
     border-radius: 0 0 20px 20px;
 }
 
