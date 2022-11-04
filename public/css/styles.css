@@ -149,7 +149,7 @@ article.card {
     padding: 10px;
     text-align: center;
     border: solid 2px var(--dark-liver);
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     margin: 10px 0;
     width: 100%;
 
@@ -179,32 +179,70 @@ main button {
     text-decoration: line-through;
 }
 
-footer i{
+footer .footer-section p{
+    color: var(--platinum);
+    font-size: 12px;
+}
+
+footer .footer-section i{
     color: var(--platinum);
     font-size: 2em;
 }
 
 footer{
-    display: flex;
+    background-color: var(--dark-liver);
+    border-radius: 20px;
+    padding: 1%;
 }
 
-.social-media, .contact-info{
-    width: 50%;
+footer .footer-section{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(var(--platinum), var(--platinum)) no-repeat 35% /2px 100%;
+}
+
+.social-media{
+    width: 30%;
+}
+
+.contact-info{
+    width: 60%;
 }
 
 footer ul{
     display: flex;
     flex-wrap: wrap;
+}
+
+footer .footer-section .social-media ul{
     justify-content: center;
 }
 
-footer .social-media ul li{
-    margin: 5px;
-    width: 40%;
+footer .footer-section .contact-info ul{
+    justify-content: flex-start;
+    text-align: left;
 }
 
+footer .footer-section .social-media ul li{
+    margin: 5px 0;
+    width: 50%;
+}
 
+footer .footer-section .social-media ul .licenter{
+    margin: 5px;
+    width: 90%;
+}
 
+footer .footer-section .contact-info ul li{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
+
+footer .footer-section .contact-info i{
+    margin: 0 5px;
+}
 
 
 
