@@ -23,14 +23,17 @@
         <nav>
             <section class="nav-left">
                 <ul class="sites">
-                    <li><i class="fas fa-bars"></i></li>
-                    <li><a class="nav-icons-href" href="/login"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="nav-icons"><i class="fas fa-bars"></i></li>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/login"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </section>
             <section class="nav-right">
                 <ul class="sites">
-                    <li><i class="fas fa-search"></i></li>
-                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <div class="search-bar">
+                        <li class="nav-input"><input type="text" placeholder="Buscar aquí"></li>
+                        <li class="nav-icons"><button><i class="fas fa-search"></i></button></i></li>
+                    </div>
+                    <li class="nav-icons"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </section>
         </nav>
@@ -57,9 +60,9 @@
                 <label>Contraseña</label>
             </div>
             <div class="pass">Olvidaste tu contraseña?</div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Ingresa">
             <div class="signup_link">
-                No tenes cuenta? <a href="#">Singinup</a>
+                No tenes cuenta? <a href="/register">Crea tu cuenta</a>
             </div>
 
 
