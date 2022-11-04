@@ -399,3 +399,29 @@ input[type="submit"]:hover{
     
     
 }
+
+/*Tablets*/
+@media (min-width: 426px) {
+    article.card {
+        width: 45%;
+    }
+}
+
+/*Laptop*/
+@media (min-width: 769px) {
+    main section article.card {
+        width: 20%;
+    }
+
+    main section article.card h2{
+        font-size: 25px;
+    }
+
+    article.card h4, article.card p {
+        font-size: 17px;
+    }
+
+    article.card h3{
+        font-size: 21px;
+    }
+}
