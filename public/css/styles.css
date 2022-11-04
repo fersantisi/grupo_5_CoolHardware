@@ -193,6 +193,7 @@ footer{
     background-color: var(--dark-liver);
     border-radius: 20px;
     padding: 1%;
+    margin: 20px 0;
 }
 
 footer .footer-section{
@@ -241,7 +242,7 @@ footer .footer-section .contact-info ul li{
 }
 
 footer .footer-section .contact-info i{
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 
