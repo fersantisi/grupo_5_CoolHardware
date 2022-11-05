@@ -150,11 +150,11 @@ article.card {
     color: var(--platinum);
     padding: 10px;
     text-align: center;
-    border: solid 3px var(--dark-liver);
+    border: solid 2px var(--dark-liver);
     border-radius: 20px;
-    margin: 10px 0;
+    margin: 15px 0;
     width: 100%;
-
+    transition: 0.7s;
 }
 
 .card-titulo {
@@ -177,8 +177,8 @@ article.card button{
         color: #e9f4fb;
         font-weight: 700;
         outline: none;
-        margin: 15px; 
-    }
+        margin: 15px;  
+}
 
 .card-price-normal{
     text-decoration: line-through;
@@ -418,8 +418,18 @@ input[type="submit"]:hover{
         width: 24%;
     }
 
-    main section article.card h2{
+    h2{
         font-size: 25px;
+    }
+
+    main section article.card h2{
+        font-size: 23px;
+    }
+
+    article.card:hover{
+        box-shadow: 0px 0px 8px 4px var(--platinum);
+        -webkit-box-shadow: 0px 0px 8px 4px var(--platinum);
+        -moz-box-shadow: 0px 0px 8px 4px var(--platinum);
     }
 
     article.card h4, article.card p {
