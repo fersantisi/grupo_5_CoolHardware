@@ -5,6 +5,7 @@
     --blue-yonder: #5b7395;
     --independence: #494562;
     --platinum: #E2E2E2;
+    --blue: #2691d9;
     
 }
 
@@ -170,7 +171,7 @@ article.card button{
         width: 90%;
         height: 40px;
         border: 1px solid;
-        background: #2691d9;
+        background: var(--blue);
         border-radius: 20px;
         font-size: 18px;
         color: #e9f4fb;
@@ -324,14 +325,14 @@ form .txt_field{
     left: 0;
     width: 0%;
     height: 2px;
-    background: #2691d9;
+    background: var(--blue);
     transition: .9s;
 }
 
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
     top: -5px;
-    color: #2691d9;
+    color: var(--blue);
 }
 
 .txt_field input:focus ~ span::before,
@@ -353,7 +354,7 @@ input[type="submit"]{
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: #2691d9;
+    background: var(--blue);
     border-radius: 25px;
     font-size: 18px;
     color: #e9f4fb;
@@ -363,7 +364,7 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover{
-    border-color: #2691d9;
+    border-color: var(--blue);
     transition: .5s;
 }
 
@@ -375,7 +376,7 @@ input[type="submit"]:hover{
 }
 
 .signup_link a{
-    color: #2691d9;
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -430,7 +431,7 @@ input[type="submit"]:hover{
     }
     
     article.card button:hover{
-        border-color: #2691d9;
+        border-color: var(--blue);
         transition: .5s;
     }
 }
