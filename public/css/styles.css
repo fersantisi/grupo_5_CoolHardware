@@ -81,17 +81,22 @@ nav .sites .search-bar{
 
 nav .sites .search-bar input{
     float: right;
+    background-color: var(--platinum);
     border: 0;
+    border-radius: 5px;
     width: 0%;
-    transition: width 300ms;
+    height: 2em;
+    transition: all 300ms;
 }
 
 nav .sites .search-bar:hover input{
     width: 150%;
+    padding: 0 5px;
 }
 
 nav .sites .search-bar input:focus{
     width: 150%;
+    padding: 0 5px;
 }
 
 nav .fa-bars {
@@ -170,11 +175,11 @@ article.card {
 article.card button{
         width: 90%;
         height: 40px;
-        border: 1px solid;
+        border: 2px solid var(--platinum);
         background: var(--blue);
         border-radius: 20px;
         font-size: 18px;
-        color: #e9f4fb;
+        color: var(--platinum);
         font-weight: 700;
         outline: none;
         margin: 15px;  
@@ -204,15 +209,15 @@ footer{
 footer .footer-section{
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(var(--platinum), var(--platinum)) no-repeat 35% /2px 100%;
+    background: linear-gradient(var(--platinum), var(--platinum)) no-repeat 45% /2px 100%;
 }
 
 .social-media{
-    width: 30%;
+    width: 40%;
 }
 
 .contact-info{
-    width: 60%;
+    width: 50%;
 }
 
 footer ul{
@@ -246,8 +251,16 @@ footer .footer-section .contact-info ul li{
     width: 100%;
 }
 
-footer .footer-section .contact-info i{
+footer .footer-section .contact-info i.fa-whatsapp{
+    margin: 0 12px;
+}
+
+footer .footer-section .contact-info i.fa-envelope{
     margin: 0 10px;
+}
+
+footer .footer-section .contact-info i.fa-location-dot{
+    margin: 0 14px;
 }
 
 
@@ -261,6 +274,7 @@ footer .footer-section .contact-info i{
     z-index: 10;
     position: relative;
     bottom: 400px;
+    padding: 0 5%;
 }
 
 .form-banner img{
@@ -353,11 +367,11 @@ form .txt_field{
 input[type="submit"]{
     width: 100%;
     height: 50px;
-    border: 1px solid;
+    border: 2px solid var(--platinum);
     background: var(--blue);
     border-radius: 25px;
     font-size: 18px;
-    color: #e9f4fb;
+    color: var(--platinum);
     font-weight: 700;
     outline: none;
 
@@ -387,14 +401,15 @@ input[type="submit"]:hover{
 
 /*  register  style */
 .form-banner-register img{
-        width: 100%;
-        height: 710px;
+    width: 100%;
+    height: 710px;
 }
 
 .all-form-register {
     z-index: 10;
     position: relative;
     bottom: 677px;
+    padding: 0 5%;
 }
 
 .all-form-register h1{
@@ -407,8 +422,48 @@ input[type="submit"]:hover{
 
 /*Tablets*/
 @media (min-width: 426px) {
+
     article.card {
         width: 45%;
+    }
+
+    footer .footer-section{
+        flex-wrap: wrap;
+        background: none;
+    }
+
+    .social-media{
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .contact-info{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    footer .footer-section .social-media ul{
+        justify-content: space-evenly;
+    }
+
+    footer .footer-section .contact-info ul{
+        justify-content: space-between;
+    }
+
+    footer .footer-section .social-media ul li{
+        margin: 5px 0;
+        width: 10%;
+    }
+    
+    footer .footer-section .social-media ul .licenter{
+        margin: 5px 0;
+        width: 10%;
+    }
+
+    footer .footer-section .contact-info ul li{
+        justify-content: center;
+        margin: 5px;
+        width: 30%;
     }
 }
 
