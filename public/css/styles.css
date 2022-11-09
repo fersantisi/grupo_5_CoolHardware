@@ -41,7 +41,7 @@ h2{
 .logo img {
     display: block;
     width: 100%;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 nav {
@@ -535,6 +535,7 @@ main .product-cart .button-div{
 }
 
 main .product-cart .button-div button{
+    display: flex;
     width: 160px;
     height: 40px;
     border: 2px solid var(--platinum);
@@ -544,6 +545,8 @@ main .product-cart .button-div button{
     color: var(--platinum);
     font-weight: 700;
     outline: none;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /*Tablets*/
@@ -590,6 +593,44 @@ main .product-cart .button-div button{
         justify-content: center;
         margin: 5px;
         width: 30%;
+    }
+
+    /* Carrito */
+
+    main .product-cart h1{
+        font-size: 2em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-name{
+        font-size: 1.5em;
+    }
+    
+    main .product-cart .cart-container .added-to-cart .product-info .product-description{
+        font-size: 1.17em;
+    }
+    
+    main .product-cart .cart-container .added-to-cart .product-info .product-price{
+        font-size: 1.5em;
+    }
+    
+    main .product-cart .cart-container .added-to-cart .product-info i{
+        font-size: 1.5em;
+    }
+
+    main .product-cart .price-container .delivery-adress{
+        font-size: 1em;
+    }
+    
+    main .product-cart .price-container .delivery-price{
+        font-size: 1em;
+    }
+    
+    main .product-cart .price-container .total-title{
+        font-size: 1.5em;
+    }
+    
+    main .product-cart .price-container .total-price{
+        font-size: 1.5em;
     }
 }
 
