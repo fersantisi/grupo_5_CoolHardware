@@ -34,3 +34,7 @@ Referencias sobre las cuales se inspira CoolHardware:
 - PCBuilder: https://pcbuilder.net/
 - BestBuy: https://www.bestbuy.com/
  
+ 
+![Home](https://user-images.githubusercontent.com/114533829/201240963-e4627cfd-bec3-4a90-ab6b-63e82349bd8f.png)
+![Carrito](https://user-images.githubusercontent.com/114533829/201241016-a03d7b45-d6bf-436f-96e4-8565e3a757d8.png)
+![Productos](https://user-images.githubusercontent.com/114533829/201241029-dee81e07-139e-40d4-8de1-da5d7ac6d128.png)
