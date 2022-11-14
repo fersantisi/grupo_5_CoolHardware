@@ -4,27 +4,27 @@ const mainController = {
 
     home: (req, res) =>{
         console.log('Entre al home');
-        res.sendFile(path.resolve('./src/views/index.html'));    
+        res.sendFile(path.resolve('./src/views/index.ejs'));    
     },
 
     login: (req, res) =>{
         console.log('Entre al login');
-        res.sendFile(path.resolve('./src/views/login.html'));       
+        res.sendFile(path.resolve('./src/views/login.ejs'));       
     },
 
     register: (req, res) =>{
         console.log('Entre al register');
-        res.sendFile(path.resolve('./src/views/register.html'));   
+        res.sendFile(path.resolve('./src/views/register.ejs'));   
     },
 
     carrito: (req, res) =>{
         console.log('Entre al productCart');
-        res.sendFile(path.resolve('./src/views/productCart.html'));     
+        res.sendFile(path.resolve('./src/views/productCart.ejs'));     
     },
 
     productos: (req, res) =>{
         console.log('Entre al productDetail');
-        res.sendFile(path.resolve('./src/views/productDetail.html'));
+        res.sendFile(path.resolve('./src/views/productDetail.ejs'));
     }
 }
 
