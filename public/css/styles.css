@@ -276,8 +276,6 @@ footer .footer-section .contact-info i.fa-location-dot{
 
 
 
-
-
 /* logIn style */
 
 .all-form{
@@ -407,6 +405,7 @@ input[type="submit"]:hover{
 .signup_link a{
     text-decoration: underline;
 }
+
 
 
 /*  register  style */
@@ -547,6 +546,78 @@ main .product-cart .button-div button{
     outline: none;
     justify-content: space-evenly;
     align-items: center;
+}
+
+
+/*Estilo Detalle de producto*/
+/* main section article.detail{
+    display: flex;
+} */
+
+article.detail{
+   margin: 15px 0px 15px 0px;
+}
+
+ main section article div.img-producto{
+    margin: auto;
+    width: 95%;
+ }
+
+main section article div.producto-info{
+    width: 95%;
+    margin: auto;
+}
+
+div h2.card-name-producto{
+    margin-bottom: 10px;
+    color: var(--platinum);
+}
+
+div h3.card-price-producto{
+    color: var(--platinum);
+    margin-top: 10px;
+}
+
+div.producto-info p{
+    color: var(--platinum);
+    margin: 0px 0px 10px 0px;
+}
+
+div.producto-info p.icono{
+    color: #76b8e4;
+}
+
+div.producto-info p.icono i{
+    margin: 5px;
+}
+
+article.detail div button {
+    align-self: flex-end;
+    width: 90%;
+    height: 40px;
+    border: 2px solid var(--platinum);
+    background: var(--blue);
+    border-radius: 20px;
+    font-size: 18px;
+    color: var(--platinum);
+    font-weight: 700;
+    outline: none;
+    margin: 15px;
+}
+
+article.detail div.descripcion{
+    text-align: center;
+    margin: 15px;
+    line-height: 25px;
+    color: var(--platinum);
+}
+
+article.detail div.descripcion h3{
+    margin-bottom: 10px;
+}
+
+article.detail div.descripcion ul li{
+    margin: ;
 }
 
 /*Tablets*/
