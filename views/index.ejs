@@ -10,7 +10,21 @@
         <section>
             <h2 class="card-titulo">¡Ofertas del BLACK FRIDAY!</h2>
             <div class="container">
-                <article class="card">
+                <% products.forEach((product) => { %>
+                    <article class="card">
+                        <div>
+                            <a href="/productDetail"><img class="card-img" src="<%= product.imagen %> " alt=""></a> 
+                        </div>
+                        <div class="product-info">
+                            <h2 class="card-name-prod"><%= product.nombre %> </h2>
+                            <h4 class="card-price-normal"><%= product.precioSubtotal %></h4>
+                            <p class="card-desc-prod"><%= product.descuento %></p>
+                            <h3 class="card-price-discount"><%= product.precioTotal %></h3>
+                        </div>
+                        <button>Comprar<i class="fa-solid fa-cart-shopping"></i></button>
+                    </article>
+                <% }) %>
+                <!-- <article class="card">
                     <div>
                         <a href="/productDetail"><img class="card-img" src="images/notebook.jpg" alt=""></a> 
                     </div>
@@ -60,7 +74,7 @@
                         <h3 class="card-price-discount">$11.000</h3>
                     </div>
                     <button>Comprar<i class="fa-solid fa-cart-shopping"></i></button>  
-                </article>
+                </article> -->
             </div>
         </section>
     </main>

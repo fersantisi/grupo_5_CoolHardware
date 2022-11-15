@@ -1,10 +1,11 @@
 const path = require("path");
+let products = require('../products')
 
 const mainController = {
 
     home: (req, res) =>{
         console.log('Entre al home');
-        return res.render(('index'));    
+        res.render('index', {products: products});    
     },
 
     login: (req, res) =>{
