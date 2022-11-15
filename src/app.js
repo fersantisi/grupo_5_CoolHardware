@@ -16,7 +16,7 @@ app.use("/login", mainRouter);
 
 app.use("/productCart", mainRouter);
 
-app.use("/productDetail", mainRouter);
+app.use("/productDetail/", mainRouter);
 
 app.use("/register", mainRouter);
 

@@ -1,11 +1,11 @@
 const path = require("path");
-let products = require('../products')
+let productArray = require('../products')
 
 const mainController = {
 
     home: (req, res) =>{
         console.log('Entre al home');
-        res.render('index', {products: products});    
+        res.render('index', {products: productArray});    
     },
 
     login: (req, res) =>{
@@ -24,8 +24,10 @@ const mainController = {
     },
 
     productos: (req, res) =>{
+        let idProducto = req.params.id
+        let product = productArray[idProducto]
         console.log('Entre al productDetail');
-        res.render('./products/productDetail');
+        res.render('./products/productDetail', {product: product});
     },
 
     admin: (req, res) => {
