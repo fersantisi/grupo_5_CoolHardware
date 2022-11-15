@@ -4,27 +4,27 @@ const mainController = {
 
     home: (req, res) =>{
         console.log('Entre al home');
-        res.sendFile(path.resolve('./src/views/index.ejs'));    
+        return res.render(('index'));    
     },
 
     login: (req, res) =>{
         console.log('Entre al login');
-        res.sendFile(path.resolve('./src/views/login.ejs'));       
+        res.render('./users/login');       
     },
 
     register: (req, res) =>{
         console.log('Entre al register');
-        res.sendFile(path.resolve('./src/views/register.ejs'));   
+        res.render('./users/register');   
     },
 
     carrito: (req, res) =>{
         console.log('Entre al productCart');
-        res.sendFile(path.resolve('./src/views/productCart.ejs'));     
+        res.render('./products/productCart');     
     },
 
     productos: (req, res) =>{
         console.log('Entre al productDetail');
-        res.sendFile(path.resolve('./src/views/productDetail.ejs'));
+        res.render('./products/productDetail');
     }
 }
 

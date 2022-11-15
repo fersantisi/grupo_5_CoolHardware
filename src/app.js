@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 const mainRouter = require("./routes/mainRouter");
-app.set("view engine", "ejs");
 
 const PORT = 3030
 
 app.listen(PORT, console.log('sv corriendo en el puerto ' + PORT));
 
 app.use(express.static('public'));
+
+app.set("view engine", "ejs");
 
 app.use("/", mainRouter);
 

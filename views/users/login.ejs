@@ -1,0 +1,39 @@
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <div class="form-banner">
+        <img src="images/background-black-design-14.webp" alt="banner">
+    </div>
+</header>
+
+    <main class="all-form">
+        <!-- register form -->
+        <div class="center"></div>
+        <h1>Inicio de sesion</h1>
+        
+        <form action="POST">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label> Nombre de usuario</label>
+            </div>
+            
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Contraseña</label>
+            </div>
+            <div class="pass">Olvidaste tu contraseña?</div>
+            <input type="submit" value="Ingresa">
+            <div class="signup_link">
+                No tenes cuenta? <a href="/register">Crea tu cuenta</a>
+            </div>
+            
+
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
