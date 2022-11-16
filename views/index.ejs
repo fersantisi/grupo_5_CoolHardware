@@ -16,12 +16,14 @@
                             <a href="/productDetail/<%= index %> "><img class="card-img" src="<%= product.imagen %>" alt=""></a> 
                         </div>
                         <div class="product-info">
+                            <a class="" href="/productDetail/<%= index %> ">
                             <h2 class="card-name-prod"><%= product.nombre %> </h2>
                             <h4 class="card-price-normal"><%= product.precioSubtotal %></h4>
                             <p class="card-desc-prod"><%= product.descuento %></p>
                             <h3 class="card-price-discount"><%= product.precioTotal %></h3>
                         </div>
                         <button>Comprar<i class="fa-solid fa-cart-shopping"></i></button>
+                        </a>
                     </article>
                 <% }) %>
             </div>

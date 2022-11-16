@@ -20,3 +20,5 @@ app.use("/productDetail/", mainRouter);
 
 app.use("/register", mainRouter);
 
+app.use("/managerProducts", mainRouter);
+
