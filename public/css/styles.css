@@ -717,6 +717,43 @@ article.detail div.descripcion h3 {
     main .product-cart .price-container .total-price {
         font-size: 1.5em;
     }
+
+    /*Detalle de Producto*/
+    main section article.detail{
+        margin-top: 30px;
+    }
+
+    main section article.detail div.contenedor-detail{
+        display: flex;
+    }
+
+     div.img-producto{
+        width: 48%;
+    }
+
+    main section article.detail div.producto-info h2{
+        font-size: 25px;
+    }
+
+    main section article.detail div.producto-info h3{
+        font-size: 20px;
+    }
+
+    article.detail div.producto-info p{
+        font-size: 18px;
+    }
+    
+    article.detail div.descripcion{
+        margin: 30px;
+    }
+    article.detail div.descripcion h3{
+        font-size: 20px;
+    }
+
+    article.detail div.descripcion ul li{
+        margin: 5px;
+        font-size: 17px;
+    }
 }
 
 /*Laptop*/
@@ -752,4 +789,16 @@ article.detail div.descripcion h3 {
         border-color: var(--blue);
         transition: .5s;
     }
+
+    /*Detalle de Producto*/
+
+    main section article div div.producto-info p{
+        margin: 10px 0px 10px 0px;
+    }
+
+    article.detail div.contenedor-detail button:hover {
+        border-color: var(--blue);
+        transition: .5s;
+    }
+
 }
