@@ -4,7 +4,45 @@
     <%- include('../partials/header') %>  
 </header>
     <main>
-        
+        <main class="all-form-admin">
+            <!-- register form -->
+            <div class="center"></div>
+            <h1>Creacion de producto</h1>
+            
+            <form action="POST">
+                <div class="up-load">
+                    <button type="button" class="btn-warning">
+                        <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                        <input type="file">
+                    </button>
+                </div>
+                
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Ingrese el nombre del producto</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Ingrese el precio del producto</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Ingrese el stock del producto</label>
+                </div>
+
+                <div class="wrapper">
+                    <h2>Caracteristicas del producto</h2>
+                    <textarea placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
+                </div>
+
+                <input type="submit" value="Subir producto">
+                <div class="signup_link">
+
 
     </main>
     <%- include('../partials/footer') %>  
