@@ -9,34 +9,36 @@
     <main>
         <section>
             <article class="detail">
-                <div class="img-producto">
-                    <img class="card-img" src="<%= product.imagen %>" alt="">
-                </div>
+                <div class="contenedor-detail">
+                    <div class="img-producto">
+                       <img class="card-img" src="<%= product.imagen %>" alt="">
+                    </div>
                 
-                <div class="producto-info">
-                    <h2 class="card-name-producto"><%= product.nombre %></h2>
-                    <hr style="border-color:gray">
-                    <h3 class="card-price-producto"><%= product.precioTotal %></h3>
-                    <p>Precio especial</p>
-                    <hr style="border-color:gray">
-                    <p class="icono"><i class="fas fa-shield-alt"></i>Garantia 12 meses.</p>
-                    <p class="icono"><i class="fas fa-check"></i>Stock disponible.</p>
-                    <p class="icono"><i class="fas fa-truck"></i>Envíos a todo el país.</p>
-                    <hr style="border-color:gray">
-                    <button>Comprar<i class="fa-solid fa-cart-shopping"></i></button>
-                    <hr style="border-color:gray">
-                </div>
-                
+                    <div class="producto-info">
+                        <h2 class="card-name-producto"><%= product.nombre %></h2>
+                        <hr style="border-color:gray">
+                        <h3 class="card-price-producto"><%= product.precioTotal %></h3>
+                        <p>Precio especial</p>
+                        <hr style="border-color:gray">
+                        <p class="icono"><i class="fas fa-shield-alt"></i>Garantia 12 meses.</p>
+                        <p class="icono"><i class="fas fa-check"></i>Stock disponible.</p>
+                        <p class="icono"><i class="fas fa-truck"></i>Envíos a todo el país.</p>
+                        <hr style="border-color:gray">
+                        <button>Comprar<i class="fa-solid fa-cart-shopping"></i></button>
+                        <hr style="border-color:gray">
+                    </div>
+                </div>   
                 <div class="descripcion">
                     <h3>CARACTERISTICAS GENERALES:</h3>
                     <ul>
-                        <li><%= product.almacenamiento%> </li>
+                        <li><%= product.marca%></li>
+                        <li><%= product.modelo%></li>
+                        <li><%= product.almacenamiento%></li>
                         <li><%= product.graficos%></li>
                         <li><%= product.memoria%></li>
                         <li><%= product.pantalla%></li>
                         <li><%= product.procesador%></li>
                         <li><%= product.sistemaOperativo%></li>
-                        <li><%= product.uso%></li>
                         <li><%= product.curvoOPlano%></li>
                         <li><%= product.conectividad%></li>
                         <li><%= product.audio%></li>
@@ -44,6 +46,13 @@
                         <li><%= product.frecuencia%></li>
                         <li><%= product.consumo%></li>
                         <li><%= product.tiempo%></li>
+                        <li><%= product.uso%></li>
+                        <li><%= product.microfono%></li>
+                        <li><%= product.nucleo%></li>
+                        <li><%= product.hilos%></li>
+                        <li><%= product.diafragma%></li>
+                        <li><%= product.soporta%></li>
+                        <li><%= product.cable%></li>
                     </ul> 
                 </div>
                 <hr style="border-color:gray">
