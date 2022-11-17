@@ -4,7 +4,7 @@ const mainRouter = require("./routes/mainRouter");
 
 const PORT = 3030
 
-app.listen(PORT, console.log('sv corriendo en el puerto ' + PORT));
+app.listen(PORT, console.log('sv corriendo en el puerto ' + PORT + "  http://localhost:3030/"));
 
 app.use(express.static('public'));
 

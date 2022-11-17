@@ -13,7 +13,8 @@
                 <% products.forEach((product, index) => { %>
                     <article class="card">
                         <div>
-                            <a href="/productDetail/<%= index %> "><img class="card-img" src="<%= product.imagen %>" alt=""></a> 
+                            <a class="card-a" href="/productDetail/<%= index %> ">
+                                <img class="card-img" src="<%= product.imagen %>" alt=""></a> 
                         </div>
                         <div class="product-info">
                             <a class="" href="/productDetail/<%= index %> ">
