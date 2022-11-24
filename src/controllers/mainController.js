@@ -31,8 +31,8 @@ const mainController = {
     },
 
     admin: (req, res) => {
-        console.log('Entre al admin')
-        res.render('./products/manageProducts')
+        console.log('Entre al admin');
+        res.render('./products/manageProducts');
     }
 }
 
