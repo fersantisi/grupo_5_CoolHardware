@@ -13,11 +13,11 @@
                 <% products.forEach((product, index) => { %>
                     <article class="card">
                         <div>
-                            <a class="card-a" href="product/productDetail/<%= index %> ">
+                            <a class="card-a" href="/products/detail/<%= index %> ">
                                 <img class="card-img" src="<%= product.imagen %>" alt=""></a> 
                         </div>
                         <div class="product-info">
-                            <a class="" href="product/productDetail/<%= index %> ">
+                            <a class="" href="/products/detail/<%= index %> ">
                             <h2 class="card-name-prod"><%= product.nombre %> </h2>
                             <h4 class="card-price-normal"><%= product.precioSubtotal %></h4>
                             <p class="card-desc-prod"><%= product.descuento %></p>
