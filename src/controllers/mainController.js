@@ -1,17 +1,19 @@
-const path = require("path");
-// let productArray = require('../products')
-let productArray = []
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
 
     home: (req, res) =>{
         console.log('Entre al home');
-        res.render('index', {products: productArray});    
+        res.render('index', {products});    
     },
 
     carrito: (req, res) =>{
         console.log('Entre al productCart');
-        res.render('./products/productCart');     
+        res.render('/cart');     
     }
 }
 

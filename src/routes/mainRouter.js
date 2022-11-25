@@ -9,7 +9,7 @@ router.get("/", mainController.home);
 router.get("/cart", mainController.carrito);
 
 
-router.use("/product",productRouter);
+router.use("/products",productRouter);
 router.use("/user",userRouter);
 router.use("/admin",adminRouter);
 
