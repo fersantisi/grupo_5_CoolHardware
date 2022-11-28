@@ -1,0 +1,26 @@
+[
+	{
+		"firstname": "1",
+		"lastname": "1",
+		"username": "1",
+		"email": "1",
+		"pass": "1",
+		"passconfirm": "1"
+	},
+	{
+		"firstname": "1",
+		"lastname": "1",
+		"username": "2",
+		"email": "1",
+		"pass": "1",
+		"passconfirm": "1"
+	},
+	{
+		"firstname": "1",
+		"lastname": "1",
+		"username": "3",
+		"email": "1",
+		"pass": "1",
+		"passconfirm": "1"
+	}
+]

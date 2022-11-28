@@ -1,4 +1,4 @@
-<%- include('../partials/head', {title: 'Creá tu cuenta'}) %>
+<%- include('../partials/head', {title: 'Creá tu cuenta', css1: "/css/index.css", css2: "/css/register.css", css3: ""}) %>
 
 <body>
     <%- include('../partials/header') %>  
@@ -12,38 +12,38 @@
         <div class="center"></div>
         <h1>Crea tu cuenta</h1>
 
-        <form action="POST">
+        <form action="/user/register" method="POST">
             <!-- Username -->
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="firstname" required>
                 <span></span>
                 <label> Nombre</label>
             </div>
             <!-- Nombre y apellido -->
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="lastname" required>
                 <span></span>
                 <label> Apellido</label>
             </div>
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="username" required>
                 <span></span>
                 <label> Nombre de usuario</label>
             </div>
             <!-- email -->
             <div class="txt_field">
-                <input type="email" required>
+                <input type="text" name="email" required>
                 <span></span>
                 <label> Email</label>
             </div>
             <!-- pass -->
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" name="pass" required>
                 <span></span>
                 <label>Contraseña</label>
             </div>
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" name="passconfirm" required>
                 <span></span>
                 <label>Contraseña</label>
             </div>
