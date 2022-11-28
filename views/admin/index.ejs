@@ -1,7 +1,7 @@
-<%- include('./partials/head', {title: 'CoolHardware'}) %>  
+<%- include('../partials/head', {title: 'Administrador'}) %>  
 
 <body>
-    <%- include('./partials/header') %>  
+    <%- include('../partials/admin-header') %>  
         <div class="banner">
             <img src="/images/black-friday-banner.webp" alt="banner">
         </div>
@@ -26,7 +26,7 @@
                         </div>
                         <a class="card-a" href="/products/detail/<%= product.id %>">
                             <button>
-                                Comprar <i class="fa-solid fa-cart-shopping"></i>
+                                Ver <i class="fa-regular fa-eye"></i>
                             </button>
                         </a>
                     </article>
@@ -34,7 +34,7 @@
             </div>
         </section>
     </main>
-    <%- include('./partials/footer') %>  
+    <%- include('../partials/footer') %>  
 </body>
 
 </html>

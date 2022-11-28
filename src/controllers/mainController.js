@@ -13,7 +13,7 @@ const mainController = {
 
     carrito: (req, res) =>{
         console.log('Entre al productCart');
-        res.render('/cart');     
+        res.render('./cart');     
     }
 }
 

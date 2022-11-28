@@ -132,6 +132,13 @@ nav .fa-user {
     text-decoration: none;
 }
 
+nav .fa-user-secret {
+    font-size: 2.625em;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
 .nav-icons-href {
     content: 24.5px;
     text-decoration: none;
