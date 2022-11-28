@@ -1,6 +1,8 @@
 [
     {
-        "nombre": "Notebook Asus TUF Gaming",
+        "id": "1",
+        "nombre": "Asus TUF Gaming",
+        "category": "Notebook",
         "precioSubtotal": "$760.000",
         "descuento": "50% OFF",
         "precioTotal": "$380.000",
@@ -12,12 +14,14 @@
         "graficos": "Graficos: Nvidia GTX 1650 4GB.",
         "memoria": "Memoria Ram: 8 GB.",
         "pantalla": "Pantalla: 15.6",
-        "procesador": "Procesador: Itel Core I5.",
+        "procesador": "Procesador: Intel Core i5.",
         "sistemaOperativo": "Sistema Operativo: Windows 10.",
         "uso": "Uso Recomendado: Gaming."
     },
     {
-        "nombre": "Monitor Gigabyte Aorus FI25F 25",
+        "id": "2",
+        "nombre": "Gigabyte Aorus FI25F 25",
+        "category": "Monitor",
         "precioSubtotal": "$320.000",
         "descuento": "50% OFF",
         "precioTotal": "$160.000",
@@ -35,11 +39,13 @@
         "uso": "Uso: Edición y Gaming"
     },
     {
-        "nombre": "Procesador AMD Ryzen 7 5800X",
+        "id": "3",
+        "nombre": "AMD Ryzen 7 5800X",
+        "category": "Procesador",
         "precioSubtotal": "$120.000",
         "descuento": "50% OFF",
         "precioTotal": "$60.000",
-        "imagen": "/images/microcesador.jpg",
+        "imagen": "/images/microprocesador.jpg",
         "marca": "Marca: AMD.",
         "modelo": "Modelo: Ryzen 7 5800X.",
         "almacenamiento": "Cache: 32MB.",
@@ -53,7 +59,9 @@
 
     },
     {
+        "id": "4",
         "nombre": "Corsair HS35 Stereo",
+        "category": "Headset",
         "precioSubtotal": "$21.000",
         "descuento": "50% OFF",
         "precioTotal": "$10.500",

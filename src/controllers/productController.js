@@ -10,6 +10,7 @@ const productController = {
         // let idProducto = req.params.id
         // let product = productArray[idProducto]
         let product =  products.find( product => product.id == req.params.id)
+        console.log(product);
         console.log('Entre al productDetail');
         res.render('./products/detail', {product});
     },

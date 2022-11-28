@@ -33,7 +33,7 @@ h2 {
     background-color: var(--independence);
     border-radius: 20px;
     width: 250px;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 0 10px;
 
 }
@@ -41,7 +41,6 @@ h2 {
 .logo img {
     display: block;
     width: 100%;
-    margin: 15px auto;
 }
 
 nav {
@@ -163,7 +162,7 @@ article.card {
     border-radius: 20px;
     margin: 15px 0;
     width: 100%;
-    transition: box-shadow 0.5s;
+    transition: box-shadow 400ms;
 }
 
 .card-titulo {
@@ -182,11 +181,13 @@ article.card .product-info {
     align-self: flex-end;
 }
 
+article.card a{
+    width: max-content;
+}
 
-
-article.card button {
+article.card button{
     align-self: flex-end;
-    width: 90%;
+    padding: 0 15px;
     height: 40px;
     border: 2px solid var(--platinum);
     background: var(--blue);
@@ -195,8 +196,10 @@ article.card button {
     color: var(--platinum);
     font-weight: 700;
     outline: none;
-    margin: 15px;
+    margin: 15px 0;
+    cursor: pointer;
 }
+
 
 .card a{
     text-decoration: none;
@@ -219,7 +222,7 @@ footer .footer-section i {
 
 footer {
     background-color: var(--dark-liver);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     padding: 1%;
     margin: 20px 0;
 }
@@ -629,13 +632,17 @@ article.detail div.descripcion h3 {
 
 /* Admin view */
 
+.adminbuttom{
+    height: 0;
+}
+
 .adminbuttom .fa-screwdriver-wrench {
     text-decoration: none;
     color: var(--platinum);
     padding-bottom: -322px;
     z-index: 10;
     position: relative;
-    top: -65px;
+    top: -80px;
     left: 160px;
 }
 
@@ -857,7 +864,7 @@ textarea::-webkit-scrollbarP {
 
     article.card button:hover {
         border-color: var(--blue);
-        transition: .5s;
+        transition: 400ms;
     }
 
     /*Detalle de Producto*/
