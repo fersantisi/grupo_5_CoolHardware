@@ -112,6 +112,21 @@ nav .fa-cart-shopping {
     color: var(--platinum);
 }
 
+div.adminbuttom{
+    height: 0;
+}
+
+.adminbuttom .fa-screwdriver-wrench {
+    text-decoration: none;
+    color: var(--platinum);
+    padding-bottom: -322px;
+    z-index: 10;
+    position: relative;
+    top: -80px;
+    left: 160px;
+}
+
+
 nav button {
     background: none;
     border: none;

@@ -1,4 +1,4 @@
-<%- include('../partials/head', {title: 'Creá un producto'}) %>  
+<%- include('../partials/head', {title: 'Creá un producto', css1: "/css/index.css", css2: "/css/admin.css", css3: "/css/register.css"}) %>  
 
 <body>
     <%- include('../partials/admin-header') %>  
@@ -9,7 +9,7 @@
             <div class="center"></div>
             <h1>Creacion de producto</h1>
             
-            <form action="POST">
+            <form action="/admin/createProduct" method="POST">
                 <div class="up-load">
                     <button type="button" class="btn-warning">
                         <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
@@ -18,25 +18,25 @@
                 </div>
                 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" name="name" required>
                     <span></span>
                     <label>Ingrese el nombre del producto</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" name="price" required>
                     <span></span>
                     <label>Ingrese el precio del producto</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" name="stock" required>
                     <span></span>
                     <label>Ingrese el stock del producto</label>
                 </div>
 
                 <div class="wrapper">
-                    <textarea placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
+                    <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
                 </div>
 
                 <input type="submit" value="Subir producto">
