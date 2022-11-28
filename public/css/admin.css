@@ -1,0 +1,268 @@
+:root {
+    --jet: #2e2e2e;
+    --dark-liver: #4c4a52;
+    --rythm: #79799a;
+    --blue-yonder: #5b7395;
+    --independence: #494562;
+    --platinum: #E2E2E2;
+    --blue: #2691d9;
+
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Admin view */
+
+.adminbuttom{
+    height: 0;
+}
+
+.adminbuttom .fa-screwdriver-wrench {
+    text-decoration: none;
+    color: var(--platinum);
+    padding-bottom: -322px;
+    z-index: 10;
+    position: relative;
+    top: -80px;
+    left: 160px;
+}
+
+.btn-warning {
+    position: relative;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--blue);
+    border: 0;
+    overflow: hidden;
+}
+
+.btn-warning input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(3);
+    opacity: 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.wrapper textarea{
+    width: 100%;
+    padding: 0 5px;
+    height: 100px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+textarea:is(:focus, :valid) {
+    border-width: 2px;
+    padding: 14px;
+    border-color: #4671EA;
+}
+
+textarea::-webkit-scrollbarP {
+    width: 0px;
+}
+
+.all-form-admin {
+    z-index: 10;
+    position: relative;
+    bottom: -10px;
+    padding: 0 5%;
+}
+
+.all-form-admin {
+    color: var(--platinum);
+}
+
+/*Tablets*/
+@media (min-width: 426px) {
+
+    article.card {
+        width: 45%;
+    }
+
+    footer .footer-section {
+        flex-wrap: wrap;
+        background: none;
+    }
+
+    .social-media {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    footer .footer-section .social-media ul {
+        justify-content: space-evenly;
+    }
+
+    footer .footer-section .contact-info ul {
+        justify-content: space-between;
+    }
+
+    footer .footer-section .social-media ul li {
+        margin: 5px 0;
+        width: 10%;
+    }
+
+    footer .footer-section .social-media ul .licenter {
+        margin: 5px 0;
+        width: 10%;
+    }
+
+    footer .footer-section .contact-info ul li {
+        justify-content: center;
+        margin: 5px;
+        width: 30%;
+    }
+
+    /* Carrito */
+
+    main .product-cart h1 {
+        font-size: 2em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-name {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-description {
+        font-size: 1.17em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-price {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info i {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .price-container .delivery-adress {
+        font-size: 1em;
+    }
+
+    main .product-cart .price-container .delivery-price {
+        font-size: 1em;
+    }
+
+    main .product-cart .price-container .total-title {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .price-container .total-price {
+        font-size: 1.5em;
+    }
+
+    /*Detalle de Producto*/
+    main section article.detail{
+        margin-top: 30px;
+    }
+
+    main section article.detail div.contenedor-detail{
+        display: flex;
+    }
+
+    div.img-producto{
+        width: 48%;
+    }
+
+    main section article.detail div.producto-info h2{
+        font-size: 25px;
+    }
+
+    main section article.detail div.producto-info h3{
+        font-size: 20px;
+    }
+
+    article.detail div.producto-info p{
+        font-size: 18px;
+    }
+    
+    article.detail div.descripcion{
+        margin: 30px;
+    }
+    article.detail div.descripcion h3{
+        font-size: 20px;
+    }
+
+    article.detail div.descripcion ul li{
+        margin: 5px;
+        font-size: 17px;
+    }
+}
+
+/*Laptop*/
+@media (min-width: 769px) {
+    main section article.card {
+        width: 24%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    main section article.card h2 {
+        font-size: 23px;
+    }
+
+    article.card:hover {
+        box-shadow: 0px 0px 8px 4px var(--platinum);
+        -webkit-box-shadow: 0px 0px 8px 4px var(--platinum);
+        -moz-box-shadow: 0px 0px 8px 4px var(--platinum);
+    }
+
+    article.card h4,
+    article.card p {
+        font-size: 17px;
+    }
+
+    article.card h3 {
+        font-size: 21px;
+    }
+
+    article.card button:hover {
+        border-color: var(--blue);
+        transition: 400ms;
+    }
+
+    /*Detalle de Producto*/
+
+    main section article div div.producto-info p{
+        margin: 10px 0px 10px 0px;
+    }
+
+    article.detail div.contenedor-detail button:hover {
+        border-color: var(--blue);
+        transition: .5s;
+    }
+
+}

@@ -9,7 +9,7 @@ const adminController = {
 
     admin: (req, res) => {
         console.log('Entre al admin');
-        res.render('./admin/index', {products})
+        res.render('./admin/createProduct', {products})
     },
 
     create: (req, res) => {

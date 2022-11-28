@@ -164,7 +164,6 @@ article.card {
     margin: auto;
     color: var(--platinum);
     padding: 10px;
-    /* text-align: center; */
     border: solid 2px var(--dark-liver);
     border-radius: 20px;
     margin: 15px 0;
@@ -290,7 +289,6 @@ footer .footer-section .contact-info i.fa-envelope {
 footer .footer-section .contact-info i.fa-location-dot {
     margin: 0 14px;
 }
-
 
 
 
@@ -570,9 +568,6 @@ main .product-cart .button-div button {
 
 
 /*Estilo Detalle de producto*/
-/* main section article.detail{
-    display: flex;
-} */
 
 article.detail {
     margin: 15px 0px 15px 0px;
@@ -811,7 +806,7 @@ textarea::-webkit-scrollbarP {
         display: flex;
     }
 
-     div.img-producto{
+    div.img-producto{
         width: 48%;
     }
 

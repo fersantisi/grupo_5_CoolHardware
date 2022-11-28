@@ -1,0 +1,307 @@
+:root {
+    --jet: #2e2e2e;
+    --dark-liver: #4c4a52;
+    --rythm: #79799a;
+    --blue-yonder: #5b7395;
+    --independence: #494562;
+    --platinum: #E2E2E2;
+    --blue: #2691d9;
+
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/*Cart*/
+
+.nav-cart {
+    border-radius: 20px;
+}
+
+main .product-cart {
+    text-align: left;
+    color: var(--platinum);
+}
+
+main .product-cart h1 {
+    margin: 10px 30px;
+}
+
+main .product-cart .cart-container {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
+}
+
+main .product-cart .cart-container .added-to-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .product-cart .cart-container .added-to-cart img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+main .product-cart .cart-container .added-to-cart .product-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+}
+
+main .product-cart .cart-container .added-to-cart .product-info .product-name {
+    width: 60%;
+    align-self: center;
+}
+
+main .product-cart .cart-container .added-to-cart .product-info .product-description {
+    width: 60%;
+    align-self: center;
+}
+
+main .product-cart .cart-container .added-to-cart .product-info .product-price {
+    width: 40%;
+    text-align: right;
+    align-self: center;
+}
+
+main .product-cart .cart-container .added-to-cart .product-info i {
+    align-self: flex-end;
+}
+
+main .product-cart .cart-container hr {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid var(--platinum);
+}
+
+main .product-cart .price-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+main .product-cart .price-container .delivery-adress {
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+main .product-cart .price-container .delivery-price {
+    width: 40%;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+main .product-cart .price-container .total-title {
+    width: 60%;
+    margin-top: 5px;
+}
+
+main .product-cart .price-container .total-price {
+    width: 40%;
+    text-align: right;
+    margin-top: 5px;
+}
+
+main .product-cart .button-div {
+    display: flex;
+    justify-content: right;
+}
+
+main .product-cart .button-div button {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    border: 2px solid var(--platinum);
+    background: var(--blue);
+    border-radius: 20px;
+    font-size: 18px;
+    color: var(--platinum);
+    font-weight: 700;
+    outline: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Tablets*/
+@media (min-width: 426px) {
+
+    article.card {
+        width: 45%;
+    }
+
+    footer .footer-section {
+        flex-wrap: wrap;
+        background: none;
+    }
+
+    .social-media {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    footer .footer-section .social-media ul {
+        justify-content: space-evenly;
+    }
+
+    footer .footer-section .contact-info ul {
+        justify-content: space-between;
+    }
+
+    footer .footer-section .social-media ul li {
+        margin: 5px 0;
+        width: 10%;
+    }
+
+    footer .footer-section .social-media ul .licenter {
+        margin: 5px 0;
+        width: 10%;
+    }
+
+    footer .footer-section .contact-info ul li {
+        justify-content: center;
+        margin: 5px;
+        width: 30%;
+    }
+
+    /* Carrito */
+
+    main .product-cart h1 {
+        font-size: 2em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-name {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-description {
+        font-size: 1.17em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info .product-price {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info i {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .price-container .delivery-adress {
+        font-size: 1em;
+    }
+
+    main .product-cart .price-container .delivery-price {
+        font-size: 1em;
+    }
+
+    main .product-cart .price-container .total-title {
+        font-size: 1.5em;
+    }
+
+    main .product-cart .price-container .total-price {
+        font-size: 1.5em;
+    }
+
+    /*Detalle de Producto*/
+    main section article.detail{
+        margin-top: 30px;
+    }
+
+    main section article.detail div.contenedor-detail{
+        display: flex;
+    }
+
+    div.img-producto{
+        width: 48%;
+    }
+
+    main section article.detail div.producto-info h2{
+        font-size: 25px;
+    }
+
+    main section article.detail div.producto-info h3{
+        font-size: 20px;
+    }
+
+    article.detail div.producto-info p{
+        font-size: 18px;
+    }
+    
+    article.detail div.descripcion{
+        margin: 30px;
+    }
+    article.detail div.descripcion h3{
+        font-size: 20px;
+    }
+
+    article.detail div.descripcion ul li{
+        margin: 5px;
+        font-size: 17px;
+    }
+}
+
+/*Laptop*/
+@media (min-width: 769px) {
+    main section article.card {
+        width: 24%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    main section article.card h2 {
+        font-size: 23px;
+    }
+
+    article.card:hover {
+        box-shadow: 0px 0px 8px 4px var(--platinum);
+        -webkit-box-shadow: 0px 0px 8px 4px var(--platinum);
+        -moz-box-shadow: 0px 0px 8px 4px var(--platinum);
+    }
+
+    article.card h4,
+    article.card p {
+        font-size: 17px;
+    }
+
+    article.card h3 {
+        font-size: 21px;
+    }
+
+    article.card button:hover {
+        border-color: var(--blue);
+        transition: 400ms;
+    }
+
+    /*Detalle de Producto*/
+
+    main section article div div.producto-info p{
+        margin: 10px 0px 10px 0px;
+    }
+
+    article.detail div.contenedor-detail button:hover {
+        border-color: var(--blue);
+        transition: .5s;
+    }
+
+}
