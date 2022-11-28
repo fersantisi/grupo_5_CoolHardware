@@ -1,0 +1,40 @@
+<%- include('../partials/head', {title: 'Administrador'}) %>  
+
+<body>
+    <%- include('../partials/admin-header') %>  
+        <div class="banner">
+            <img src="/images/black-friday-banner.webp" alt="banner">
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2 class="card-titulo">¡Ofertas del BLACK FRIDAY!</h2>
+            <div class="container">
+                <% products.forEach((product) => { %>
+                    <article class="card">
+                        <div>
+                            <a class="card-a" href="/products/detail/<%= product.id %>">
+                                <img class="card-img" src="<%= product.imagen %>" alt="">
+                            </a> 
+                        </div>
+                        <div class="product-info">
+                            <h4><%= product.category %> </h4>
+                            <h2 class="card-name-prod"><%= product.nombre %> </h2>
+                            <h4 class="card-price-normal"><%= product.precioSubtotal %></h4>
+                            <p class="card-desc-prod"><%= product.descuento %></p>
+                            <h3 class="card-price-discount"><%= product.precioTotal %></h3>
+                        </div>
+                        <a class="card-a" href="/products/detail/<%= product.id %>">
+                            <button>
+                                Ver <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </a>
+                    </article>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>  
+</body>
+
+</html>
