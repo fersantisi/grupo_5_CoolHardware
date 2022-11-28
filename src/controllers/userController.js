@@ -14,6 +14,8 @@ const userController = {
     register: (req, res) =>{
         console.log('Entre al register');
         res.render('./users/register');   
+
+        
     },
 
 }

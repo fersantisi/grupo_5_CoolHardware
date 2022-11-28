@@ -9,13 +9,19 @@ const adminController = {
 
     admin: (req, res) => {
         console.log('Entre al admin');
-        res.render('./admin/createProduct', {products})
+        res.render('./admin/indexAdmin', {products})
     },
 
     create: (req, res) => {
         console.log('Entre al creador');
         res.render('./admin/createProduct');
     }
+    ,
+
+    users: (req, res) => {
+        console.log('Entre al registro de perfiles');
+        res.render('./admin/userAdmin');
+    }   
 }
 
 module.exports = adminController;
