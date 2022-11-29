@@ -1,0 +1,62 @@
+<%- include('../partials/head', {title: 'Creá un producto', stylesheets: ["/css/admin.css", "/css/form.css", "/css/header.css", "/css/footer.css"]}) %>  
+
+<body>
+    <%- include('../partials/admin-header') %>  
+</header>
+    <main>
+        <main class="all-form-admin">
+            <!-- register form -->
+            <div class="center"></div>
+            <h1>Creacion de producto</h1>
+            
+            <form action="/admin/manageProduct/edit/<%= product.id %>?_method=PUT" method="POST">
+                <div class="up-load">
+                    <button type="button" class="btn-warning">
+                        <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                        <input type="file" name="image" value="<%= product.image %>">
+                    </button>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" name="brand" value="<%= product.brand %>" required>
+                    <span></span>
+                    <label>Ingrese la marca del producto</label>
+                </div>
+                
+                <div class="txt_field">
+                    <input type="text" name="name" value="<%= product.name %>" required>
+                    <span></span>
+                    <label>Ingrese el nombre del producto</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" name="category" value="<%= product.category %>" required>
+                    <span></span>
+                    <label>Ingrese la categoría del producto</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" name="price" value="<%= product.price %>" required>
+                    <span></span>
+                    <label>Ingrese el precio del producto</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" name="discount" value="<%= product.discount %>" required>
+                    <span></span>
+                    <label>Ingrese el % de descuento del producto</label>
+                </div>
+
+                <div class="wrapper">
+                    <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required><%= product.description %></textarea>
+                </div>
+
+                <input type="submit" value="Subir producto">
+                <div class="signup_link">
+
+
+    </main>
+    <%- include('../partials/footer') %>  
+</body>
+
+</html>
