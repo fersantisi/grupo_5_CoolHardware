@@ -1,48 +1,58 @@
-<%- include('../partials/head', {title: 'Creá un producto', css1: "/css/index.css", css2: "/css/admin.css", css3: "/css/register.css"}) %>  
+<%- include('../partials/head', {title: 'Creá un producto', stylesheets: ["/css/admin.css", "/css/form.css", "/css/header.css", "/css/footer.css"]}) %>  
 
 <body>
     <%- include('../partials/admin-header') %>  
 </header>
-    <main>
-        <main class="all-form-admin">
-            <!-- register form -->
-            <div class="center"></div>
-            <h1>Creacion de producto</h1>
+    <main class="all-form-admin">
+        <!-- register form -->
+        <div class="center"></div>
+        <h1>Creacion de producto</h1>
+        
+        <form action="/admin/createProduct" method="POST">
+            <div class="up-load">
+                <button type="button" class="btn-warning">
+                    <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                    <input type="file" name="image">
+                </button>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="brand" required>
+                <span></span>
+                <label>Ingrese la marca del producto</label>
+            </div>
             
-            <form action="/admin/createProduct" method="POST">
-                <div class="up-load">
-                    <button type="button" class="btn-warning">
-                        <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
-                        <input type="file">
-                    </button>
-                </div>
-                
-                <div class="txt_field">
-                    <input type="text" name="name" required>
-                    <span></span>
-                    <label>Ingrese el nombre del producto</label>
-                </div>
+            <div class="txt_field">
+                <input type="text" name="name" required>
+                <span></span>
+                <label>Ingrese el nombre del producto</label>
+            </div>
 
-                <div class="txt_field">
-                    <input type="text" name="price" required>
-                    <span></span>
-                    <label>Ingrese el precio del producto</label>
-                </div>
+            <div class="txt_field">
+                <input type="text" name="category" required>
+                <span></span>
+                <label>Ingrese la categoría del producto</label>
+            </div>
 
-                <div class="txt_field">
-                    <input type="text" name="stock" required>
-                    <span></span>
-                    <label>Ingrese el stock del producto</label>
-                </div>
+            <div class="txt_field">
+                <input type="text" name="price" required>
+                <span></span>
+                <label>Ingrese el precio del producto</label>
+            </div>
 
-                <div class="wrapper">
-                    <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
-                </div>
+            <div class="txt_field">
+                <input type="text" name="discount" required>
+                <span></span>
+                <label>Ingrese el % de descuento del producto</label>
+            </div>
 
-                <input type="submit" value="Subir producto">
-                <div class="signup_link">
+            <div class="wrapper">
+                <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
+            </div>
 
-
+            <input type="submit" value="Subir producto">
+            <div class="signup_link">
+        </form>
     </main>
     <%- include('../partials/footer') %>  
 </body>

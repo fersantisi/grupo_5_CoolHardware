@@ -1,0 +1,157 @@
+:root {
+    --jet: #2e2e2e;
+    --dark-liver: #4c4a52;
+    --rythm: #79799a;
+    --blue-yonder: #5b7395;
+    --independence: #494562;
+    --platinum: #E2E2E2;
+    --blue: #2691d9;
+
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--jet);
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    background-color: var(--independence);
+    border-radius: 20px;
+    width: 250px;
+    margin: 30px auto;
+    padding: 0 10px;
+
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    font-size: 10px;
+    margin: auto;
+    width: 100%;
+    background-color: var(--dark-liver);
+    color: var(--platinum);
+    border-radius: 20px 20px 0 0;
+    padding: 1% 0;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    width: 50%;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+nav .sites {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .sites li.nav-icons {
+    margin: 0 10px;
+}
+
+nav .sites .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+nav .sites .search-bar input {
+    float: right;
+    background-color: var(--platinum);
+    border: 0;
+    border-radius: 5px;
+    width: 0%;
+    height: 2em;
+    transition: all 300ms;
+}
+
+nav .sites .search-bar:hover input {
+    width: 150%;
+    padding: 0 5px;
+}
+
+nav .sites .search-bar input:focus {
+    width: 150%;
+    padding: 0 5px;
+}
+
+nav .fa-bars {
+    font-size: 3em;
+    margin-left: 10px;
+}
+
+nav .fa-cart-shopping {
+    font-size: 2.625em;
+    margin-right: 10px;
+    padding-top: 2.5px;
+    text-decoration: none;
+    color: var(--platinum);
+}
+
+div.adminbuttom{
+    height: 0;
+}
+
+.adminbuttom .fa-screwdriver-wrench {
+    text-decoration: none;
+    color: var(--platinum);
+    padding-bottom: -322px;
+    z-index: 10;
+    position: relative;
+    top: -80px;
+    left: 160px;
+}
+
+
+nav button {
+    background: none;
+    border: none;
+    padding-top: 1.5px;
+}
+
+nav button .fa-search {
+    font-size: 2em;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+nav .fa-user {
+    font-size: 2.625em;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+nav .fa-user-secret {
+    font-size: 2.625em;
+    padding-top: 1.5px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+.nav-icons-href {
+    content: 24.5px;
+    text-decoration: none;
+    width: 20px;
+}
