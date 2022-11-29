@@ -1,57 +1,32 @@
-<%- include('../partials/head', {title: 'Admnistrador de usuarios'}) %>  
+<%- include('../partials/head', {title: 'Admnistrador de usuarios' , css1: "/css/index.css" , css2: "/css/admin.css" ,
+    css3: "" }) %>
 
-<body>
-    <%- include('../partials/admin-header')   %>
-    </header>
-    <main>
-        <section class="product-cart">
-            <h1>Registro de usuarios</h1>
-            <div class="cart-container">
-                <section class="added-to-cart">
-                    <img src="images/monitor.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">Asus TUF 25"</h3>
-                        <h3 class="product-price">$160.000</h3>
-                        <h4 class="product-description">Color: Matte Black</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
-                </section>
-                <hr>
-                <section class="added-to-cart">
-                    <img src="images/notebook.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">Asus TUF Gaming</h3>
-                        <h3 class="product-price">$380.000</h3>
-                        <h4 class="product-description">Color: Slate Gray</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
-                </section>
-                <hr>
-                <section class="added-to-cart">
-                    <img src="images/microprocesador.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">AMD Ryzen 7</h3>
-                        <h3 class="product-price">$60.000</h3>
-                        <h4 class="product-description">Color: -</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
-                </section>
-            </div>
-            <div class="price-container">
-                <h5 class="delivery-adress">Envío a Calle #, Localidad, Pcia.</h5>
-                <h5 class="delivery-price">$1.000</h5>
-                <h2 class="total-title">Total a pagar</h2>
-                <h2 class="total-price">$601.000</h2>
-            </div>
-            <div class="button-div">
-                <button>Continuar<i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </section>
-    </main>
-    <%- include('../partials/footer') %>  
-</body>
+    <body>
+        <%- include('../partials/admin-header') %>
+            </header>
+            <main>
+                <section class="user-list">
+                    <h1>Registro de usuarios</h1>
 
-</html>
+                    <button class="user-list-addUser">Nuevo Usuario<i class="fa-solid fa-plus"></i></button>
+                    <article class="user-list-categories">
+                        <section class="user-list-conteiner">
+                        <p class="user-list-cat-name">Nombre y apellido</p>
+                        <p class="user-list-cat-userName">UserName</p>
+                        <p class="user-list-cat-email">Email</p>
+                        <p class="user-list-cat-pass">Contraseña</p>
+                        <p class="user-list-cat-ac">Acciones</p>
+                    </section>
+                    </article>
+                    <button><i class="fa-solid fa-user-pen"></i></button><button><i
+                            class="fa-solid fa-trash"></i></button>
+
+                    <div class="button-div">
+                        <button>Continuar<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

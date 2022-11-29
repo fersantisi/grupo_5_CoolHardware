@@ -373,22 +373,5 @@
 		"cable": "Longitud del Cable: 1,1 mts.",
 		"uso": "Es inalambrico: No.",
 		"soporta": "Compatible con: Play Station, Xbox y PC."
-	},
-	{
-		"id": "41"
-	},
-	{
-		"id": "411",
-		"name": "fdas",
-		"price": "fsda",
-		"stock": "3",
-		"description": "hola"
-	},
-	{
-		"id": "4111",
-		"name": "fdas",
-		"price": "fsda",
-		"stock": "3",
-		"description": "hola"
 	}
 ]

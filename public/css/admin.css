@@ -106,6 +106,28 @@ textarea::-webkit-scrollbarP {
     color: var(--platinum);
 }
 
+/* UserList */
+.user-list-addUser{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.user-list-categories{
+    margin: 3px;
+}
+
+.user-list-conteiner{
+    display: table-cell;
+    padding: 10px;
+}
+
+
+
+
+
+
 /*Tablets*/
 @media (min-width: 426px) {
 
