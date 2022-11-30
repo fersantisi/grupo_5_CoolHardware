@@ -155,3 +155,12 @@ nav .fa-user-secret {
     text-decoration: none;
     width: 20px;
 }
+
+nav .fa-plus {
+    font-size: 2.625em;
+    margin-right: 10px;
+    margin-left: 6.56px;
+    padding-top: 2.5px;
+    text-decoration: none;
+    color: var(--platinum);
+}

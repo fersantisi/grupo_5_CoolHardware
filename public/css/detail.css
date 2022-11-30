@@ -80,6 +80,7 @@ article.detail div button.productBuy, article.detail div button.productEdit {
 
 article.detail div button.productDelete {
     background: crimson;
+    margin-top: 2px;
 }
 
 article.detail div.descripcion {
