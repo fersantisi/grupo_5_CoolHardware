@@ -21,7 +21,7 @@
 .all-form {
     z-index: 10;
     position: relative;
-    bottom: 400px;
+    margin-top: -400px;
     padding: 0 5%;
 }
 
@@ -155,8 +155,9 @@ input[type="submit"]:hover {
 .all-form-register {
     z-index: 10;
     position: relative;
-    bottom: 677px;
+    bottom: 0px;
     padding: 0 5%;
+    margin-top: -650px;
 }
 
 .all-form-register h1 {
