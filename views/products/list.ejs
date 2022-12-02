@@ -1,19 +1,14 @@
-<%- include('../partials/head', {title: 'Administrador', stylesheets: ["/css/admin.css", "/css/index.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('../partials/head', {title: "CoolHardware", stylesheets: ["/css/index.css", "/css/header.css", "/css/footer.css"]}) %>  
 
 <body>
-    <%- include('../partials/admin-header') %>  
-        <div class="banner">
-            <img src="/images/black-friday-banner.webp" alt="banner">
-        </div>
-    </header>
+    <%- include('../partials/header') %>    
     <main>
         <section>
-            <h2 class="card-titulo">¡Ofertas del BLACK FRIDAY!</h2>
             <div class="container">
                 <% products.forEach((product) => { %>
                     <article class="card">
                         <div>
-                            <a class="card-a" href="/admin/manageProduct/<%= product.id %>">
+                            <a class="card-a" href="/products/detail/<%= product.id %>">
                                 <img class="card-img" src="<%= product.image %>" alt="">
                             </a> 
                         </div>
@@ -25,9 +20,9 @@
                             <p class="card-desc-prod"><%= product.discount %>% OFF</p>
                             <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
                         </div>
-                        <a class="card-a" href="/admin/manageProduct/<%= product.id %>">
+                        <a class="card-a" href="/products/detail/<%= product.id %>">
                             <button>
-                                Ver <i class="fa-regular fa-eye"></i>
+                                Comprar <i class="fa-solid fa-cart-shopping"></i>
                             </button>
                         </a>
                     </article>

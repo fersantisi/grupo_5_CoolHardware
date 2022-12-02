@@ -1,14 +1,9 @@
-<%- include('../partials/head', {title: 'Administrador', stylesheets: ["/css/admin.css", "/css/index.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('../partials/head', {title: "CoolHardware", stylesheets: ["/css/index.css", "/css/header.css", "/css/footer.css"]}) %>  
 
 <body>
-    <%- include('../partials/admin-header') %>  
-        <div class="banner">
-            <img src="/images/black-friday-banner.webp" alt="banner">
-        </div>
-    </header>
+    <%- include('../partials/admin-header') %>    
     <main>
         <section>
-            <h2 class="card-titulo">¡Ofertas del BLACK FRIDAY!</h2>
             <div class="container">
                 <% products.forEach((product) => { %>
                     <article class="card">

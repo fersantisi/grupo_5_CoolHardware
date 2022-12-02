@@ -4,6 +4,9 @@ const adminController = require("../controllers/adminController")
 
 router.get('/', adminController.admin)
 
+router.get('/list', adminController.list)
+
+
 router.get('/manageProduct/:id', adminController.manage);
 router.get('/manageProduct/edit/:id', adminController.edit);
 router.put('/manageProduct/edit/:id', adminController.update);

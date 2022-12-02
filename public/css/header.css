@@ -96,8 +96,10 @@ nav .sites .search-bar input:focus {
 }
 
 nav .fa-bars {
+    text-decoration: none;
     font-size: 3em;
     margin-left: 10px;
+    color: var(--platinum);
 }
 
 nav .fa-cart-shopping {

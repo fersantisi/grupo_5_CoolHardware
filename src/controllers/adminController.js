@@ -12,6 +12,11 @@ const adminController = {
         res.render('./admin/adminIndex', {products})
     },
 
+    list: (req, res) =>{
+        console.log('Entre al product list');
+        res.render('./admin/adminList', {products});    
+    },
+
     create: (req, res) => {
         console.log('Entre al creador');
         res.render('./admin/createProduct');
