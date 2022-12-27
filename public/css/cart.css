@@ -161,5 +161,67 @@ main .product-cart .button-div button {
 
 /*Laptop*/
 @media (min-width: 769px) {
-   
+
+    main .product-cart .cart-container .added-to-cart img {
+        width: 20%;
+        border-radius: 20px;
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    main .product-cart .cart-container .added-to-cart .product-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+    }
+
+    /* main .product-info .product-actions{} */
+
+    main .product-info .product-actions a {
+        color: var(--platinum);
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    main .product-cart .button-div button {
+        display: flex;
+        width: 160px;
+        height: 40px;
+        border: 2px solid var(--platinum);
+        background: var(--blue);
+        border-radius: 20px;
+        font-size: 18px;
+        color: var(--platinum);
+        font-weight: 700;
+        outline: none;
+        justify-content: space-evenly;
+        align-items: center;
+        top: -160px;
+        position: relative;
+    }
+
+    main .product-cart .cart-container {
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid var(--platinum);
+        border-radius: 20px;
+        width: 60%;
+    }
+
+    main .product-cart .price-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid var(--platinum);
+        border-radius: 20px;
+        justify-content: space-between;
+        align-content: space-between;
+        width: 35%;
+        z-index: 10;
+        position: relative;
+        margin-left: 705px;
+        top: -515px;
+    }
 }

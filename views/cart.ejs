@@ -1,57 +1,67 @@
-<%- include('./partials/head', {title: 'Carrito', stylesheets: ["/css/cart.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('./partials/head', {title: 'Carrito' , stylesheets: ["/css/cart.css", "/css/header.css" , "/css/footer.css"
+    ]}) %>
 
-<body>
-    <%- include('./partials/header') %>  
-    </header>
-    <main>
-        <section class="product-cart">
-            <h1>Tu carrito (3)</h1>
-            <div class="cart-container">
-                <section class="added-to-cart">
-                    <img src="images/monitor.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">Asus TUF 25"</h3>
-                        <h3 class="product-price">$160.000</h3>
-                        <h4 class="product-description">Color: Matte Black</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
+    <body>
+        <%- include('./partials/header') %>
+            </header>
+            <main>
+                <section class="product-cart">
+                    <h1>Tu carrito (3)</h1>
+                    <div class="cart-container">
+                        <section class="added-to-cart">
+                            <img src="images/monitor.jpg" alt="">
+                            <section class="product-info">
+                                <h3 class="product-name">Asus TUF 25"</h3>
+                                <h3 class="product-price">$160.000</h3>
+                                <h4 class="product-description">Color: Matte Black</h4>
+                                <div class="product-actions">
+                                    <a href="#">Eliminar</a>
+                                    <a href="#">Comprar Ahora</a>
+                                    <a href="#">Guardar para despues</a>
+                                </div>
+                            </section>
+                        </section>
+                        <hr>
+                        <section class="added-to-cart">
+                            <img src="images/notebook.jpg" alt="">
+                            <section class="product-info">
+                                <h3 class="product-name">Asus TUF Gaming</h3>
+                                <h3 class="product-price">$380.000</h3>
+                                <h4 class="product-description">Color: Slate Gray</h4>
+                                <div class="product-actions">
+                                    <a href="#">Eliminar</a>
+                                    <a href="#">Comprar Ahora</a>
+                                    <a href="#">Guardar para despues</a>
+                                </div>
+                            </section>
+                        </section>
+                        <hr>
+                        <section class="added-to-cart">
+                            <img src="images/microprocesador.jpg" alt="">
+                            <section class="product-info">
+                                <h3 class="product-name">AMD Ryzen 7</h3>
+                                <h3 class="product-price">$60.000</h3>
+                                <h4 class="product-description">Color: -</h4>
+                                <div class="product-actions">
+                                    <a href="#">Eliminar</a>
+                                    <a href="#">Comprar Ahora</a>
+                                    <a href="#">Guardar para despues</a>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="price-container">
+                        <h5 class="delivery-adress">Envío a Calle #, Localidad, Pcia.</h5>
+                        <h5 class="delivery-price">$1.000</h5>
+                        <h2 class="total-title">Total a pagar</h2>
+                        <h2 class="total-price">$601.000</h2>
+                    </div>
+                    <div class="button-div">
+                        <button>Continuar<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </section>
-                <hr>
-                <section class="added-to-cart">
-                    <img src="images/notebook.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">Asus TUF Gaming</h3>
-                        <h3 class="product-price">$380.000</h3>
-                        <h4 class="product-description">Color: Slate Gray</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
-                </section>
-                <hr>
-                <section class="added-to-cart">
-                    <img src="images/microprocesador.jpg" alt="">
-                    <section class="product-info">
-                        <h3 class="product-name">AMD Ryzen 7</h3>
-                        <h3 class="product-price">$60.000</h3>
-                        <h4 class="product-description">Color: -</h4>
-                        <i class="fa-solid fa-trash-can"></i>
-                        
-                    </section>
-                </section>
-            </div>
-            <div class="price-container">
-                <h5 class="delivery-adress">Envío a Calle #, Localidad, Pcia.</h5>
-                <h5 class="delivery-price">$1.000</h5>
-                <h2 class="total-title">Total a pagar</h2>
-                <h2 class="total-price">$601.000</h2>
-            </div>
-            <div class="button-div">
-                <button>Continuar<i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-        </section>
-    </main>
-    <%- include('./partials/footer') %>  
-</body>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
 
-</html>
+    </html>
