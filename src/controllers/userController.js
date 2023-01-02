@@ -28,7 +28,8 @@ const userController = {
             "username": req.body.username,
             "email": req.body.email,
             "pass": req.body.pass,
-            "passconfirm": req.body.passconfirm
+            "passconfirm": req.body.passconfirm,
+            "image": req.body.file
         }
 
         let checkUsername = users.find((user) => {
