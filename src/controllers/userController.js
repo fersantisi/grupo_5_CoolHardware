@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcrypt');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -16,6 +17,10 @@ const userController = {
         res.render('./users/login');
     },
 
+    signin: (req,res) => {
+        
+    },
+
     register: (req, res) => {
         console.log('Entre al register');
         res.render('./users/register');
@@ -27,9 +32,8 @@ const userController = {
             "lastname": req.body.lastname,
             "username": req.body.username,
             "email": req.body.email,
-            "pass": req.body.pass,
-            "passconfirm": req.body.passconfirm,
-            "image": req.body.file
+            "pass": bcrypt.hashSync(req.body.pass, 10),
+            "image": req.file.filename
         }
 
         let checkUsername = users.find((user) => {

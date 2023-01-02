@@ -96,7 +96,7 @@ const adminController = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
 
-		res.redirect('/');
+		res.redirect('/admin');
     },
 };
 

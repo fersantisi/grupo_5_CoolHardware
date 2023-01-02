@@ -57,7 +57,7 @@
 		"price": "35000",
 		"discount": "30",
 		"image": "/images/gabinete.jpg",
-		"description":"Dimensiones: 45,3cm x 23,0cm x 46,6cm. Factor de forma: Mid-Tower. Vidrio templado: Si. Material: Acero y PVC. Peso: 7,85kg."
+		"description": "Dimensiones: 45,3cm x 23,0cm x 46,6cm. Factor de forma: Mid-Tower. Vidrio templado: Si. Material: Acero y PVC. Peso: 7,85kg."
 	},
 	{
 		"id": 7,
@@ -67,7 +67,7 @@
 		"price": "35000",
 		"discount": "20",
 		"image": "/images/memoria_ram.jpg",
-		"description":"Modulos de memoria: 2x 8GB. Capacidad total: 16GB. RGB: Si. Tecnologia: DDR4. Frecuencia: 3600 MHz."
+		"description": "Modulos de memoria: 2x 8GB. Capacidad total: 16GB. RGB: Si. Tecnologia: DDR4. Frecuencia: 3600 MHz."
 	},
 	{
 		"id": 8,
@@ -77,7 +77,7 @@
 		"price": "65000",
 		"discount": "20",
 		"image": "/images/mother.jpg",
-		"description":"Socket: AM4. Chipset: AMD B550. Memoria: 4 socket para Memoria Ram DDR4. Diseño: ATX. Conectores: USB 3.2, HDMI. RGB: Si. "
+		"description": "Socket: AM4. Chipset: AMD B550. Memoria: 4 socket para Memoria Ram DDR4. Diseño: ATX. Conectores: USB 3.2, HDMI. RGB: Si. "
 	},
 	{
 		"id": 9,
@@ -87,7 +87,7 @@
 		"price": "650000",
 		"discount": "5",
 		"image": "/images/placa-de-video.jpeg",
-		"description":"Interfaz: PCI-Express 4.0. Cantidad de núcleos: 10496. Resolucion máxima: 7680x4320. Memoria: 24GB. Tipo de memoria: GDDR6X. Bus de memoria: 384 bit. RGB: Si."
+		"description": "Interfaz: PCI-Express 4.0. Cantidad de núcleos: 10496. Resolucion máxima: 7680x4320. Memoria: 24GB. Tipo de memoria: GDDR6X. Bus de memoria: 384 bit. RGB: Si."
 	},
 	{
 		"id": 10,
@@ -97,7 +97,7 @@
 		"price": "125000",
 		"discount": "5",
 		"image": "/images/silla-gamer-corsair.jpg",
-		"description":"Peso soportado: 120kg. Tipo de asiento: Acolchonado. Inclinacion: Hasta los 180°. Apoyabrazos: Si. Número de ruedas: 5. Engonomico: Si. Peso: 22kg."
+		"description": "Peso soportado: 120kg. Tipo de asiento: Acolchonado. Inclinacion: Hasta los 180°. Apoyabrazos: Si. Número de ruedas: 5. Engonomico: Si. Peso: 22kg."
 	},
 	{
 		"id": 11,
@@ -107,7 +107,7 @@
 		"price": "39000",
 		"discount": "5",
 		"image": "/images/ssd.jpg",
-		"description":"Capacidad: 1TB. Interfaces: SATA III. Peso: 40g. Tecnologia: 3D NAND."
+		"description": "Capacidad: 1TB. Interfaces: SATA III. Peso: 40g. Tecnologia: 3D NAND."
 	},
 	{
 		"id": 12,
@@ -117,6 +117,6 @@
 		"price": "20000",
 		"discount": "5",
 		"image": "/images/mouse_logitech.jpg",
-		"description":"Inalámbrico: Si. Sensor: Hero. Cantidad de botones: 11. DPI maximo: 16000. Frecuencia de repuesta: 1000HZ. Peso: 110gr. Tecnologia Wifi: LIGHTSPEED. Recargable: Si."
+		"description": "Inalámbrico: Si. Sensor: Hero. Cantidad de botones: 11. DPI maximo: 16000. Frecuencia de repuesta: 1000HZ. Peso: 110gr. Tecnologia Wifi: LIGHTSPEED. Recargable: Si."
 	}
 ]
