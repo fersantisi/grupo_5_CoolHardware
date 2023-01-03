@@ -118,5 +118,11 @@
 		"discount": "5",
 		"image": "/images/mouse_logitech.jpg",
 		"description": "Inalámbrico: Si. Sensor: Hero. Cantidad de botones: 11. DPI maximo: 16000. Frecuencia de repuesta: 1000HZ. Peso: 110gr. Tecnologia Wifi: LIGHTSPEED. Recargable: Si."
+	},
+	{
+		"id": 13
+	},
+	{
+		"id": 14
 	}
 ]

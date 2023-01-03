@@ -1,4 +1,4 @@
-<%- include('../partials/head', {title: 'Creá tu cuenta', stylesheets: ["/css/form.css", "/css/header.css", "/css/footer.css"]}) %>
+<%- include('../partials/head', {title: 'Creá tu cuenta', stylesheets: ["/css/admin.css","/css/form.css", "/css/header.css", "/css/footer.css"]}) %>
 
 <body>
     <%- include('../partials/header') %>  
@@ -45,13 +45,19 @@
             <div class="txt_field">
                 <input type="password" name="passconfirm" required>
                 <span></span>
-                <label>Contraseña</label>
+                <label>Confirmar Contraseña</label>
             </div>
             <!-- image -->
-            <div class="txt_field">
+            <!-- <div class="txt_field">
                 <input type="file" name="avatar" required>
                 <span></span>
                 <label>Imágen</label>
+            </div> -->
+            <div class="up-load">
+                <button type="button" class="btn-warning">
+                    <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                    <input type="file" name="avatar">
+                </button>
             </div>
 
             <input type="submit" value="Ingresa" >
