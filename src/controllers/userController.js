@@ -33,6 +33,7 @@ const userController = {
             "username": req.body.username,
             "email": req.body.email,
             "pass": bcrypt.hashSync(req.body.pass, 10),
+            "passconfirm": req.body.confirmpass,
             "image": req.file.filename
         }
 
@@ -53,9 +54,8 @@ const userController = {
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
             return res.render('index', {products})
         }
-        
-    }
-
+    
+}
 }
 
 module.exports = userController;

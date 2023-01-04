@@ -15,21 +15,7 @@ const productController = {
         console.log(product);
         console.log('Entre al productDetail');
         res.render('./products/detail', {product});
-    },
-    store: (req, res) => {
-        let newProduct = {
-            "brand": req.body.brand,
-            "name": req.body.name,
-            "category": req.body.category,
-            "price": req.body.price,
-            "discount": req.body.discount,
-            "description": req.body.description,
-            "image": req.file.filename
-        }
-        products.push(newProduct);
-    fs.writeFileSync(usersFilePath, JSON.stringify(products, null, '\t'));
-    return res.render('index', { products });
-},
+    }
 }
 
 module.exports = productController;
