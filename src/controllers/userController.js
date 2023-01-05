@@ -27,12 +27,23 @@ const userController = {
         res.render('./users/register');
     },
 
+    generateId: () => {
+        console.log("Entré al generateId");
+        let lastUser = users.pop();
+        if(lastUser){
+            return lastUser.id + 1;
+        }else{
+            return 1;
+        }
+    },
+
     store: (req, res) => {
         const result = validationResult(req) 
         if(result.errors.length > 0){
             return res.render('./users/register', {errors: result.mapped(), oldData: req.body})
         }
         let newUser = {
+            // "id": users[users.length-1].id ? users[users.length-1].id + 1 : 1,
             "firstname": req.body.firstname,
             "lastname": req.body.lastname,
             "username": req.body.username,
@@ -40,6 +51,11 @@ const userController = {
             "pass": bcrypt.hashSync(req.body.pass, 10),
             "image": req.file.filename
         }
+
+        // console.log(newUser);
+
+
+        // console.log(newUser.id);
 
         let checkUsername = users.find((user) => {
             return user.username == newUser.username;

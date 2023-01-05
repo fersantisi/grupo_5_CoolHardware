@@ -4,7 +4,15 @@
 		"lastname": "fer",
 		"username": "fer",
 		"email": "fer@fer.com",
-		"pass": "$2b$10$d2ouF2vpFH/fMSO7Sk.XyuFOEoOJyyuKMF62nn8nzx1LEUk4OSPrW",
-		"image": "avatar-1672882645739.png"
+		"pass": "$2b$10$UT1dbzB/jeXqavdwubOgcOg41FuXrLqAbroNKinbk/LKiBcDa5H3S",
+		"image": "avatar-1672911520889.png"
+	},
+	{
+		"firstname": "f",
+		"lastname": "f",
+		"username": "f",
+		"email": "f@f.com",
+		"pass": "$2b$10$XDdJFxD7ZFBM2iouf.U1K.UmQNjxyCWFl3c4PlhVHFm8ItebAHU6i",
+		"image": "avatar-1672911603921.png"
 	}
 ]
