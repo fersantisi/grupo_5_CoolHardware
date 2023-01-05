@@ -102,13 +102,14 @@ nav .sites {
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    clip-path: circle(0 at center);
-    transition: clip-path 1s ease-in-out; 
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    transition: clip-path 0.5s ease-in-out; 
     border-radius: 15px;
+    z-index: 10;
 }
 
 .nav-checkbox:checked + .nav-menu{
-    clip-path: circle(100% at center);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .nav-item{
