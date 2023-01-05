@@ -14,5 +14,13 @@
 		"email": "f@f.com",
 		"pass": "$2b$10$XDdJFxD7ZFBM2iouf.U1K.UmQNjxyCWFl3c4PlhVHFm8ItebAHU6i",
 		"image": "avatar-1672911603921.png"
+	},
+	{
+		"firstname": "1",
+		"lastname": "1",
+		"username": "1",
+		"email": "a@a.com",
+		"pass": "$2b$10$6PcLpCIOfQqAxVIbGUpnPuiaMM6oc1HMtVklObSGfH/jcKb9ZuUZu",
+		"image": "avatar-1672926160142.jpg"
 	}
 ]
