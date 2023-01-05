@@ -18,8 +18,24 @@ const userController = {
         res.render('./users/login');
     },
 
-    signin: (req,res) => {
-        
+    loginProcess: (req, res) => {
+        let userRequest = {
+            ...req.body
+        }
+
+        let userFound = users.find(user => {
+            return user.username == userRequest.user
+        });
+
+        if (userFound) {
+            if (bcrypt.compareSync(userRequest.pass, userFound.pass)) {
+                return res.send('Usuario logueado')
+            } else {
+                return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
+            }
+        } else {
+            return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
+        }
     },
 
     register: (req, res) => {
@@ -27,22 +43,23 @@ const userController = {
         res.render('./users/register');
     },
 
-    generateId: () => {
+    generateId: function () {
         console.log("Entré al generateId");
         let lastUser = users.pop();
-        if(lastUser){
+        if (lastUser) {
             return lastUser.id + 1;
-        }else{
+        } else {
             return 1;
         }
     },
 
     store: (req, res) => {
-        const result = validationResult(req) 
-        if(result.errors.length > 0){
-            return res.render('./users/register', {errors: result.mapped(), oldData: req.body})
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
         }
         let newUser = {
+            "id": this.generateId,
             // "id": users[users.length-1].id ? users[users.length-1].id + 1 : 1,
             "firstname": req.body.firstname,
             "lastname": req.body.lastname,
@@ -67,15 +84,20 @@ const userController = {
 
         if (checkUsername) {
             return res.send("Este usuario ya está registrado!");
-        } else if(checkEmail) {
+        } else if (checkEmail) {
             return res.send("Este email ya está registrado!");
-        }else{
+        } else {
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-            return res.render('index', {products})
+            return res.render('index', { products })
         }
-    
-}
+    },
+
+    delete: (id) => {
+        let updatedList = users.filter((user => user.id !== id));
+        fs.writeFileSync(usersFilePath, JSON.stringify(updatedList, null, '\t'));
+        res.send(updatedList);
+    }
 }
 
 module.exports = userController;

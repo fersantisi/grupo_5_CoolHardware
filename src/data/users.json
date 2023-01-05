@@ -1,26 +1,10 @@
 [
 	{
-		"firstname": "fer",
-		"lastname": "fer",
-		"username": "fer",
-		"email": "fer@fer.com",
-		"pass": "$2b$10$UT1dbzB/jeXqavdwubOgcOg41FuXrLqAbroNKinbk/LKiBcDa5H3S",
-		"image": "avatar-1672911520889.png"
-	},
-	{
-		"firstname": "f",
-		"lastname": "f",
-		"username": "f",
-		"email": "f@f.com",
-		"pass": "$2b$10$XDdJFxD7ZFBM2iouf.U1K.UmQNjxyCWFl3c4PlhVHFm8ItebAHU6i",
-		"image": "avatar-1672911603921.png"
-	},
-	{
-		"firstname": "1",
-		"lastname": "1",
-		"username": "1",
-		"email": "a@a.com",
-		"pass": "$2b$10$6PcLpCIOfQqAxVIbGUpnPuiaMM6oc1HMtVklObSGfH/jcKb9ZuUZu",
-		"image": "avatar-1672926160142.jpg"
+		"firstname": "s",
+		"lastname": "s",
+		"username": "s",
+		"email": "s@s.com",
+		"pass": "$2b$10$NGEkx1FCUgX9/KOxIWCqZ.efDPDe.C4.ObI9a.PWKHsHDaLvPrGQ.",
+		"image": "avatar-1672958604808.png"
 	}
 ]
