@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,13 +28,16 @@ const userController = {
     },
 
     store: (req, res) => {
+        const result = validationResult(req) 
+        if(result.errors.length > 0){
+            return res.render('./users/register', {errors: result.mapped(), oldData: req.body})
+        }
         let newUser = {
             "firstname": req.body.firstname,
             "lastname": req.body.lastname,
             "username": req.body.username,
             "email": req.body.email,
             "pass": bcrypt.hashSync(req.body.pass, 10),
-            "passconfirm": req.body.confirmpass,
             "image": req.file.filename
         }
 

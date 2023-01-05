@@ -1,10 +1,10 @@
-<%- include('../partials/head', {title: 'Creá tu cuenta', stylesheets: ["/css/admin.css","/css/form.css", "/css/header.css", "/css/footer.css"]}) %>
+<%- include('../partials/head', {title: 'Creá tu cuenta', stylesheets: ["/css/header.css", "/css/form.css", "/css/footer.css"]}) %>
 
 <body>
     <%- include('../partials/header') %>  
-        <div class="form-banner-register">
+        <!-- <div class="form-banner-register">
             <img src="/images/background-black-design-14.webp" alt="banner">
-        </div>
+        </div> -->
     </header>
 
     <main class="all-form-register">
@@ -15,44 +15,65 @@
         <form action="/user/register" method="POST" enctype="multipart/form-data">
             <!-- Username -->
             <div class="txt_field">
-                <input type="text" name="firstname" required>
+                <input type="text" name="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
+                <label>Nombre</label>
                 <span></span>
-                <label> Nombre</label>
             </div>
+            <% if (locals.errors && errors.firstname) { %>
+                <p><%= errors.firstname.msg %></p>
+            <% } %>
             <!-- Nombre y apellido -->
             <div class="txt_field">
-                <input type="text" name="lastname" required>
+                <input type="text" name="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span></span>
-                <label> Apellido</label>
+                <label>Apellido</label>
             </div>
+            <% if (locals.errors && errors.lastname) { %>
+                <p><%= errors.lastname.msg %></p>
+            <% } %>
             <div class="txt_field">
-                <input type="text" name="username" required>
+                <input type="text" name="username" value="<%= locals.oldData ? oldData.username : null %>">
                 <span></span>
-                <label> Nombre de usuario</label>
+                <label>Nombre de usuario</label>
             </div>
+            <% if (locals.errors && errors.username) { %>
+                <p><%= errors.username.msg %></p>
+            <% } %>
             <!-- email -->
             <div class="txt_field">
-                <input type="text" name="email" required>
+                <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <span></span>
-                <label> Email</label>
+                <label>Email</label>
             </div>
+            <% if (locals.errors && errors.email) { %>
+                <p><%= errors.email.msg %></p>
+            <% } %>
             <!-- pass -->
             <div class="txt_field">
-                <input type="password" name="pass" required>
+                <input type="password" name="pass">
                 <span></span>
                 <label>Contraseña</label>
             </div>
+            <% if (locals.errors && errors.pass) { %>
+                <p><%= errors.pass.msg %></p>
+            <% } %>
             <div class="txt_field">
-                <input type="password" name="passconfirm" required>
+                <input type="password" name="passconfirm">
                 <span></span>
                 <label>Confirmar Contraseña</label>
             </div>
+            <% if (locals.errors && errors.passconfirm) { %>
+                <p><%= errors.passconfirm.msg %></p>
+            <% } %>
             <div class="up-load">
                 <button type="button" class="btn-warning">
-                    <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                    <i class="fa-solid fa-file-arrow-up"></i> Subir un avatar
                     <input type="file" name="avatar">
                 </button>
             </div>
+            <% if (locals.errors && errors.avatar) { %>
+                <p><%= errors.avatar.msg %></p>
+            <% } %>
 
             <input type="submit" value="Ingresa" >
             <div class="signup_link">

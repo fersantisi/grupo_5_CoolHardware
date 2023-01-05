@@ -1,74 +1,10 @@
 [
 	{
-		"firstname": "1",
-		"lastname": "1",
-		"username": "1",
-		"email": "1",
-		"pass": "1",
-		"passconfirm": "1"
-	},
-	{
-		"firstname": "1",
-		"lastname": "1",
-		"username": "2",
-		"email": "1",
-		"pass": "1",
-		"passconfirm": "1"
-	},
-	{
-		"firstname": "1",
-		"lastname": "1",
-		"username": "3",
-		"email": "1",
-		"pass": "1",
-		"passconfirm": "1"
-	},
-	{
-		"firstname": "Ignacio ",
-		"lastname": "Oreiro",
-		"username": "nachowo",
-		"email": "ignaciooreiro3@outlook.es",
-		"pass": "123",
-		"passconfirm": "123"
-	},
-	{
-		"firstname": "Ignacio ",
-		"lastname": "Oreiro",
-		"username": "nachowoski",
-		"email": "ignaciooreiro33@outlook.es",
-		"pass": "123",
-		"passconfirm": "123"
-	},
-	{
-		"firstname": "Ignacio ",
-		"lastname": "Oreiro",
-		"username": "nachowoskii",
-		"email": "ignaciooreiro333@outlook.es",
-		"pass": "123",
-		"passconfirm": "123"
-	},
-	{
 		"firstname": "fer",
 		"lastname": "fer",
 		"username": "fer",
-		"email": "fer.santisi@hotmail.com",
-		"pass": "$2b$10$s1JRfnyl1ow66RGd9xCI9OUfEjU.Xr6XdYtNAYgzeAcuUAsK5novG",
-		"image": "avatar-1672696608909.png"
-	},
-	{
-		"firstname": "das",
-		"lastname": "sdas",
-		"username": "asdaasda",
-		"email": "asdasda",
-		"pass": "$2b$10$AQydRH0ZfvYGbMi/qZ/sq.IFuNm1bAYZeAcmG3XiaH6p0qfXTe6ia",
-		"image": "avatar-1672764428475.jpg"
-	},
-	{
-		"firstname": "asdasd",
-		"lastname": "dasd",
-		"username": "asdasdas",
-		"email": "dasdasd",
-		"pass": "$2b$10$WLHC/CJeNePPrXUYsK9K8uiwCM7/2Iw.f3maEERhPhAN9Oa0ZBTES",
-		"image": "avatar-1672766561178.jpg"
+		"email": "fer@fer.com",
+		"pass": "$2b$10$d2ouF2vpFH/fMSO7Sk.XyuFOEoOJyyuKMF62nn8nzx1LEUk4OSPrW",
+		"image": "avatar-1672882645739.png"
 	}
 ]

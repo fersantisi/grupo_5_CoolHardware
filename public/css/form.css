@@ -5,35 +5,32 @@
 }
 
 .all-form-register {
-    z-index: 10;
     position: relative;
-    bottom: 677px;
     padding: 0 5%;
+    background-image: url("/images/background-black-design-14.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .all-form-register h1 {
     color: var(--platinum);
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 20px 0;
 }
 
 /* logIn style */
 .all-form {
-    z-index: 10;
     position: relative;
-    margin-top: -400px;
     padding: 0 5%;
-}
-
-.form-banner img {
-    width: 100%;
-    height: 420px;
+    background-image: url("/images/background-black-design-14.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .all-form h1 {
     color: var(--platinum);
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 20px 0;
 }
 
 .center {
@@ -53,10 +50,10 @@
 form .txt_field {
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
-.txt_field input {
+.txt_field input:empty {
     width: 100%;
     padding: 0 5px;
     height: 40px;
@@ -90,18 +87,22 @@ form .txt_field {
 }
 
 .txt_field input:focus~label,
-.txt_field input:valid~label {
+.txt_field label{
     top: -5px;
-    color: var(--blue);
+    color: var(--blue)
 }
 
-.txt_field input:focus~span::before,
-.txt_field input:valid~span::before {
+.txt_field input:focus~span::before{
     width: 100%;
 }
 
+form p{
+    text-align: left;
+    color: orangered
+}
+
 .pass {
-    margin: -5px 0 20px 5px;
+    margin: 10px 0;
     color: #a6a6a6;
     cursor: pointer;
 }
@@ -120,7 +121,7 @@ input[type="submit"] {
     color: var(--platinum);
     font-weight: 700;
     outline: none;
-
+    margin-top: 30px;
 }
 
 input[type="submit"]:hover {
@@ -129,7 +130,8 @@ input[type="submit"]:hover {
 }
 
 .signup_link {
-    margin: 30px 0;
+    margin-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
     font-size: 16px;
     color: #666666;
@@ -152,20 +154,27 @@ input[type="submit"]:hover {
     height: 710px;
 }
 
-.all-form-register {
-    z-index: 10;
+.all-form-register form .btn-warning {
     position: relative;
-    bottom: 0px;
-    padding: 0 5%;
-    margin-top: -700px;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--blue);
+    border: 0;
+    overflow: hidden;
+    margin-top: 30px;
+    display: block;
 }
 
-.all-form-register h1 {
-    color: var(--platinum);
-    text-align: center;
-    padding: 0 0 20px 0;
-
-
+.btn-warning input[type="file"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(3);
+    opacity: 0;
 }
 
 /*Tablets*/
