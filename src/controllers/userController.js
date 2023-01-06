@@ -49,9 +49,7 @@ const userController = {
     },
 
     generateId: () => {
-        console.log('Users1= ', users);
         let lastUser = users[users.length-1]
-        console.log('Users2= ', users);
         if (lastUser) {
             return lastUser.id + 1;
         } else {
