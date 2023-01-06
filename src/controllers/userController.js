@@ -42,7 +42,7 @@ const userController = {
         console.log('Entre al register');
         res.render('./users/register');
     },
-
+    
     generateId: function () {
         console.log("Entré al generateId");
         let lastUser = users.pop();
@@ -59,7 +59,7 @@ const userController = {
             return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
         }
         let newUser = {
-            "id": this.generateId,
+            "id": userController.generateId(),
             // "id": users[users.length-1].id ? users[users.length-1].id + 1 : 1,
             "firstname": req.body.firstname,
             "lastname": req.body.lastname,

@@ -1,6 +1,6 @@
 /* Admin view */
 
-.adminbuttom{
+.adminbuttom {
     height: 0;
 }
 
@@ -37,7 +37,7 @@
     opacity: 0;
 }
 
-.txt_field input{
+.txt_field input {
     width: 100%;
     padding: 0 5px;
     height: 40px;
@@ -48,7 +48,7 @@
     color: white;
 }
 
-.wrapper textarea{
+.wrapper textarea {
     width: 100%;
     padding: 0 5px;
     height: 100px;
@@ -82,28 +82,116 @@ textarea::-webkit-scrollbarP {
 }
 
 /* UserList */
-.user-list-addUser{
+
+.user-list {}
+
+.user-list-conteiner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     display: flex;
-    justify-content: right;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
-.user-list-categories{
-    margin: 3px;
+.user-list-0 {
+    display: flex;
+    order: 0;
+    height: 40px;
+    width: 15%;
+    margin: 2px;
+    align-self: flex-start;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
 }
 
-.user-list-conteiner{
-    display: table-cell;
-    padding: 10px;
+.user-list-1 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
 }
+
+.user-list-2 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+.user-list-3 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+.user-list-4 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+.user-list-5 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+.user-list-6 {
+    order: 0;
+    height: 40px;
+    width: 50%;
+    margin: 2px;
+    align-self: auto;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Tablets*/
-@media (min-width: 426px) {
-
-}
+@media (min-width: 426px) {}
 
 /*Laptop*/
-@media (min-width: 769px) {
-
-}
+@media (min-width: 769px) {}

@@ -7,18 +7,32 @@
                 <section class="user-list">
                     <h1>Registro de usuarios</h1>
 
+                    
                     <button class="user-list-addUser">Nuevo Usuario<i class="fa-solid fa-plus"></i></button>
-                    <article class="user-list-categories">
                         <section class="user-list-conteiner">
-                        <p class="user-list-cat-name">Nombre y apellido</p>
-                        <p class="user-list-cat-userName">UserName</p>
-                        <p class="user-list-cat-email">Email</p>
-                        <p class="user-list-cat-pass">Contraseña</p>
-                        <p class="user-list-cat-ac">Acciones</p>
-                    </section>
-                    </article>
-                    <button><i class="fa-solid fa-user-pen"></i></button><button><i
-                            class="fa-solid fa-trash"></i></button>
+                        <p class="user-list-0">id</p>
+                        <p class="user-list-1">Nombre</p>
+                        <p class="user-list-2">apellido</p>
+                        <p class="user-list-3">UserName</p>
+                        <p class="user-list-4">Email</p>
+                        <p class="user-list-5">Acciones
+                        <button><i class="fa-solid fa-user-pen"></i></button>
+                        <button><i class="fa-solid fa-trash"></i></button></p>
+                        </section>
+                        
+                        <% newUser.forEach((users) => { %>
+                        <section class="user-list">
+                            <section class="user-list-conteiner">
+                                <p class="user-list-0"><%= users.firstname %></p>
+                                <p class="user-list-1"><%= users.firstname %></p>
+                                <p class="user-list-2"><%= users.lastname %></p>
+                                <p class="user-list-3"><%= users.username %></p>
+                                <p class="user-list-4"><%= users.email %></p>
+                                <p class="user-list-5">Acciones
+                                <button><i class="fa-solid fa-user-pen"></i></button>
+                                <button><i class="fa-solid fa-trash"></i></button></p>
+                        </section>
+                        <% }) %>
 
                     <div class="button-div">
                         <button>Continuar<i class="fa-solid fa-arrow-right"></i></button>
