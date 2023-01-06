@@ -22,7 +22,7 @@
     border-radius: 3px;
     color: #fff;
     background-color: var(--blue);
-    border: 0;
+
     overflow: hidden;
     margin-top: 30px;
     text-align: left;
@@ -85,6 +85,9 @@ textarea::-webkit-scrollbarP {
 
 .user-list {}
 
+
+
+
 .user-list-conteiner {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -94,87 +97,80 @@ textarea::-webkit-scrollbarP {
 }
 
 .user-list-0 {
+    height: 40px;
+    width: 25%;
+    align-self: auto;
+    background-color: #79799a;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    border: 2px solid white;
+}
+
+.user-list-01{
     display: flex;
-    order: 0;
     height: 40px;
     width: 15%;
     margin: 2px;
-    align-self: flex-start;
+    align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 
-.user-list-1 {
-    order: 0;
+.user-list-02 {
     height: 40px;
     width: 50%;
     margin: 2px;
     align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 
-.user-list-2 {
-    order: 0;
+.user-list-03{
     height: 40px;
     width: 50%;
     margin: 2px;
     align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 
-.user-list-3 {
-    order: 0;
+.user-list-04 {
     height: 40px;
     width: 50%;
     margin: 2px;
     align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 
-.user-list-4 {
-    order: 0;
+.user-list-05 {
     height: 40px;
     width: 50%;
     margin: 2px;
     align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 
-.user-list-5 {
-    order: 0;
+.user-list-06 {
     height: 40px;
     width: 50%;
     margin: 2px;
     align-self: auto;
     background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    border: 2px solid white;
-}
-
-.user-list-6 {
-    order: 0;
-    height: 40px;
-    width: 50%;
-    margin: 2px;
-    align-self: auto;
-    background-color: red;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 2px solid white;
 }
 

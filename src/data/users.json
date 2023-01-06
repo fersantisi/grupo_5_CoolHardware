@@ -7,5 +7,15 @@
 		"email": "f@f.com",
 		"pass": "$2b$10$S1kaX3EcRQdFVa0qvJflmOv6Z.CSj.yzDmUgzpGbkJ20894WGwPvC",
 		"image": "avatar-1672967268673.png"
+	},
+	{
+		"id": 2,
+		"firstname": "Ignacio",
+		"lastname": "Oreiro",
+		"username": "nachowoski",
+		"email": "ignaciooreiro3@outlook.es",
+		"pass": "$2b$10$aS2pLwnoMGVSEDYx1keI7ukxyHJc0eSnruMegzwNEiNddSEiW1zE2",
+		"image": "avatar-1672976008464.jpg"
 	}
+	
 ]
