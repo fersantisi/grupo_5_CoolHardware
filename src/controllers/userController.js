@@ -27,9 +27,14 @@ const userController = {
             return user.username == userRequest.user
         });
 
+        console.log("found", userFound);
         if (userFound) {
+            console.log("request", userRequest);
             if (bcrypt.compareSync(userRequest.pass, userFound.pass)) {
-                return res.send('Usuario logueado')
+                delete userFound.pass
+                req.session.userLogged = userFound;
+                return res.redirect('/')
+
             } else {
                 return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
             }
@@ -43,9 +48,10 @@ const userController = {
         res.render('./users/register');
     },
 
-    generateId: function () {
-        console.log("Entré al generateId");
-        let lastUser = users.pop();
+    generateId: () => {
+        console.log('Users1= ', users);
+        let lastUser = users[users.length-1]
+        console.log('Users2= ', users);
         if (lastUser) {
             return lastUser.id + 1;
         } else {
@@ -59,7 +65,7 @@ const userController = {
             return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
         }
         let newUser = {
-            "id": this.generateId,
+            "id": userController.generateId(),
             // "id": users[users.length-1].id ? users[users.length-1].id + 1 : 1,
             "firstname": req.body.firstname,
             "lastname": req.body.lastname,
@@ -68,12 +74,7 @@ const userController = {
             "pass": bcrypt.hashSync(req.body.pass, 10),
             "image": req.file.filename
         }
-
-        // console.log(newUser);
-
-
-        // console.log(newUser.id);
-
+        
         let checkUsername = users.find((user) => {
             return user.username == newUser.username;
         })
@@ -89,7 +90,7 @@ const userController = {
         } else {
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-            return res.render('index', { products })
+            return res.redirect('/user/login')
         }
     },
 
@@ -97,6 +98,11 @@ const userController = {
         let updatedList = users.filter((user => user.id !== id));
         fs.writeFileSync(usersFilePath, JSON.stringify(updatedList, null, '\t'));
         res.send(updatedList);
+    },
+
+    logout: (req, res) => {
+        delete req.session.userLogged
+        return res.redirect('/');
     }
 }
 

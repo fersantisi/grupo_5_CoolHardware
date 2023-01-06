@@ -6,9 +6,6 @@
     <nav>
         <section class="nav-left">
             <ul class="sites">
-
-
-
                 <nav class="esp-nav">
                     <section class="nav-container">
                         <label for="menu" class="nav-label">
@@ -22,19 +19,13 @@
                         </section>
                     </section>
                 </nav>
-
-
-                
-
-
-
-
-
-                <!-- <li class="nav-icons"><a href="/products/list"><i class="fas fa-bars"></i></a></li> -->
-
-
-                <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i class="fa-solid fa-user"></i></a>
-                </li>
+                <% if (locals.isLogged) { %>
+                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>" width="50" style="border-radius: 100%;"></li>
+                    <li class="user-name"><h2><%= locals.userLogged.username %></h2></li>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i class="fa-solid fa-power-off"></i></a></li>
+                <% } else { %>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i class="fa-solid fa-user"></i></a></li>
+                <% } %>
             </ul>
         </section>
         <section class="nav-right">

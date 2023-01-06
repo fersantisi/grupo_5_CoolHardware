@@ -47,7 +47,6 @@ nav {
     background-color: var(--dark-liver);
     color: var(--platinum);
     border-radius: 20px 20px 0 0;
-    padding: 1% 0;
 }
 
 .nav-left,
@@ -90,33 +89,33 @@ nav .sites {
     display: none;
 }
 
-.nav-menu{
+.nav-menu {
     font-size: 19px;
-    position:absolute;
-    top: 255px;
-    bottom: 345px;
-    background: var(--blue);
-    width: 22%;
-    left: 84px;
-    display: flex;
+    position: relative;
+    top: 113px;
+    /* bottom: 401px; */
+    background: var(--dark-liver);
+    left: -69px;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
-    transition: clip-path 0.5s ease-in-out; 
-    border-radius: 15px;
+    transition: clip-path 0.5s ease-in-out;
+    border-radius: 0 0 15px 15px;
     z-index: 10;
+    width: 10em;
+    display: flex;
 }
 
 .nav-checkbox:checked + .nav-menu{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.nav-item{
+.nav-item {
     color: #fff;
     text-decoration: none;
     --clippy: polygon(0 0,0 0, 0 100%, 0% 100%);
-    
+    margin: 10px;
 }
 
 .nav-item::after{
@@ -144,7 +143,10 @@ nav .sites li.nav-icons {
 }
 
 
-
+.user-name {
+    color: var(--platinum);
+    margin-left: 10px;
+}
 
 
 nav .sites .search-bar {
@@ -180,6 +182,14 @@ nav .fa-bars {
 }
 
 nav .fa-cart-shopping {
+    font-size: 2.625em;
+    margin-right: 10px;
+    padding-top: 2.5px;
+    text-decoration: none;
+    color: var(--platinum);
+}
+
+nav .fa-power-off {
     font-size: 2.625em;
     margin-right: 10px;
     padding-top: 2.5px;
