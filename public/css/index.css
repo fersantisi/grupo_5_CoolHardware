@@ -33,6 +33,10 @@ article.card {
     width: 80%;
     margin-bottom: 10px;
     border-radius: 10px;
+    min-height: 250px;
+    min-width: 250px;
+    max-width: 251px;
+    max-height: 251px;
 }
 
 article.card .product-info {
@@ -78,6 +82,13 @@ article.card button{
         width: 45%;
     }
 
+    .card-img {
+        min-height: 230px;
+        min-width: 230px;
+        max-width: 231px;
+        max-height: 231px;
+    }
+
 }
 
 /*Laptop*/
@@ -88,6 +99,13 @@ article.card button{
 
     h2 {
         font-size: 25px;
+    }
+
+    .card-img {
+        min-height: 180px;
+        min-width: 180px;
+        max-width: 181px;
+        max-height: 181px;
     }
 
     main section article.card h2 {

@@ -18,6 +18,10 @@ main section article div.img-producto {
 main section article div.img-producto .card-img {
     width: 100%;
     border-radius: 20px;
+    min-height: 300px;
+    min-width: 300px;
+    max-width: 301px;
+    max-height: 301px;
 }
 
 main section article div.producto-info {
@@ -112,7 +116,14 @@ article.detail div.descripcion h3 {
         width: 50%;
         align-self: center;
         margin: auto 0;
+       
     }
+    main section article div.img-producto img.card-img{  
+        min-height: 345px;
+        min-width: 345px;
+        max-width: 346px;
+        max-height: 346px;
+    } 
 
     main section article div.producto-info {
         width: 45%;
@@ -145,9 +156,18 @@ article.detail div.descripcion h3 {
         margin-top: 10px;
     }
 
+     main section article div.img-producto img.card-img{
+        
+        min-height: 488px;
+        min-width: 488px;
+        max-width: 489px;
+        max-height: 489px;
+    } 
+
     article.detail div.contenedor-detail button:hover {
         border-color: var(--blue);
         transition: .5s;
     }
+
 
 }
