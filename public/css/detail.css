@@ -72,6 +72,7 @@ article.detail div button {
     font-weight: 700;
     outline: none;
     margin: 15px;
+    cursor: pointer;
 }
 
 article.detail div button.productBuy, article.detail div button.productEdit {

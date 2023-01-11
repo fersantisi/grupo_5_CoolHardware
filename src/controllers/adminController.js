@@ -102,6 +102,17 @@ const adminController = {
 
         res.redirect('/admin');
     },
+    destroyUser: (req, res) => {
+        let userToDelete = users.find((users) => {
+            return users.id == req.params.id;
+        });
+
+        let removed = products.splice(products.indexOf(userToDelete), 1);
+
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
+
+        res.redirect('/admin');
+    }
 };
 
 module.exports = adminController;

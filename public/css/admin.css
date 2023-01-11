@@ -83,11 +83,6 @@ textarea::-webkit-scrollbarP {
 
 /* UserList */
 
-.user-list {}
-
-
-
-
 .user-list-conteiner {
     flex-direction: row;
     flex-wrap: nowrap;
