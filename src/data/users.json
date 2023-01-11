@@ -16,6 +16,14 @@
 		"email": "ignaciooreiro3@outlook.es",
 		"pass": "$2b$10$aS2pLwnoMGVSEDYx1keI7ukxyHJc0eSnruMegzwNEiNddSEiW1zE2",
 		"image": "avatar-1672976008464.jpg"
+	},
+	{
+		"id": 3,
+		"firstname": "asda",
+		"lastname": "asda",
+		"username": "asdasdas",
+		"email": "asd@asdas.com",
+		"pass": "$2b$10$ILObJgA/2M.WigQjQRx4lerkvXPpevMiRRSW3TSuIubTktJ9DYwuO",
+		"image": "avatar-1673472622611.jpg"
 	}
-	
 ]

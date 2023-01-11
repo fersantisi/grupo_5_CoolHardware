@@ -6,7 +6,7 @@
 		"category": "Notebook",
 		"price": 380000,
 		"discount": 50,
-		"image": "/images/notebook.jpg",
+		"image": "notebook.jpg",
 		"description": "Procesador: Intel Core i5. Almacenamiento: SSD 512GB. Conectividad: Wi-Fi. Graficos: Nvidia GTX 1650 4GB. Memoria Ram: 8 GB. Pantalla: 15.6. Sistema Operativo: Windows 10. Uso Recomendado: Gaming."
 	},
 	{
@@ -16,7 +16,7 @@
 		"category": "Monitor",
 		"price": 320000,
 		"discount": 50,
-		"image": "/images/monitor.jpg",
+		"image": "monitor.jpg",
 		"description": "Pantalla: 25\" FullHD. Tipo: Plano. Parlantes: No. Panel: IPS. Conectividad: 1xDisplay Port, 2xHDMI. Frecuencia: 240 Hz. Consumo: 60 W. Tiempo de Repuesta(ms): 0.4ms. Uso: Edición y Gaming."
 	},
 	{
@@ -26,7 +26,7 @@
 		"category": "Procesador",
 		"price": 120000,
 		"discount": 30,
-		"image": "/images/microprocesador.jpg",
+		"image": "microprocesador.jpg",
 		"description": "Socket: AM4. Cantidad de nucleos: 8. Hilos: 16. GPU Integrado: No. Cache: 32MB. Soporta Memorias RAM: DDR4. Consumo: 105 W."
 	},
 	{
@@ -36,7 +36,7 @@
 		"category": "Auricular",
 		"price": 21000,
 		"discount": 15,
-		"image": "/images/auricular.jpg",
+		"image": "auricular.jpg",
 		"description": "Micrófono: Si. Es inalambrico: No. Conector: Jack 3.5 mm. Unidad de Diafragma: 50mm. Longitud del Cable: 1,1 mts. Compatible con: Play Station, Xbox y PC."
 	},
 	{
@@ -46,7 +46,7 @@
 		"category": "CPU Cooler",
 		"price": "5000",
 		"discount": "20",
-		"image": "/images/cooler.jpg",
+		"image": "cooler.jpg",
 		"description": "Socket: Intel LGA 1200 y AMD AM4. Consumo: 130W. Peso: 370g. Velocidad del ventilador: 2000 RPM."
 	},
 	{
@@ -56,7 +56,7 @@
 		"category": "Gabinete GPU",
 		"price": "35000",
 		"discount": "30",
-		"image": "/images/gabinete.jpg",
+		"image": "gabinete.jpg",
 		"description": "Dimensiones: 45,3cm x 23,0cm x 46,6cm. Factor de forma: Mid-Tower. Vidrio templado: Si. Material: Acero y PVC. Peso: 7,85kg."
 	},
 	{
@@ -66,7 +66,7 @@
 		"category": "Memoria RAM",
 		"price": "35000",
 		"discount": "20",
-		"image": "/images/memoria_ram.jpg",
+		"image": "memoria_ram.jpg",
 		"description": "Modulos de memoria: 2x 8GB. Capacidad total: 16GB. RGB: Si. Tecnologia: DDR4. Frecuencia: 3600 MHz."
 	},
 	{
@@ -76,7 +76,7 @@
 		"category": "Motherboard",
 		"price": "65000",
 		"discount": "20",
-		"image": "/images/mother.jpg",
+		"image": "mother.jpg",
 		"description": "Socket: AM4. Chipset: AMD B550. Memoria: 4 socket para Memoria Ram DDR4. Diseño: ATX. Conectores: USB 3.2, HDMI. RGB: Si. "
 	},
 	{
@@ -86,7 +86,7 @@
 		"category": "Placa de video",
 		"price": "650000",
 		"discount": "5",
-		"image": "/images/placa-de-video.jpeg",
+		"image": "placa-de-video.jpeg",
 		"description": "Interfaz: PCI-Express 4.0. Cantidad de núcleos: 10496. Resolucion máxima: 7680x4320. Memoria: 24GB. Tipo de memoria: GDDR6X. Bus de memoria: 384 bit. RGB: Si."
 	},
 	{
@@ -96,7 +96,7 @@
 		"category": "Silla gamer",
 		"price": "125000",
 		"discount": "5",
-		"image": "/images/silla-gamer-corsair.jpg",
+		"image": "silla-gamer-corsair.jpg",
 		"description": "Peso soportado: 120kg. Tipo de asiento: Acolchonado. Inclinacion: Hasta los 180°. Apoyabrazos: Si. Número de ruedas: 5. Engonomico: Si. Peso: 22kg."
 	},
 	{
@@ -106,7 +106,7 @@
 		"category": "SSD",
 		"price": "39000",
 		"discount": "5",
-		"image": "/images/ssd.jpg",
+		"image": "ssd.jpg",
 		"description": "Capacidad: 1TB. Interfaces: SATA III. Peso: 40g. Tecnologia: 3D NAND."
 	},
 	{
@@ -116,47 +116,17 @@
 		"category": "Mouse",
 		"price": "20000",
 		"discount": "5",
-		"image": "/images/mouse_logitech.jpg",
+		"image": "mouse_logitech.jpg",
 		"description": "Inalámbrico: Si. Sensor: Hero. Cantidad de botones: 11. DPI maximo: 16000. Frecuencia de repuesta: 1000HZ. Peso: 110gr. Tecnologia Wifi: LIGHTSPEED. Recargable: Si."
 	},
 	{
 		"id": 13,
-		"brand": "1",
-		"name": "1",
-		"category": "1",
-		"price": "1",
-		"discount": "1",
-		"image": "avatar-1672959041362.jpg",
-		"description": "1"
-	},
-	{
-		"id": 14,
-		"brand": "1",
-		"name": "1",
-		"category": "1",
-		"price": "1",
-		"discount": "1",
-		"image": "avatar-1672959083567.jpg",
-		"description": "1"
-	},
-	{
-		"id": 15,
-		"brand": "1",
-		"name": "1",
-		"category": "1",
-		"price": "1",
-		"discount": "1",
-		"image": "avatar-1672959285811.jpg",
-		"description": "1"
-	},
-	{
-		"id": 16,
-		"brand": "11",
-		"name": "1",
-		"category": "1",
-		"price": "1",
-		"discount": "1",
-		"image": "avatar-1672959317341.jpg",
-		"description": "11"
+		"brand": "q",
+		"name": "q",
+		"category": "q",
+		"price": "q",
+		"discount": "q",
+		"image": "avatar-1673473641871.jpg",
+		"description": "q"
 	}
 ]
