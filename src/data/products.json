@@ -20,16 +20,6 @@
 		"description": "Pantalla: 25\" FullHD. Tipo: Plano. Parlantes: No. Panel: IPS. Conectividad: 1xDisplay Port, 2xHDMI. Frecuencia: 240 Hz. Consumo: 60 W. Tiempo de Repuesta(ms): 0.4ms. Uso: Edición y Gaming."
 	},
 	{
-		"id": 3,
-		"brand": "AMD",
-		"name": "Ryzen 7 5800X",
-		"category": "Procesador",
-		"price": 120000,
-		"discount": 30,
-		"image": "microprocesador.jpg",
-		"description": "Socket: AM4. Cantidad de nucleos: 8. Hilos: 16. GPU Integrado: No. Cache: 32MB. Soporta Memorias RAM: DDR4. Consumo: 105 W."
-	},
-	{
 		"id": 4,
 		"brand": "Corsair",
 		"name": "HS35 Stereo",
@@ -118,15 +108,5 @@
 		"discount": "5",
 		"image": "mouse_logitech.jpg",
 		"description": "Inalámbrico: Si. Sensor: Hero. Cantidad de botones: 11. DPI maximo: 16000. Frecuencia de repuesta: 1000HZ. Peso: 110gr. Tecnologia Wifi: LIGHTSPEED. Recargable: Si."
-	},
-	{
-		"id": 13,
-		"brand": "q",
-		"name": "q",
-		"category": "q",
-		"price": "q",
-		"discount": "q",
-		"image": "avatar-1673473641871.jpg",
-		"description": "q"
 	}
 ]
