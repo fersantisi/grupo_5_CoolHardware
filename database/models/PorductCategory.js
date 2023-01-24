@@ -6,36 +6,26 @@ module.exports = function (sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         desc: {
-            type: Sequelize.TEXT,
-            allowNull: true
-        },
-        created_at: {
-            type: Sequelize.DATE,
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-        },
-        modified_at: {
-            type: Sequelize.DATE,
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
-        },
-        deleted_at: {
-            type: Sequelize.DATE,
+            type: DataTypes.TEXT,
             allowNull: true
         }
     }
 
 
     let config = {
-        tableName: "productsCategory",
-        timestamps: true
+        timestamp: true,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
 

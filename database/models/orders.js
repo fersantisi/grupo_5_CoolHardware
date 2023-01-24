@@ -18,11 +18,6 @@ module.exports = function (sequelize, DataTypes) {
                 key: 'id'
             }
         },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.literal('CURRENT_TIMESTAMP')
-        },
         cost: {
             type: DataTypes.DOUBLE,
             allowNull: false
@@ -56,9 +51,9 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: "orders",
         timestamps: false,
-        freezeTableName: true
+        freezeTableName: true,
+        createdAt: "created_at",
     }
 
     let Orders = sequelize.define(alias, cols, config);

@@ -43,7 +43,8 @@ module.exports = function (sequelize, DataTypes) {
 
     let config = {
         tableName: "users",
-        timestamps: true
+        timestamps: true,
+        createdAt: "created_at"
     }
 
 

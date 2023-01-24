@@ -24,26 +24,15 @@ module.exports = function (sequelize, DataTypes) {
         active: {
             type: DataTypes.BOOLEAN,
             allowNull: false
-        },
-        created_at: {
-            type: DataTypes.DATE,
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
-        },
-        modified_at: {
-            type: DataTypes.DATE,
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
-        },
-        deleted_at: {
-            type: DataTypes.DATE,
-            allowNull: true
         }
     }
 
 
     let config = {
-        tableName: "",
-        timestamps: false,
-        freezeTableName: true
+        timestamp: true,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
 
     }
 

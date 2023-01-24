@@ -2,47 +2,37 @@
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = ""
+    let alias = "ProductInventory"
 
     let cols = {
         id: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         quantity: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
-        },
-        created_at: {
-            type: Sequelize.DATE,
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-        },
-        modified_at: {
-            type: Sequelize.DATE,
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
-        },
-        deleted_at: {
-            type: Sequelize.DATE,
-            allowNull: true
         }
     }
 
 
     let config = {
-        tableName: "",
-
+        timestamp: true,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
-    let aa = sequelize.define(alias, cols, config);
+    let ProductInventory = sequelize.define(alias, cols, config);
 
-    CartItem.associate = function (models) {
-        CartItem.belongsTo(models.Cart, {
+    ProductInventory.associate = function (models) {
+        ProductInventory.belongsTo(models.Cart, {
             as: 'cart',
             foreignKey: 'carts_id'
         })
     }
 
 
-    return CartItem;
+    return ProductInventory;
 }

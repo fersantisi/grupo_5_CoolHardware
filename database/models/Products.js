@@ -42,28 +42,21 @@ module.exports = function (sequelize, DataTypes) {
 
         brand_id: {
             type: DataTypes.INTEGER
-        },
-        created_at: {
-            type: DataTypes.timestamp
-        },
-        modified_at: {
-            type: DataTypes.timestamp
-        },
-        deleted_at: {
-            type: DataTypes.timestamp
         }
     }
 
     let config = {
-        tableName: "products",
-        timestamps: true
+        timestamp: true,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
 
     let Products = sequelize.define(alias, cols, config);
 
-    Product.associate = (models) => {
-        Product.belongsTo(models.ProductCategory, {
+    Products.associate = (models) => {
+        Products.belongsTo(models.ProductCategory, {
             foreignKey: 'category_id',
             as: 'category'
         });

@@ -6,24 +6,20 @@ module.exports = function (sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: CartItem.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         quantity: {
-            type: CartItem.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         discount: {
-            type: CartItem.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         price: {
-            type: CartItem.INTEGER,
-            allowNull: false
-        },
-        carts_id: {
-            type: CartItem.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     }

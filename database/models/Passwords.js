@@ -19,7 +19,6 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        tableName: "passwords",
         timestamps: false
     }
 

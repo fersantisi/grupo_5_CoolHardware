@@ -26,7 +26,6 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: "PageVisit",
         timestamps: false,
         freezeTableName: true
 
