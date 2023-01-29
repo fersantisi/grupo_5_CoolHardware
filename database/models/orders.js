@@ -2,7 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "Orders"
+    let alias = "Order"
 
     let cols = {
         id: {
@@ -56,22 +56,22 @@ module.exports = function (sequelize, DataTypes) {
         createdAt: "created_at",
     }
 
-    let Orders = sequelize.define(alias, cols, config);
+    let Order = sequelize.define(alias, cols, config);
 
-    Orders.associate = function (models) {
-        Orders.belongsTo(models.Users, {
-            as: "user",
+    Order.associate = function (models) {
+        Order.belongsTo(models.Users, {
+            as: "users",
             foreignKey: "user_id"
         });
-        Orders.hasMany(models.Payments, {
+        Order.hasMany(models.Payments, {
             as: "payments",
             foreignKey: "order_id"
         });
-        Orders.belongsTo(models.Carts, {
+        Order.belongsTo(models.Cart, {
             as: "cart",
             foreignKey: "cart_id"
         });
     }
 
-    return Orders;
+    return Order;
 }

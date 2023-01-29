@@ -2,9 +2,10 @@ module.exports = {
   "development": {
     "username": "root",
     "password": '',
-    "database": "cool_hardware",
+    "database": "cool_hardware_1",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "underscored":true
   },
   "test": {
     "username": "root",

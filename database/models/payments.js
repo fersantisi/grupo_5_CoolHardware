@@ -22,11 +22,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.literal('CURRENT_TIMESTAMP')
-        },
         amount: {
             type: DataTypes.DOUBLE,
             allowNull: false
@@ -48,7 +43,8 @@ module.exports = function (sequelize, DataTypes) {
 
     let config = {
         tableName: "Payments",
-        timestamps: false,
+        timestamps: true,
+        createdAt: "created_at",
         freezeTableName: true
 
     }
@@ -57,10 +53,10 @@ module.exports = function (sequelize, DataTypes) {
 
     Payments.associate = function(models){
         Payments.belongsTo(models.Users,{
-        as: "user",
+        as: "users",
         foreignKey: "user_id"
         });
-        Payments.belongsTo(models.Orders,{
+        Payments.belongsTo(models.Order,{
         as: "order",
         foreignKey: "order_id"
         });

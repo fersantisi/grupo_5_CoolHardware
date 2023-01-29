@@ -75,6 +75,10 @@ form .txt_field {
     transition: .9s;
 }
 
+.txt_field select {
+    width: 100%;
+}
+
 .txt_field span::before {
     content: '';
     position: absolute;

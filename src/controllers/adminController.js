@@ -7,6 +7,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+//Databases
+let db = require('../../database/models')
+
 
 const adminController = {
 
@@ -22,7 +25,11 @@ const adminController = {
 
     create: (req, res) => {
         console.log('Entre al creador');
-        res.render('./admin/createProduct');
+        db.ProductsCategory.findAll()
+            .then((categories) => {
+                console.log(categories)
+                return res.render('./admin/createProduct', {categories});
+            })
     },
 
     store: (req, res) => {

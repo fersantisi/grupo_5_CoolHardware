@@ -2,7 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "Carts"
+    let alias = "Cart"
 
     let cols = {
         id: {
@@ -13,30 +13,24 @@ module.exports = function (sequelize, DataTypes) {
         status: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.literal('CURRENT_TIMESTAMP')
         }
     }
 
 
     let config = {
-        tableName: "",
-        timestamps: false,
-        freezeTableName: true
+        timestamps: true,
+        cratedAt: 'created_at',
     }
 
-    let Carts = sequelize.define(alias, cols, config);
+    let Cart = sequelize.define(alias, cols, config);
 
-    Carts.associate = function (models) {
-        Carts.hasMany(models.Cart, {
+    Cart.associate = function (models) {
+        Cart.hasMany(models.CartItem, {
             as: 'items',
             foreignKey: 'carts_id'
         })
     }
 
 
-    return Carts;
+    return Cart;
 }

@@ -6,12 +6,12 @@ module.exports = function (sequelize, DataTypes) {
 
     let cols = {
         id: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         user_id: {
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'users',
@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         url: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         }
     }

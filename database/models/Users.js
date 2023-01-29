@@ -34,10 +34,6 @@ module.exports = function (sequelize, DataTypes) {
 
         password_id: {
             type: DataTypes.INTEGER
-        },
-        created_at: {
-            type: DataTypes.
-                timestamp
         }
     }
 
@@ -56,7 +52,7 @@ module.exports = function (sequelize, DataTypes) {
             as: "passwords",
             foreingKey: "user_id"
         });
-        Users.hasMany(models.Orders, {
+        Users.hasMany(models.Order, {
             as: "orders",
             foreignKey: "user_id"
         });

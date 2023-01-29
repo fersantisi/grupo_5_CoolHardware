@@ -26,16 +26,14 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: "cartItem",
         timestamps: false,
-        freezeTableName: true
     }
 
     let CartItem = sequelize.define(alias, cols, config);
 
     CartItem.associate = function (models) {
         CartItem.belongsTo(models.Cart, {
-            as: 'cart',
+            as: 'carts',
             foreignKey: 'carts_id'
         })
     }

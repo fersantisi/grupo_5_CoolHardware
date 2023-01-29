@@ -22,10 +22,11 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        timestamp: true,
-        createdAt:"created_at",
-        modifiedAt:"modified_at",
-        deletedAt:"deleted_at",
+        tableName: 'product_category',
+        timestamps: false,
+        // createdAt:"created_at",
+        // modifiedAt:"modified_at",
+        // deletedAt:"deleted_at",
     }
 
 
@@ -34,7 +35,7 @@ module.exports = function (sequelize, DataTypes) {
 
     ProductsCategory.associate = function (models) {
         ProductsCategory.hasMany(models.Products, {
-            as: "passwords",
+            as: "products",
             foreingKey: "category_id"
         });
     }
