@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
+const db = require('../../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -10,8 +11,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // const usersFilePath = path.join(__dirname, '../data/users.json');
 // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-//Databases
-let db = require('../../database/models')
+
 
 
 const userController = {
@@ -26,7 +26,7 @@ const userController = {
             ...req.body
         }
 
-        let userFound = users.find(user => {
+        let userFound = Users.find(user => {
             return user.username == userRequest.user
         });
 
@@ -60,11 +60,11 @@ const userController = {
     //     }
     // },
 
-    store: (req, res) => {
-        // const result = validationResult(req)
-        // if (result.errors.length > 0) {
-        //     return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
-        // }
+    store: function (req, res) {
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+        }
         let newUser = db.Users.create({
             Fname: req.body.firstname,
             Lname: req.body.lastname,
@@ -74,27 +74,28 @@ const userController = {
             // "image": req.file.filename
         }).catch(error => console.error(error))
 
-        let checkUsername = users.find((user) => {
-            return user.Fname == newUser.Fname;
-        })
+        // let checkUsername = Users.findAll((user) => {
+        //     return user.Fname == newUser.Fname;
+        // })
 
-        let checkEmail = users.find((user) => {
-            return user.email == newUser.email;
-        })
+        // let checkEmail = Users.find((user) => {
+        //     return user.email == newUser.email;
+        // })
 
-        if (checkUsername) {
-            return res.send("Este usuario ya está registrado!");
-        } else if (checkEmail) {
-            return res.send("Este email ya está registrado!");
-        } else {
-            users.push(newUser)
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-            return res.redirect('/user/login')
-        }
+        // if (checkUsername) {
+        //     return res.send("Este usuario ya está registrado!");
+        // } else if (checkEmail) {
+        //     return res.send("Este email ya está registrado!");
+        // } else {
+        //     users.push(newUser)
+        //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
+        //     return res.redirect('/user/login')
+        // }
+        res.redirect('/user/login')
     },
 
     delete: (id) => {
-        let updatedList = users.filter((user => user.id !== id));
+        let updatedList = Users.filter((user => user.id !== id));
         fs.writeFileSync(usersFilePath, JSON.stringify(updatedList, null, '\t'));
         res.send(updatedList);
     },
@@ -102,15 +103,6 @@ const userController = {
     logout: (req, res) => {
         delete req.session.userLogged
         return res.redirect('/');
-    },
-
-    listado: function (req, res) {
-        db.Users.findAll()
-            .then(function(user){
-                res.render("userAdmin",{user:user})
-            })
-
-        
     }
 }
 

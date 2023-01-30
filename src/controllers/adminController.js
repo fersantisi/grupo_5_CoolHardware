@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 //Databases
-let db = require('../../database/models')
+const db = require('../../database/models')
 
 
 const adminController = {

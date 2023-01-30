@@ -32,7 +32,7 @@ router.get("/logout/", userController.logout)
 
 
 //ShowUser
-router.get("/listadoUsers/",userController.listado)
+// router.get("/listadoUsers/",userController.listado)
 
 
 module.exports = router;
