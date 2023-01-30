@@ -119,10 +119,10 @@ article.detail div.descripcion h3 {
        
     }
     main section article div.img-producto img.card-img{  
-        min-height: 345px;
-        min-width: 345px;
-        max-width: 346px;
-        max-height: 346px;
+        min-height: 280px;
+        min-width: 280px;
+        max-width: 281px;
+        max-height: 281px;
     } 
 
     main section article div.producto-info {
@@ -158,10 +158,10 @@ article.detail div.descripcion h3 {
 
      main section article div.img-producto img.card-img{
         
-        min-height: 488px;
-        min-width: 488px;
-        max-width: 489px;
-        max-height: 489px;
+        min-height: 380px;
+        min-width: 380px;
+        max-width: 381px;
+        max-height: 381px;
     } 
 
     article.detail div.contenedor-detail button:hover {

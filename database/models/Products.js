@@ -46,10 +46,10 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        timestamp: true,
+        timestamps: true,
         createdAt:"created_at",
         modifiedAt:"modified_at",
-        deletedAt:"deleted_at",
+        deletedAt:"deleted_at"
     }
 
 
