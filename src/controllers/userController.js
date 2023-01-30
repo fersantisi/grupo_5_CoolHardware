@@ -3,6 +3,8 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 const db = require('../../database/models')
+const express = require('express');
+const router = express.Router();
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -51,47 +53,50 @@ const userController = {
         res.render('./users/register');
     },
 
-    // generateId: () => {
-    //     let lastUser = users[users.length - 1]
-    //     if (lastUser) {
-    //         return lastUser.id + 1;
-    //     } else {
-    //         return 1;
-    //     }
-    // },
-
-    store: function (req, res) {
-        const result = validationResult(req)
+    store: (req, res) => {
+        const result = validationResult(req);
         if (result.errors.length > 0) {
-            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+            return res.render("./users/register", {
+                errors: result.mapped(),
+                oldData: req.body
+            });
         }
-        let newUser = db.Users.create({
+        const newUser = db.Users.create({
             Fname: req.body.firstname,
             Lname: req.body.lastname,
             nickname: req.body.username,
             email: req.body.email,
             password_id: bcrypt.hashSync(req.body.pass, 10),
             // "image": req.file.filename
-        }).catch(error => console.error(error))
+        })
 
-        // let checkUsername = Users.findAll((user) => {
-        //     return user.Fname == newUser.Fname;
-        // })
+        function checkUsername(username) {
+            let user = db.Users.findOne({ where: { nickname: username } })
+            return user;
+        }
 
-        // let checkEmail = Users.find((user) => {
-        //     return user.email == newUser.email;
-        // })
+        function checkEmail(email) {
+            let user = db.Users.findOne({ where: { email: email } })
+            return user;
+        }
 
-        // if (checkUsername) {
-        //     return res.send("Este usuario ya está registrado!");
-        // } else if (checkEmail) {
-        //     return res.send("Este email ya está registrado!");
-        // } else {
-        //     users.push(newUser)
-        //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-        //     return res.redirect('/user/login')
-        // }
-        res.redirect('/user/login')
+        function register(username, email, db) {
+            let existingUsername = checkUsername(username);
+            let existingEmail = checkEmail(email);
+
+            if (existingUsername || existingEmail) {
+                if (existingUsername) {
+                    return "El nombre de usuario ya existe";
+                }
+                if (existingEmail) {
+                    return "El correo electrónico ya está registrado";
+                }
+            } else {
+                db.Users.create({ newUser });
+                return res.redirect("/user/login");
+            }
+        }
+        
     },
 
     delete: (id) => {
