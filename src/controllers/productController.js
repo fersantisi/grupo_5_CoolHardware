@@ -1,20 +1,27 @@
 const fs = require('fs');
 const path = require('path');
+const db = require("../../database/models")
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
     list: (req, res) =>{
-        console.log('Entre al product list');
+    console.log('Entre al product list');
+    db.Products.findAll()
+    .then(function(products){
         res.render('./products/list', {products});    
+    })
+    .catch(error => console.log(error))
     },
 
     productos: (req, res) =>{
-        let product =  products.find( product => product.id == req.params.id)
-        console.log(product);
         console.log('Entre al productDetail');
-        res.render('./products/detail', {product});
+        db.Products.findByPk(req.params.id)
+        .then(function(product){
+            res.render('./products/detail', {product});
+        })
+        .catch(error => console.log(error))
     }
 }
 
