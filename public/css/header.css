@@ -50,15 +50,18 @@ header nav {
     
 }
 
-.nav-left,
-.nav-right {
+.nav-left {
     display: flex;
     width: 50%;
-    min-height: 69px;
-    max-height: 70px;
+    min-height: 64px;
+    max-height: 65px;
 }
 
 .nav-right {
+    display: flex;
+    width: 50%;
+    min-height: 64px;
+    max-height: 65px;
     justify-content: flex-end;
 }
 
@@ -71,13 +74,13 @@ nav .sites {
 
 .esp-nav{
     background-color: var(--dark-liver);
-    height: 80px;
+    min-height: 64px;
+    max-height: 65px;
     color: white;
 }
 
 .nav-container{
     display: flex;
-    height: 100%;
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
