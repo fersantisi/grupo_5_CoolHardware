@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": '123456789',
+    "password": '',
     "database": "cool_hardware",
     "host": "127.0.0.1",
     "dialect": "mysql",

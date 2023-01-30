@@ -39,7 +39,7 @@ body {
     width: 100%;
 }
 
-nav {
+header nav {
     display: flex;
     font-size: 10px;
     margin: auto;
@@ -47,15 +47,21 @@ nav {
     background-color: var(--dark-liver);
     color: var(--platinum);
     border-radius: 20px 20px 0 0;
+    
 }
 
-.nav-left,
+.nav-left {
+    display: flex;
+    width: 50%;
+    min-height: 64px;
+    max-height: 65px;
+}
+
 .nav-right {
     display: flex;
     width: 50%;
-}
-
-.nav-right {
+    min-height: 64px;
+    max-height: 65px;
     justify-content: flex-end;
 }
 
@@ -68,13 +74,13 @@ nav .sites {
 
 .esp-nav{
     background-color: var(--dark-liver);
-    height: 80px;
+    min-height: 64px;
+    max-height: 65px;
     color: white;
 }
 
 .nav-container{
     display: flex;
-    height: 100%;
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
