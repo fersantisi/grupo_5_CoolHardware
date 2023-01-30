@@ -60,40 +60,38 @@ const userController = {
         }
     },
 
-    // store: (req, res) => {
-    //     const result = validationResult(req)
-    //     if (result.errors.length > 0) {
-    //         return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
-    //     }
-    //     let newUser = {
-    //         "id": userController.generateId(),
-    //         // "id": users[users.length-1].id ? users[users.length-1].id + 1 : 1,
-    //         "firstname": req.body.firstname,
-    //         "lastname": req.body.lastname,
-    //         "username": req.body.username,
-    //         "email": req.body.email,
-    //         "pass": bcrypt.hashSync(req.body.pass, 10),
-    //         "image": req.file.filename
-    //     }
+    store: (req, res) => {
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+        }
+        let newUser = db.Users.create({
+            Fname: req.body.firstname,
+            Lname: req.body.lastname,
+            nickname: req.body.username,
+            email: req.body.email,
+            password_id: bcrypt.hashSync(req.body.pass, 10),
+            // "image": req.file.filename
+        }).catch(error => console.error(error))
 
-    //     let checkUsername = users.find((user) => {
-    //         return user.username == newUser.username;
-    //     })
+        let checkUsername = users.find((user) => {
+            return user.username == newUser.username;
+        })
 
-    //     let checkEmail = users.find((user) => {
-    //         return user.email == newUser.email;
-    //     })
+        let checkEmail = users.find((user) => {
+            return user.email == newUser.email;
+        })
 
-    //     if (checkUsername) {
-    //         return res.send("Este usuario ya está registrado!");
-    //     } else if (checkEmail) {
-    //         return res.send("Este email ya está registrado!");
-    //     } else {
-    //         users.push(newUser)
-    //         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-    //         return res.redirect('/user/login')
-    //     }
-    // },
+        if (checkUsername) {
+            return res.send("Este usuario ya está registrado!");
+        } else if (checkEmail) {
+            return res.send("Este email ya está registrado!");
+        } else {
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
+            return res.redirect('/user/login')
+        }
+    },
 
     delete: (id) => {
         let updatedList = users.filter((user => user.id !== id));
@@ -113,17 +111,16 @@ const userController = {
     //         })
 
     // },
-
-    register: function (req, res) {
-        db.Users.create({
-            Fname: req.body.firstname || 'defaultValue',
-            Lname: req.body.lastname || 'defaultValue',
-            nickname: req.body.username || 'defaultValue',
-            email: req.body.email || 'defaultValue',
-            password_id: 0
-        }).catch(error => console.error(error))
+    // register: function (req, res) {
+    //     db.Users.create({
+    //         Fname: req.body.firstname || 'defaultValue',
+    //         Lname: req.body.lastname || 'defaultValue',
+    //         nickname: req.body.username || 'defaultValue',
+    //         email: req.body.email || 'defaultValue',
+    //         password_id: 0
+    //     }).catch(error => console.error(error))
  
-    }
+    // }
 }
 
 module.exports = userController;

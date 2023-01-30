@@ -42,11 +42,10 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: "Payments",
-        timestamps: true,
-        createdAt: "created_at",
-        freezeTableName: true
-
+        timestamps: false,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at"
     }
 
     let Payments = sequelize.define(alias, cols, config);

@@ -22,10 +22,9 @@ const upload = multer({storage: storage});
 router.get("/login/", guestMiddleware, userController.login);
 router.post("/login/", userController.loginProcess);
 router.get("/register/", guestMiddleware, userController.register); 
+// router.post("/register/", guestMiddleware, userController.register); 
 
-router.post("/register/", guestMiddleware, userController.register); 
-
-// router.post("/register/", upload.single('avatar'), validations, userController.store);
+router.post("/register/", upload.single('avatar'), validations, userController.store);
 
 router.get("/logout/", userController.logout)
 

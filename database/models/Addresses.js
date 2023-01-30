@@ -43,8 +43,9 @@ module.exports = function (sequelize, DataTypes) {
 
     let config = {
         timestamps: false,
-        freezeTableName: true
-
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
     let Addresses = sequelize.define(alias, cols, config);

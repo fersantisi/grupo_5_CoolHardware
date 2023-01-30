@@ -18,8 +18,10 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        timestamps: true,
-        cratedAt: 'created_at',
+        timestamps: false,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
     let Cart = sequelize.define(alias, cols, config);

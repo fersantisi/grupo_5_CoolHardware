@@ -19,7 +19,10 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        timestamps: false
+        timestamps: false,
+        createdAt:"created_at",
+        modifiedAt:"modified_at",
+        deletedAt:"deleted_at",
     }
 
 
