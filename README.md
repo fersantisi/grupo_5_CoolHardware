@@ -40,3 +40,4 @@ Referencias sobre las cuales se inspira CoolHardware:
 ![Productos](https://user-images.githubusercontent.com/114533829/201241029-dee81e07-139e-40d4-8de1-da5d7ac6d128.png)
 ![CreateAcc](https://user-images.githubusercontent.com/114533829/201241125-7d3a00a8-9b62-4ae6-8f80-dfa70795a60b.png)
 ![login](https://user-images.githubusercontent.com/114533829/201241140-dc3bb2e5-983c-43af-a23d-414c2a8fcfe5.png)
+

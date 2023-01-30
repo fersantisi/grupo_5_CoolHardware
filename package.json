@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fersantisi/grupo_5_CoolHardware.git"
+    "url": "git+https://github.com/fersantisi/grupo_5_CoolHardware.git"
   },
   "keywords": [],
   "author": "",

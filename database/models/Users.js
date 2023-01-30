@@ -12,7 +12,7 @@ module.exports = function (sequelize, DataTypes) {
         },
 
         Fname: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
 
         Lname: {
@@ -38,9 +38,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        tableName: "users",
-        timestamps: true,
-        createdAt: "created_at"
+        timestamps: false,
     }
 
 
