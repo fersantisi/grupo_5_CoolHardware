@@ -7,8 +7,8 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 //Databases
 let db = require('../../database/models')
@@ -51,20 +51,20 @@ const userController = {
         res.render('./users/register');
     },
 
-    generateId: () => {
-        let lastUser = users[users.length - 1]
-        if (lastUser) {
-            return lastUser.id + 1;
-        } else {
-            return 1;
-        }
-    },
+    // generateId: () => {
+    //     let lastUser = users[users.length - 1]
+    //     if (lastUser) {
+    //         return lastUser.id + 1;
+    //     } else {
+    //         return 1;
+    //     }
+    // },
 
     store: (req, res) => {
-        const result = validationResult(req)
-        if (result.errors.length > 0) {
-            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
-        }
+        // const result = validationResult(req)
+        // if (result.errors.length > 0) {
+        //     return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+        // }
         let newUser = db.Users.create({
             Fname: req.body.firstname,
             Lname: req.body.lastname,
@@ -75,7 +75,7 @@ const userController = {
         }).catch(error => console.error(error))
 
         let checkUsername = users.find((user) => {
-            return user.username == newUser.username;
+            return user.Fname == newUser.Fname;
         })
 
         let checkEmail = users.find((user) => {
@@ -104,23 +104,14 @@ const userController = {
         return res.redirect('/');
     },
 
-    // crearUserDB: function (req, res) {
-    //     db.Users.findAll()
-    //         .then(function (Users) {
-    //             return res.render("userAdmin", { users: users })
-    //         })
+    listado: function (req, res) {
+        db.Users.findAll()
+            .then(function(user){
+                res.render("userAdmin",{user:user})
+            })
 
-    // },
-    // register: function (req, res) {
-    //     db.Users.create({
-    //         Fname: req.body.firstname || 'defaultValue',
-    //         Lname: req.body.lastname || 'defaultValue',
-    //         nickname: req.body.username || 'defaultValue',
-    //         email: req.body.email || 'defaultValue',
-    //         password_id: 0
-    //     }).catch(error => console.error(error))
- 
-    // }
+        
+    }
 }
 
 module.exports = userController;

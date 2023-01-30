@@ -4,8 +4,8 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 //Databases
 let db = require('../../database/models')
@@ -28,7 +28,7 @@ const adminController = {
         db.ProductsCategory.findAll()
             .then((categories) => {
                 console.log(categories)
-                return res.render('./admin/createProduct', {categories});
+                return res.render('./admin/createProduct', { categories });
             })
     },
 
@@ -51,75 +51,83 @@ const adminController = {
         res.render('./admin/adminIndex', { products });
     },
 
-    users: (req, res) => {
-        res.render('admin/userAdmin', { newUser: users });
-        console.log('Entre al registro de perfiles');
-        res.render('./admin/userAdmin');
-    },
+    // users: (req, res) => {
+    //     res.render('admin/userAdmin', { newUser: users });
+    //     console.log('Entre al registro de perfiles');
+    //     res.render('./admin/userAdmin');
+    // },
+        users: function (req, res) {
+        db.Users.findAll()
+            .then(function (user) {
+                res.render("admin/userAdmin", { newUser: user })
+                console.log('Entre al registro de perfiles');
+                res.render('./admin/userAdmin');
+            })
+        },
 
-    manage: (req, res) => {
-        let product = products.find(product => product.id == req.params.id)
-        console.log('Entre a administrador de producto');
-        res.render('./admin/manageProduct', { product });
-    },
+            manage: (req, res) => {
+                let product = products.find(product => product.id == req.params.id)
+                console.log('Entre a administrador de producto');
+                res.render('./admin/manageProduct', { product });
+            },
 
-    edit: (req, res) => {
-        let product = products.find((product) => {
-            return product.id == req.params.id;
-        });
-        res.render('./admin/editProduct', { product })
-    },
+                edit: (req, res) => {
+                    let product = products.find((product) => {
+                        return product.id == req.params.id;
+                    });
+                    res.render('./admin/editProduct', { product })
+                },
 
-    update: (req, res) => {
-        let productToEdit = products.find((product) => {
-            return product.id == req.params.id;
-        });
+                    update: (req, res) => {
+                        let productToEdit = products.find((product) => {
+                            return product.id == req.params.id;
+                        });
 
-        let editedProduct = {
-            "id": productToEdit.id,
-            "brand": req.body.brand,
-            "name": req.body.name,
-            "category": req.body.category,
-            "price": req.body.price,
-            "discount": req.body.discount,
-            "image": req.body.image,
-            "description": req.body.description
-        };
+                        let editedProduct = {
+                            "id": productToEdit.id,
+                            "brand": req.body.brand,
+                            "name": req.body.name,
+                            "category": req.body.category,
+                            "price": req.body.price,
+                            "discount": req.body.discount,
+                            "image": req.body.image,
+                            "description": req.body.description
+                        };
 
-        let updatedJSON = products.map((product) => {
-            if (editedProduct.id == product.id) {
-                return product = editedProduct;
-            }
-            return product;
-        });
+                        let updatedJSON = products.map((product) => {
+                            if (editedProduct.id == product.id) {
+                                return product = editedProduct;
+                            }
+                            return product;
+                        });
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(updatedJSON, null, '\t'));
+                        fs.writeFileSync(productsFilePath, JSON.stringify(updatedJSON, null, '\t'));
 
-        res.render('./admin/manageProduct', { product: editedProduct });
-    },
+                        res.render('./admin/manageProduct', { product: editedProduct });
+                    },
 
-    destroy: (req, res) => {
-        let productToDelete = products.find((product) => {
-            return product.id == req.params.id;
-        });
+                        destroy: (req, res) => {
+                            let productToDelete = products.find((product) => {
+                                return product.id == req.params.id;
+                            });
 
-        let removed = products.splice(products.indexOf(productToDelete), 1);
+                            let removed = products.splice(products.indexOf(productToDelete), 1);
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
+                            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
 
-        res.redirect('/admin');
-    },
-    destroyUser: (req, res) => {
-        let userToDelete = users.find((users) => {
-            return users.id == req.params.id;
-        });
+                            res.redirect('/admin');
+                        },
+                            destroyUser: (req, res) => {
+                                let userToDelete = users.find((users) => {
+                                    return users.id == req.params.id;
+                                });
 
-        let removed = products.splice(products.indexOf(userToDelete), 1);
+                                let removed = products.splice(products.indexOf(userToDelete), 1);
 
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
+                                fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
 
-        res.redirect('/admin');
-    }
-};
+                                res.redirect('/admin');
+                            }
+    };
 
-module.exports = adminController;
+    module.exports = adminController;
