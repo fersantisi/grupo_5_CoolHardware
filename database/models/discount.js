@@ -38,12 +38,12 @@ module.exports = function (sequelize, DataTypes) {
 
     let Discount = sequelize.define(alias, cols, config);
 
-    Discount.associate = function (models) {
-        Discount.hasMany(models.Products, {
-            as: "products",
-            foreignKey: "discount_id"
-        });
-    }
+    // Discount.associate = function (models) {
+    //     Discount.hasMany(models.Products, {
+    //         as: "products",
+    //         foreignKey: "discount_id"
+    //     });
+    // }
 
     return Discount;
 }
