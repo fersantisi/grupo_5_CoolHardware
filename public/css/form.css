@@ -53,6 +53,11 @@ form .txt_field {
     margin-top: 30px;
 }
 
+form .select_field {
+    position: relative;
+    margin-top: 30px;
+}
+
 .txt_field input:empty {
     width: 100%;
     padding: 0 5px;
@@ -75,8 +80,33 @@ form .txt_field {
     transition: .9s;
 }
 
-.txt_field select {
-    width: 100%;
+.select_field select {
+    width: 50%;
+    color: var(--platinum);
+    display: block;
+    background-color: transparent;
+    margin-top: 55px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #adadad;
+    transition: border-color .9s;
+}
+
+.select_field select option {
+    color: var(--platinum);
+    background-color: var(--dark-liver);
+    
+}
+
+.select_field select:focus {
+    border-color: var(--blue);
+}
+
+.select_field .select_label {
+    color: var(--blue);
+    left: 5px;
+    position: absolute;
+    top: -40px;
 }
 
 .txt_field span::before {

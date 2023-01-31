@@ -45,6 +45,10 @@ module.exports = function (sequelize, DataTypes) {
 
         brand_id: {
             type: DataTypes.INTEGER
+        },
+
+        image: {
+            type: DataTypes.STRING
         }
     }
 

@@ -28,16 +28,15 @@
                 <label>Ingrese el nombre del producto</label>
             </div>
 
-            <div class="txt_field">
+            <div class="select_field">
+                <label class="select_label">Ingrese la categoría del producto</label>
+                <span></span>
                 <select name="category">
-                    <option value="">--Please choose an option--</option>
+                    <option value="">--Seleccioná una categoría--</option>
                     <% categories.forEach(category => { %>
                         <option value="<%= category.name %> "><%= category.name %> </option>
                     <% }) %>
                 </select>
-                <input type="text" name="category" required>
-                <span></span>
-                <label>Ingrese la categoría del producto</label>
             </div>
 
             <div class="txt_field">
