@@ -18,7 +18,8 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        timestamp: false,
+        tableName: 'product_brand',
+        timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
@@ -28,10 +29,10 @@ module.exports = function (sequelize, DataTypes) {
     let productBrand = sequelize.define(alias, cols, config);
 
     productBrand.associate = function (models) {
-        productBrand.belongsTo(models.Cart, {
-            as: 'cart',
-            foreignKey: 'carts_id'
-        })
+        productBrand.hasMany(models.Products, {
+            foreignKey: 'brand_id',
+            as: 'product'
+        });
     }
 
 

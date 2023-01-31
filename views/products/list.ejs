@@ -14,11 +14,11 @@
                         </div>
                         <div class="product-info">
                             <h4><%= product.category %> </h4>
-                            <h2 class="card-name-prod"><%= product.brand %> </h2>
+                            <h2 class="card-name-prod"><%= product.brand.name %> </h2>
                             <h2 class="card-name-prod"><%= product.name %> </h2>
                             <h4 class="card-price-normal">$<%= product.price %></h4>
-                            <p class="card-desc-prod"><%= product.discount %>% OFF</p>
-                            <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
+                            <p class="card-desc-prod"><%= product.discount.discount_percent %>% OFF</p>
+                            <h3 class="card-price-discount">$<%= product.price - product.price * product.discount.discount_percent / 100  %></h3>
                         </div>
                         <a class="card-a" href="/products/detail/<%= product.id %>">
                             <button>

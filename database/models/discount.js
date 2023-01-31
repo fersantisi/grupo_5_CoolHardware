@@ -29,7 +29,7 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        timestamp: false,
+        timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
@@ -38,6 +38,12 @@ module.exports = function (sequelize, DataTypes) {
 
     let Discount = sequelize.define(alias, cols, config);
 
+    Discount.associate = function (models) {
+        Discount.hasMany(models.Products, {
+            as: "products",
+            foreignKey: "discount_id"
+        });
+    }
 
     return Discount;
 }

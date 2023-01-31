@@ -46,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        timestamp: true,
+        timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
@@ -59,6 +59,14 @@ module.exports = function (sequelize, DataTypes) {
         Products.belongsTo(models.ProductsCategory, {
             foreignKey: 'category_id',
             as: 'category'
+        });
+        Products.belongsTo(models.Discount, {
+            foreignKey: 'discount_id',
+            as: 'discount'
+        });
+        Products.belongsTo(models.productBrand, {
+            foreignKey: 'brand_id',
+            as: 'brand'
         });
     };
 
