@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 const db = require('../../database/models')
 const express = require('express');
+const { Association } = require('sequelize');
 const router = express.Router();
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -23,24 +24,57 @@ const userController = {
         res.render('./users/login');
     },
 
+    // loginProcess: (req, res) => {
+    //     const login = (username, password, db) => {
+    //         let existingUser = db.Users.findAll({ where: { nickname: username } });
+    //         let passwordDB =  db.Users.findAll({include: [{association: 'passwords'}]})
+    //         .then(console.log(existingUser))
+    //         if (existingUser) {
+    //             let match = bcrypt.compareSync(passwordDB, existingUser.password_id);
+    //             if (match) {
+    //                 req.session.userLogged = existingUser;
+    //                 return res.redirect("index");
+    //             } else {
+    //                 return res.render("./users/login", { error: "La contraseña es incorrecta" });
+    //             }
+    //         } else {
+    //             res.redirect("/user/register");
+    //         }
+    //     };
+    //     login(req.body.user, req.body.pass, db);
+    // }
     loginProcess: (req, res) => {
         const login = (username, password, db) => {
-            let existingUser = db.Users.findAll({ where: { nickname: username } });
-            if (existingUser) {
-                let match = bcrypt.compareSync(password, existingUser.password_id);
-                if (match) {
-                    req.session.userLogged = existingUser;
-                    return res.redirect("index");
-                } else {
-                    return res.render("./users/login", { error: "La contraseña es incorrecta" });
+            db.Users.findOne({ where: { nickname: username } }, (err, existingUser) => {
+                if (err) {
+                    console.error(err);
+                    return res.render("./users/login", { error: "Ocurrió un error, por favor intente nuevamente" });
                 }
-            } else {
-                res.redirect("/user/register");
-            }
+                if (!existingUser) {
+                    return res.redirect("/user/register");
+                }
+                db.Passwords.findOne({ where: { user_id: existingUser.id } }, (err, passwordDB) => {
+                    if (err) {
+                        console.error(err);
+                        return res.render("./users/login", { error: "Ocurrió un error, por favor intente nuevamente" });
+                    }
+                    bcrypt.compare(password, passwordDB.password, (err, match) => {
+                        if (err) {
+                            console.error(err);
+                            return res.render("./users/login", { error: "Ocurrió un error, por favor intente nuevamente" });
+                        }
+                        if (match) {
+                            req.session.userLogged = existingUser;
+                            return res.redirect("index");
+                        } else {
+                            return res.render("./users/login", { error: "La contraseña es incorrecta" });
+                        }
+                    });
+                });
+            });
         };
-        login(req.body.username, req.body.pass, db);
-    }
-    ,
+        login(req.body.user, req.body.pass, db);
+    },
 
     register: (req, res) => {
         console.log('Entre al register');
