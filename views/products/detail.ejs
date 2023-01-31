@@ -16,7 +16,7 @@
                         <hr style="border-color:gray">
                         <% if (product.discount.discount_percent > 0) { %>
                             <p class="card-price-linedthrough">$<%= product.price %> </p>
-                            <p class="card-price-discount"> <%= product.discount.discount_percent %>% OFF </p>
+                            <p class="card-price-discount"> <%= Math.round(product.discount.discount_percent) %>% OFF </p>
                             <h3 class="card-price">$<%= product.price - product.price * product.discount.discount_percent / 100 %></h3>
                         <% } else { %>
                             <h3 class="card-price">$<%= product.price %></h3>

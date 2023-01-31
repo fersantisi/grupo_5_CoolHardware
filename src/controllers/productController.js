@@ -12,7 +12,6 @@ const productController = {
         include: [{association: 'discount'}, {association: 'brand'}]
     })
     .then(function(products){
-        console.log(products)
         console.log('Entre al product list');
         res.render('./products/list', {products});    
     })},
@@ -23,7 +22,6 @@ const productController = {
             include: [{association: 'discount'}, {association: 'brand'}]
         })
         .then(function(product){
-            console.log(product.discount)
             res.render('./products/detail', {product});
         })
         .catch(error => console.log(error))
