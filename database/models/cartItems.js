@@ -9,27 +9,17 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
-        },
-        quantity: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        discount: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        price: {
-            type: DataTypes.INTEGER,
-            allowNull: false
         }
     }
 
 
     let config = {
+        tableName: 'cartItem',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
+        freezeTableName: true
     }
 
     let CartItem = sequelize.define(alias, cols, config);

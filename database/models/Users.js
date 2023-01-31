@@ -20,7 +20,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
         nickname:
         {
             type: DataTypes.STRING,
@@ -31,21 +30,24 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        email_verified: {
-            type: DataTypes.INTEGER
+        password: {
+            type: DataTypes.STRING
         },
-
-        password_id: {
-            type: DataTypes.INTEGER
+        admin: {
+            type: DataTypes.INT
+        },
+        carts_id: {
+            type:  DataTypes.INT
         }
     }
 
     let config = {
+        tableName: 'users',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
+        freezeTableName: true
     }
 
 
@@ -53,26 +55,11 @@ module.exports = function (sequelize, DataTypes) {
 
 
     Users.associate = function (models) {
-        Users.hasOne(models.Passwords, {
-            as: "passwords",
-            foreignKey: "user_id"
+        Users.belongsTo(models.Carts, {
+            as: "carts",
+            foreignKey: "carts_id"
         });
-        Users.hasMany(models.Order, {
-            as: "orders",
-            foreignKey: "user_id"
-        });
-        Users.hasMany(models.Payments, {
-            as: "payments",
-            foreignKey: "user_id"
-        });
-        Users.hasMany(models.PageVisit, {
-            as: "page_visit",
-            foreignKey: "user_id"
-        });
-        Users.hasMany(models.Addresses, {
-            as: "addresses",
-            foreignKey: "user_id"
-        });
+        
     }
 
     return Users;

@@ -20,17 +20,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
         },
 
-        SKU:
-        {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        category_id: {
+        product_category_id: {
             type: DataTypes.INTEGER
         },
 
-        inventory_id: {
+        stock: {
             type: DataTypes.INTEGER
         },
 
@@ -39,11 +33,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
 
-        discount_id: {
+        discount: {
             type: DataTypes.INTEGER
         },
 
-        brand_id: {
+        product_brand_id: {
             type: DataTypes.INTEGER
         },
 
@@ -53,10 +47,12 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
+        tableName: 'products',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
-        deletedAt:"deleted_at"
+        deletedAt:"deleted_at",
+        freezeTableName: true
     }
 
 
@@ -64,15 +60,11 @@ module.exports = function (sequelize, DataTypes) {
 
     Products.associate = (models) => {
         Products.belongsTo(models.ProductsCategory, {
-            foreignKey: 'category_id',
+            foreignKey: 'product_category_id',
             as: 'category'
         });
-        Products.belongsTo(models.Discount, {
-            foreignKey: 'discount_id',
-            as: 'discount'
-        });
         Products.belongsTo(models.productBrand, {
-            foreignKey: 'brand_id',
+            foreignKey: 'product_brand_id',
             as: 'brand'
         });
     };

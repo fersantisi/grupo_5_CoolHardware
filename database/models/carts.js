@@ -18,17 +18,19 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
+        tableName: 'carts',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
         deletedAt:"deleted_at",
+        freezeTableName: true
     }
 
     let Cart = sequelize.define(alias, cols, config);
 
     Cart.associate = function (models) {
-        Cart.hasMany(models.CartItem, {
-            as: 'items',
+        Cart.belongsTo(models.CartItem, {
+            as: 'cartItem',
             foreignKey: 'carts_id'
         })
     }
