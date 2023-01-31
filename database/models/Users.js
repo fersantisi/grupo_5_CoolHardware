@@ -13,19 +13,23 @@ module.exports = function (sequelize, DataTypes) {
 
         Fname: {
             type: DataTypes.STRING,
+            allowNull: false
         },
 
         Lname: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         nickname:
         {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         email: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         email_verified: {
@@ -51,7 +55,7 @@ module.exports = function (sequelize, DataTypes) {
     Users.associate = function (models) {
         Users.hasOne(models.Passwords, {
             as: "passwords",
-            foreingKey: "user_id"
+            foreignKey: "user_id"
         });
         Users.hasMany(models.Order, {
             as: "orders",

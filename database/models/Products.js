@@ -12,16 +12,18 @@ module.exports = function (sequelize, DataTypes) {
         },
 
         name: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         desc: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
 
         SKU:
         {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         category_id: {
@@ -33,7 +35,8 @@ module.exports = function (sequelize, DataTypes) {
         },
 
         price: {
-            type: DataTypes.DECIMAL
+            type: DataTypes.DECIMAL,
+            allowNull: false
         },
 
         discount_id: {
