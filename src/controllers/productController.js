@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const db = require("../../database/models")
+const db = require('../../database/models')
 
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -13,10 +13,9 @@ const productController = {
     })
     .then(function(products){
         console.log(products)
+        console.log('Entre al product list');
         res.render('./products/list', {products});    
-    })
-    .catch(error => console.log(error))
-    },
+    })},
 
     productos: (req, res) =>{
         console.log('Entre al productDetail');
