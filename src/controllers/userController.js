@@ -11,17 +11,16 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-// const usersFilePath = path.join(__dirname, '../data/users.json');
-// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-
-
 
 const userController = {
 
     login: (req, res) => {
         console.log('Entre al login');
         res.render('./users/login');
+    },
+    register: (req, res) => {
+        console.log('Entre al register');
+        res.render('./users/register');
     },
 
     // loginProcess: (req, res) => {
@@ -76,10 +75,6 @@ const userController = {
         login(req.body.user, req.body.pass, db);
     },
 
-    register: (req, res) => {
-        console.log('Entre al register');
-        res.render('./users/register');
-    },
 
     store: (req, res) => {
         function checkUsername(firstname) {
