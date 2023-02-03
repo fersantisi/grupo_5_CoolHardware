@@ -2,7 +2,7 @@ const config = require("../config/config")
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "Products"
+    let alias = "Product"
 
     let cols = {
         id: {
@@ -15,12 +15,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        desc: {
+        description: {
             type: DataTypes.STRING,
         },
 
-        product_category_id: {
+        category_id: {
             type: DataTypes.INTEGER
         },
 
@@ -37,7 +36,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER
         },
 
-        product_brand_id: {
+        brand_id: {
             type: DataTypes.INTEGER
         },
 
@@ -47,28 +46,28 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        tableName: 'products',
+        tableName: 'product',
         timestamps: false,
-        createdAt:"created_at",
-        modifiedAt:"modified_at",
-        deletedAt:"deleted_at",
+        createdAt: "created_at",
+        modifiedAt: "modified_at",
+        deletedAt: "deleted_at",
         freezeTableName: true
     }
 
 
-    let Products = sequelize.define(alias, cols, config);
+    let Product = sequelize.define(alias, cols, config);
 
-    Products.associate = (models) => {
-        Products.belongsTo(models.ProductsCategory, {
-            foreignKey: 'product_category_id',
+    Product.associate = (models) => {
+        Product.belongsTo(models.Category, {
+            foreignKey: 'category_id',
             as: 'category'
         });
-        Products.belongsTo(models.productBrand, {
-            foreignKey: 'product_brand_id',
+        Product.belongsTo(models.Brand, {
+            foreignKey: 'brand_id',
             as: 'brand'
         });
     };
 
 
-    return Products;
+    return Product;
 }

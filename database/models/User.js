@@ -11,12 +11,12 @@ module.exports = function (sequelize, DataTypes) {
             autoIncrement: true,
         },
 
-        Fname: {
+        fist_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        Lname: {
+        last_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -25,7 +25,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
         email: {
             type: DataTypes.STRING,
             allowNull: false
@@ -37,7 +36,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER
         },
         
-        carts_id: {
+       is_active: {
             type:  DataTypes.INTEGER
         }
     }

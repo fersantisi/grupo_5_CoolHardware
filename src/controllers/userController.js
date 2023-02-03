@@ -56,8 +56,8 @@ const userController = {
         } else {
             console.log(req.file.image)
             db.Users.create({
-                Fname: req.body.firstname,
-                Lname: req.body.lastname,
+                fist_name: req.body.firstname,
+                lasti_name: req.body.lastname,
                 nickname: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.pass, 10),
