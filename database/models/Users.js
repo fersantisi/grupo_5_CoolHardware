@@ -34,10 +34,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         admin: {
-            type: DataTypes.INT
+            type: DataTypes.INTEGER
         },
+        
         carts_id: {
-            type:  DataTypes.INT
+            type:  DataTypes.INTEGER
         }
     }
 
@@ -54,13 +55,13 @@ module.exports = function (sequelize, DataTypes) {
     let Users = sequelize.define(alias, cols, config);
 
 
-    Users.associate = function (models) {
-        Users.belongsTo(models.Carts, {
-            as: "carts",
-            foreignKey: "carts_id"
-        });
+    // Users.associate = function (models) {
+    //     Users.belongsTo(models.Carts, {
+    //         as: "carts",
+    //         foreignKey: "carts_id"
+    //     });
         
-    }
+    // }
 
     return Users;
 }
