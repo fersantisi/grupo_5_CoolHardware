@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const { sequelize } = require("../database/models");
-const Users = require("../database/models/Users")
+const User = require("../database/models/User")
 
 const PORT = 3030
 

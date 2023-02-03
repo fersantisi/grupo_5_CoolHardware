@@ -2,7 +2,7 @@ const config = require("../config/config")
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "Users"
+    let alias = "User"
 
     let cols = {
         id: {
@@ -11,7 +11,7 @@ module.exports = function (sequelize, DataTypes) {
             autoIncrement: true,
         },
 
-        fist_name: {
+        first_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -42,7 +42,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
     let config = {
-        tableName: 'users',
+        tableName: 'user',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
@@ -51,7 +51,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
 
-    let Users = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
 
 
     // Users.associate = function (models) {
@@ -62,5 +62,5 @@ module.exports = function (sequelize, DataTypes) {
         
     // }
 
-    return Users;
+    return User;
 }

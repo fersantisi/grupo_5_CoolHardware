@@ -2,7 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "productBrand"
+    let alias = "Brand"
 
     let cols = {
         id: {
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: 'product_brand',
+        tableName: 'brand',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
@@ -27,15 +27,15 @@ module.exports = function (sequelize, DataTypes) {
 
     }
 
-    let productBrand = sequelize.define(alias, cols, config);
+    let Brand = sequelize.define(alias, cols, config);
 
-    productBrand.associate = function (models) {
-        productBrand.hasMany(models.Products, {
+    Brand.associate = function (models) {
+        Brand.hasMany(models.Product, {
             foreignKey: 'brand_id',
             as: 'product'
         });
     }
 
 
-    return productBrand;
+    return Brand;
 }

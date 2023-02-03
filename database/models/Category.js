@@ -2,7 +2,7 @@ const config = require("../config/config")
 
 module.exports = function (sequelize, DataTypes) {
 
-    let alias = "ProductsCategory"
+    let alias = "Category"
 
     let cols = {
         id: {
@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
 
 
     let config = {
-        tableName: 'product_category',
+        tableName: 'category',
         timestamps: false,
         createdAt:"created_at",
         modifiedAt:"modified_at",
@@ -31,15 +31,15 @@ module.exports = function (sequelize, DataTypes) {
     }
 
 
-    let ProductsCategory = sequelize.define(alias, cols, config);
+    let Category = sequelize.define(alias, cols, config);
 
 
-    ProductsCategory.associate = function (models) {
-        ProductsCategory.hasMany(models.Products, {
+    Category.associate = function (models) {
+        Category.hasMany(models.Product, {
             as: "products",
-            foreignKey: "product_category_id"
+            foreignKey: "Category_id"
         });
     }
 
-    return ProductsCategory;
+    return Category;
 }

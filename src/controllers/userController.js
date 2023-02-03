@@ -27,7 +27,7 @@ const userController = {
     },
 
     loginProcess: async (req, res) => {
-        let userFound = await db.Users.findOne({ where: { nickname: req.body.user } }, (userFound => {
+        let userFound = await db.User.findOne({ where: { nickname: req.body.user } }, (userFound => {
             return userFound.nickname == req.body.username
         }));
         console.log("found", userFound);
@@ -45,8 +45,8 @@ const userController = {
 
 
     store: async (req, res) => {
-        let checkUsername = await db.Users.findOne({ where: { nickname: req.body.username } })
-        let checkEmail = await db.Users.findOne({ where: { email: req.body.email } })
+        let checkUsername = await db.User.findOne({ where: { nickname: req.body.username } })
+        let checkEmail = await db.User.findOne({ where: { email: req.body.email } })
         if (checkUsername) {
             console.log("Este nombre de usuario ya es existente!");
             return res.redirect("/user/register");
@@ -54,10 +54,9 @@ const userController = {
             console.log("Este correo electrónico ya está registrado");
             return res.redirect("/user/register");
         } else {
-            console.log(req.file.image)
-            db.Users.create({
-                fist_name: req.body.firstname,
-                lasti_name: req.body.lastname,
+            db.User.create({
+                first_name: req.body.firstname,
+                last_name: req.body.lastname,
                 nickname: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.pass, 10),
@@ -70,7 +69,7 @@ const userController = {
 
 
     delete: (id) => {
-        let updatedList = Users.filter((user => user.id !== id));
+        let updatedList = User.filter((user => user.id !== id));
         fs.writeFileSync(usersFilePath, JSON.stringify(updatedList, null, '\t'));
         res.send(updatedList);
     },
