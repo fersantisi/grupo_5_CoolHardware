@@ -28,12 +28,12 @@ const userController = {
 
     loginProcess: async (req, res) => {
         let userFound = await db.User.findOne({ where: { nickname: req.body.user } }, (userFound => {
-            return userFound.nickname == req.body.username
+            return userFound.dataValues.nickname == req.body.user
         }));
         console.log("found", userFound);
         if (userFound) {
             if (bcrypt.compareSync(req.body.pass, userFound.password)) {
-                req.session.userLogged = userFound;
+                req.session.userLogged = userFound.dataValues;
                 return res.redirect('/')
             } else {
                 return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
@@ -54,6 +54,11 @@ const userController = {
             console.log("Este correo electrónico ya está registrado");
             return res.redirect("/user/register");
         } else {
+            if(!req.body.avatar){
+                req.file = {
+                    filename: 'Default.png'
+                };
+            }
             db.User.create({
                 first_name: req.body.firstname,
                 last_name: req.body.lastname,
