@@ -45,14 +45,23 @@ const userController = {
 
 
     store: async (req, res) => {
+        const result = validationResult(req)
+        console.log('results', result);
+        if (result.errors.length > 0) {
+            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+        }
         let checkUsername = await db.User.findOne({ where: { nickname: req.body.username } })
         let checkEmail = await db.User.findOne({ where: { email: req.body.email } })
         if (checkUsername) {
-            console.log("Este nombre de usuario ya es existente!");
-            return res.redirect("/user/register");
-        } else if (checkEmail) {
-            console.log("Este correo electrónico ya está registrado");
-            return res.redirect("/user/register");
+            if(checkUsername || checkEmail){    
+                let error = "Este nombre de usuario ya es existente!";
+                return res.redirect("/user/register");
+            } else if (checkEmail) {
+                console.log("Este correo electrónico ya está registrado");
+                return res.redirect("/user/register");
+            } else{
+
+            }
         } else {
             if(!req.body.avatar){
                 req.file = {
