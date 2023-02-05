@@ -12,7 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema cool_hardware
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `cool_hardware` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+CREATE SCHEMA IF NOT EXISTS `cool_hardware` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 USE `cool_hardware` ;
 
 -- -----------------------------------------------------
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Brand` (
   `deleted_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Category` (
   `deleted_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Product` (
   `category_id` INT NOT NULL,
   `brand_id` INT NOT NULL,
   PRIMARY KEY (`id`, `category_id`, `brand_id`),
-  INDEX `fk_Product_Category1_idx` (`category_id` ASC) VISIBLE,
-  INDEX `fk_Product_Brand1_idx` (`brand_id` ASC) VISIBLE,
+  INDEX `fk_Product_Category1_idx` (`category_id` ASC),
+  INDEX `fk_Product_Brand1_idx` (`brand_id` ASC),
   CONSTRAINT `fk_Product_Category1`
     FOREIGN KEY (`category_id`)
     REFERENCES `cool_hardware`.`Category` (`id`)
@@ -76,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Product` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -97,8 +97,8 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`User` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 13
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
