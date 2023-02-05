@@ -25,7 +25,7 @@ const adminController = {
 
     create: (req, res) => {
         console.log('Entre al creador');
-        db.ProductsCategory.findAll()
+        db.Category.findAll()
             .then((categories) => {
                 console.log(categories)
                 return res.render('./admin/createProduct', { categories });
