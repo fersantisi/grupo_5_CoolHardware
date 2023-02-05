@@ -38,7 +38,11 @@ module.exports = function (sequelize, DataTypes) {
         
        is_active: {
             type:  DataTypes.INTEGER
-        }
+        },
+
+        image: {
+            type:  DataTypes.STRING
+        },
     }
 
     let config = {
