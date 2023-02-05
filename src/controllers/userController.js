@@ -23,7 +23,7 @@ const userController = {
     },
     register: (req, res) => {
         console.log('Entre al register');
-        res.render('./users/register');
+        res.render('./users/register', {errorUser: null, errorEmail: null});
     },
 
     loginProcess: async (req, res) => {
@@ -46,24 +46,25 @@ const userController = {
 
     store: async (req, res) => {
         const result = validationResult(req)
-        console.log('results', result);
         if (result.errors.length > 0) {
-            return res.render('./users/register', { errors: result.mapped(), oldData: req.body })
+            return res.render('./users/register', {errorUser: null, errorEmail: null, errors: result.mapped(), oldData: req.body})
         }
         let checkUsername = await db.User.findOne({ where: { nickname: req.body.username } })
         let checkEmail = await db.User.findOne({ where: { email: req.body.email } })
-        if (checkUsername) {
-            if(checkUsername || checkEmail){    
-                let error = "Este nombre de usuario ya es existente!";
-                return res.redirect("/user/register");
-            } else if (checkEmail) {
-                console.log("Este correo electrónico ya está registrado");
-                return res.redirect("/user/register");
+        if (checkUsername || checkEmail) {
+            if(checkUsername && !checkEmail){    
+                let errorUser = "Este nombre de usuario ya existe!";
+                return res.render("./users/register", {errorUser, errorEmail: null, oldData: req.body});
+            } else if (!checkUsername && checkEmail) {
+                let errorEmail = "Este correo electrónico ya está en uso!";
+                return res.render("./users/register", {errorUser: null, errorEmail, oldData: req.body});
             } else{
-
+                let errorUser = "Este nombre de usuario ya existe!";
+                let errorEmail = "Este correo electrónico ya está en uso!";
+                return res.render("./users/register", {errorUser, errorEmail, oldData: req.body});
             }
         } else {
-            if(!req.body.avatar){
+            if(!req.file){
                 req.file = {
                     filename: 'Default.png'
                 };
@@ -79,8 +80,6 @@ const userController = {
             return res.redirect("/user/login");
         }
     },
-
-
 
     delete: (id) => {
         let updatedList = User.filter((user => user.id !== id));

@@ -31,6 +31,7 @@
             <% if (locals.errors && errors.lastname) { %>
                 <p><%= errors.lastname.msg %></p>
             <% } %>
+            <!-- username -->
             <div class="txt_field">
                 <input type="text" name="username" value="<%= locals.oldData ? oldData.username : null %>">
                 <span></span>
@@ -38,6 +39,9 @@
             </div>
             <% if (locals.errors && errors.username) { %>
                 <p><%= errors.username.msg %></p>
+            <% } %>
+            <% if (errorUser) { %>
+                <p><%= errorUser %></p>
             <% } %>
             <!-- email -->
             <div class="txt_field">
@@ -47,6 +51,9 @@
             </div>
             <% if (locals.errors && errors.email) { %>
                 <p><%= errors.email.msg %></p>
+            <% } %>
+            <% if (errorEmail) { %>
+                <p><%= errorEmail %></p>
             <% } %>
             <!-- pass -->
             <div class="txt_field">
