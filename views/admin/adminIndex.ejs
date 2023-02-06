@@ -19,11 +19,15 @@
                         </div>
                         <div class="product-info">
                             <h4><%= product.category %> </h4>
-                            <h2 class="card-name-prod"><%= product.brand %> </h2>
+                            <h2 class="card-name-prod"><%= product.brand.name %> </h2>
                             <h2 class="card-name-prod"><%= product.name %> </h2>
-                            <h4 class="card-price-normal">$<%= product.price %></h4>
-                            <p class="card-desc-prod"><%= product.discount %>% OFF</p>
-                            <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
+                            <% if (product.discount > 0) { %>
+                                <h4 class="card-price-normal">$<%= product.price %></h4>
+                                <p class="card-desc-prod"><%= Math.round(product.discount) %>% OFF</p>
+                                <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
+                            <% } else { %>
+                                <h3 class="card-price-discount">$<%= product.price %></h4>
+                            <% } %>
                         </div>
                         <a class="card-a" href="/admin/manageProduct/<%= product.id %>">
                             <button>

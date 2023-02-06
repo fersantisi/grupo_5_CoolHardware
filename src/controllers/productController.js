@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models')
+const { sequelize } = require("../../database/models");
 
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -8,8 +9,8 @@ const db = require('../../database/models')
 const productController = {
     list: (req, res) =>{
     console.log('Entre al product list');
-    db.Products.findAll({
-        include: [{association: 'discount'}, {association: 'brand'}]
+    db.Product.findAll({
+        include: ['brand', 'category']
     })
     .then(function(products){
         console.log('Entre al product list');
@@ -18,8 +19,8 @@ const productController = {
 
     productos: (req, res) =>{
         console.log('Entre al productDetail');
-        db.Products.findByPk(req.params.id, {
-            include: [{association: 'discount'}, {association: 'brand'}]
+        db.Product.findByPk(req.params.id, {
+            include: ['brand']
         })
         .then(function(product){
             res.render('./products/detail', {product});
