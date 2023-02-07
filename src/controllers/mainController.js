@@ -6,6 +6,8 @@ const mainController = {
 
     home: async (req, res) =>{
         console.log('Entre al home');
+        console.log(req.session)
+
         let products = await db.Product.findAll({
             include: ['brand', 'category']
         })

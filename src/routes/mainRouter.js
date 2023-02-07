@@ -4,6 +4,7 @@ const mainController = require("../controllers/mainController");
 const productRouter = require("./productRouter");
 const userRouter = require("./userRouter")
 const adminRouter = require("./adminRouter")
+const adminSessionMiddleware = require('../middlewares/adminSessionMiddleware')
 
 router.get("/", mainController.home);
 router.get("/cart", mainController.carrito);
@@ -11,6 +12,6 @@ router.get("/cart", mainController.carrito);
 
 router.use("/products",productRouter);
 router.use("/user",userRouter);
-router.use("/admin",adminRouter);
+router.use("/admin", adminSessionMiddleware,adminRouter);
 
 module.exports = router;

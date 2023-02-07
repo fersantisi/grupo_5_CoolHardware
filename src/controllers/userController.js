@@ -20,10 +20,11 @@ const userController = {
         let userFound = await db.User.findOne({ where: { nickname: req.body.user } }, (userFound => {
             return userFound.dataValues.nickname == req.body.user
         }));
-        console.log("found", userFound);
+        
         if (userFound) {
             if (bcrypt.compareSync(req.body.pass, userFound.password)) {
                 req.session.userLogged = userFound.dataValues;
+                console.log(req.session)
                 return res.redirect('/')
             } else {
                 return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
@@ -31,6 +32,7 @@ const userController = {
         } else {
             return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
         }
+        console.log(req.session)
     },
 
 

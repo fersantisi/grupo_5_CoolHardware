@@ -47,7 +47,7 @@ header nav {
     background-color: var(--dark-liver);
     color: var(--platinum);
     border-radius: 20px 20px 0 0;
-    
+
 }
 
 .nav-left {
@@ -72,36 +72,39 @@ nav .sites {
 }
 
 
-.esp-nav{
+.esp-nav {
     background-color: var(--dark-liver);
     min-height: 64px;
     max-height: 65px;
     color: white;
 }
 
-.nav-container{
+.nav-container {
     display: flex;
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-.nav-label, .nav-checkbox{
+.nav-label,
+.nav-checkbox {
     display: block;
     cursor: pointer;
 }
-.nav-checkbox{
+
+.nav-checkbox {
     display: none;
 }
 
 .nav-menu {
     font-size: 19px;
-    position: relative;
-    top: 105px;
+    position: absolute;
+    top: 64px;
     /* bottom: 401px; */
     background: var(--dark-liver);
-    left: -69px;
+    left: -3px;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -113,18 +116,18 @@ nav .sites {
     display: flex;
 }
 
-.nav-checkbox:checked + .nav-menu{
+.nav-checkbox:checked+.nav-menu {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .nav-item {
     color: #fff;
     text-decoration: none;
-    --clippy: polygon(0 0,0 0, 0 100%, 0% 100%);
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
     margin: 10px;
 }
 
-.nav-item::after{
+.nav-item::after {
     content: '';
     display: block;
     background: #fff;
@@ -135,8 +138,8 @@ nav .sites {
     transition: clip-path .5s;
 }
 
-.nav-item:hover{
-    --clippy: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+.nav-item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 
@@ -149,9 +152,21 @@ nav .sites li.nav-icons {
 }
 
 
-.user-name {
+.user-name h2 {
     color: var(--platinum);
     margin-left: 10px;
+    font-size: 25px;
+}
+
+.user-avatar {
+    align-items: center;
+}
+
+.user-avatar img {
+    width:50px;
+    height:50px;
+    object-fit:cover;
+    border-radius:50%;
 }
 
 
@@ -203,7 +218,7 @@ nav .fa-power-off {
     color: var(--platinum);
 }
 
-div.adminbuttom{
+div.adminbuttom {
     height: 0;
 }
 

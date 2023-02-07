@@ -2,7 +2,17 @@
     <div class="logo">
         <a href="/"><img src="/images/logo.svg" alt="logo-banner"></a>
     </div>
-    <div class="adminbuttom"><a href="/admin"><i class="fa-solid fa-screwdriver-wrench"></i></a></div>
+
+    <% if (locals.userLogged) { %>
+        <% if (locals.userLogged.admin == 1) { %>
+            <div class="adminbuttom">
+                <a href="/admin">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a>
+            </div>
+        <% } %>
+    <% } %>
+
     <nav>
         <section class="nav-left">
             <ul class="sites">
@@ -20,7 +30,7 @@
                     </section>
                 </nav>
                 <% if (locals.isLogged) { %>
-                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>" width="50" style="border-radius: 100%;"></li>
+                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>"></li>
                     <li class="user-name"><h2><%= locals.userLogged.nickname %></h2></li>
                     <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i class="fa-solid fa-power-off"></i></a></li>
                 <% } else { %>
