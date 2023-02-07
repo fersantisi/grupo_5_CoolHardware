@@ -1,19 +1,9 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
-const express = require('express');
-const router = express.Router();
 
 // DB REQUIRE
 const db = require('../../database/models');
 const { sequelize } = require("../../database/models");
-
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-
 
 const userController = {
 
@@ -23,7 +13,7 @@ const userController = {
     },
     register: (req, res) => {
         console.log('Entre al register');
-        res.render('./users/register', {errorUser: null, errorEmail: null});
+        res.render('./users/register', { errorUser: null, errorEmail: null });
     },
 
     loginProcess: async (req, res) => {
@@ -47,24 +37,24 @@ const userController = {
     store: async (req, res) => {
         const result = validationResult(req)
         if (result.errors.length > 0) {
-            return res.render('./users/register', {errorUser: null, errorEmail: null, errors: result.mapped(), oldData: req.body})
+            return res.render('./users/register', { errorUser: null, errorEmail: null, errors: result.mapped(), oldData: req.body })
         }
         let checkUsername = await db.User.findOne({ where: { nickname: req.body.username } })
         let checkEmail = await db.User.findOne({ where: { email: req.body.email } })
         if (checkUsername || checkEmail) {
-            if(checkUsername && !checkEmail){    
+            if (checkUsername && !checkEmail) {
                 let errorUser = "Este nombre de usuario ya existe!";
-                return res.render("./users/register", {errorUser, errorEmail: null, oldData: req.body});
+                return res.render("./users/register", { errorUser, errorEmail: null, oldData: req.body });
             } else if (!checkUsername && checkEmail) {
                 let errorEmail = "Este correo electrónico ya está en uso!";
-                return res.render("./users/register", {errorUser: null, errorEmail, oldData: req.body});
-            } else{
+                return res.render("./users/register", { errorUser: null, errorEmail, oldData: req.body });
+            } else {
                 let errorUser = "Este nombre de usuario ya existe!";
                 let errorEmail = "Este correo electrónico ya está en uso!";
-                return res.render("./users/register", {errorUser, errorEmail, oldData: req.body});
+                return res.render("./users/register", { errorUser, errorEmail, oldData: req.body });
             }
         } else {
-            if(!req.file){
+            if (!req.file) {
                 req.file = {
                     filename: 'Default.png'
                 };
@@ -79,12 +69,6 @@ const userController = {
             })
             return res.redirect("/user/login");
         }
-    },
-
-    delete: (id) => {
-        let updatedList = User.filter((user => user.id !== id));
-        fs.writeFileSync(usersFilePath, JSON.stringify(updatedList, null, '\t'));
-        res.send(updatedList);
     },
 
     logout: (req, res) => {

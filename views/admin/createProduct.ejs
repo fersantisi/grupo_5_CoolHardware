@@ -16,10 +16,15 @@
                 </button>
             </div>
 
-            <div class="txt_field">
-                <input type="text" name="brand" required>
+            <div class="select_field">
+                <label class="select_label">Ingrese la marca del producto</label>
                 <span></span>
-                <label>Ingrese la marca del producto</label>
+                <select name="brand">
+                    <option value="">--Seleccioná una marca--</option>
+                    <% brands.forEach((brand) => { %>
+                        <option value="<%= brand.id %> "><%= brand.name %> </option>
+                    <% }) %>
+                </select>
             </div>
             
             <div class="txt_field">
@@ -34,9 +39,15 @@
                 <select name="category">
                     <option value="">--Seleccioná una categoría--</option>
                     <% categories.forEach(category => { %>
-                        <option value="<%= category.name %> "><%= category.name %> </option>
+                        <option value="<%= category.id %> "><%= category.name %> </option>
                     <% }) %>
                 </select>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="stock" required>
+                <span></span>
+                <label>Ingrese la cantidad de productos disponibles</label>
             </div>
 
             <div class="txt_field">

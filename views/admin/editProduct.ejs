@@ -9,18 +9,22 @@
             <div class="center"></div>
             <h1>Edición de producto</h1>
             
-            <form action="/admin/manageProduct/edit/<%= product.id %>?_method=PUT" method="POST">
+            <form action="/admin/manageProduct/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="up-load">
                     <button type="button" class="btn-warning">
                         <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
-                        <input type="file" name="image" value="<%= product.image %>">
+                        <input type="file" name="avatar" value="<%= product.image %>">
                     </button>
                 </div>
 
-                <div class="txt_field">
-                    <input type="text" name="brand" value="<%= product.brand %>" required>
+                <div class="select_field">
+                    <label class="select_label">Ingrese la marca del producto</label>
                     <span></span>
-                    <label>Ingrese la marca del producto</label>
+                    <select name="brand">
+                        <% brands.forEach(brand => { %>
+                            <option value="<%= brand.id %>" <%= brand.name == product.brand.name ? 'selected' : '' %>><%= brand.name %> </option>
+                        <% }) %>
+                    </select>
                 </div>
                 
                 <div class="txt_field">
@@ -29,10 +33,14 @@
                     <label>Ingrese el nombre del producto</label>
                 </div>
 
-                <div class="txt_field">
-                    <input type="text" name="category" value="<%= product.category %>" required>
+                <div class="select_field">
+                    <label class="select_label">Ingrese la categoría del producto</label>
                     <span></span>
-                    <label>Ingrese la categoría del producto</label>
+                    <select name="category">
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.id %>" <%= category.name == product.category.name ? 'selected' : '' %>><%= category.name %> </option>
+                        <% }) %>
+                    </select>
                 </div>
 
                 <div class="txt_field">

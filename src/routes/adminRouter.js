@@ -22,9 +22,9 @@ router.get('/list', adminController.list)
 
 router.get('/manageProduct/:id', adminController.manage);
 router.get('/manageProduct/edit/:id', adminController.edit);
-router.put('/manageProduct/edit/:id', adminController.update);
-router.delete('/manageProduct/delete/:id', adminController.destroy);
-router.delete('/userAdmin/delete/:id', adminController.destroy);
+router.put('/manageProduct/edit/:id', upload.single('avatar'), adminController.update);
+router.delete('/manageProduct/delete/:id', adminController.destroyProduct);
+router.delete('/userAdmin/delete/:id', adminController.destroyUser);
 router.get("/createProduct", adminController.create);
 
 

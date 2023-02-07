@@ -11,30 +11,29 @@
             <h2 class="card-titulo">¡Ofertas del BLACK FRIDAY!</h2>
             <div class="container">
                 <% products.forEach((product) => { %>
-                    <article class="card">
-                        <div>
-                            <a class="card-a" href="/admin/manageProduct/<%= product.id %>">
-                                <img class="card-img" src="/images/products/<%= product.image %>" alt="">
-                            </a> 
-                        </div>
-                        <div class="product-info">
-                            <h4><%= product.category %> </h4>
-                            <h2 class="card-name-prod"><%= product.brand.name %> </h2>
-                            <h2 class="card-name-prod"><%= product.name %> </h2>
-                            <% if (product.discount > 0) { %>
-                                <h4 class="card-price-normal">$<%= product.price %></h4>
-                                <p class="card-desc-prod"><%= Math.round(product.discount) %>% OFF</p>
-                                <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
-                            <% } else { %>
-                                <h3 class="card-price-discount">$<%= product.price %></h4>
-                            <% } %>
-                        </div>
-                        <a class="card-a" href="/admin/manageProduct/<%= product.id %>">
-                            <button>
-                                Ver <i class="fa-regular fa-eye"></i>
-                            </button>
-                        </a>
-                    </article>
+                    <% if (product.discount > 0) { %>
+                        <article class="card">
+                            <div>
+                                <a class="card-a" href="/products/detail/<%= product.id %>">
+                                    <img class="card-img" src="/images/products/<%= product.image %>" alt="">
+                                </a> 
+                            </div>
+                            <div class="product-info">
+                                <h4><%= product.category.name %> </h4>
+                                <h2 class="card-name-prod"><%= product.brand.name %> </h2>
+                                <h2 class="card-name-prod"><%= product.name %> </h2>
+                                    <h4 class="card-price-normal">$<%= product.price %></h4>
+                                    <p class="card-desc-prod"><%= Math.round(product.discount) %>% OFF</p>
+                                    <h3 class="card-price-discount">$<%= product.price - product.price * product.discount / 100  %></h3>
+                                
+                            </div>
+                            <a class="card-a" href="/products/detail/<%= product.id %>">
+                                <button>
+                                    Comprar <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </a>
+                         </article>
+                    <% } %>
                 <% }) %>
             </div>
         </section>
