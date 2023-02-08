@@ -1,23 +1,9 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+DROP DATABASE IF EXISTS `cool_hardware`;
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
--- -----------------------------------------------------
--- Schema cool_hardware
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema cool_hardware
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `cool_hardware` DEFAULT CHARACTER SET utf8 COLLATE=utf8_general_ci;
 USE `cool_hardware` ;
 
--- -----------------------------------------------------
--- Table `cool_hardware`.`Brand`
--- -----------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS `cool_hardware`.`Brand` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
@@ -29,9 +15,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
--- -----------------------------------------------------
--- Table `cool_hardware`.`Category`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cool_hardware`.`Category` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
@@ -44,9 +27,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
--- -----------------------------------------------------
--- Table `cool_hardware`.`Product`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cool_hardware`.`Product` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
@@ -77,9 +57,6 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
--- -----------------------------------------------------
--- Table `cool_hardware`.`User`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cool_hardware`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(255) NOT NULL,
@@ -88,15 +65,10 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`User` (
   `email` VARCHAR(255) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `image` VARCHAR(255) NULL DEFAULT 'Default.jpg',
+  `image` VARCHAR(255),
   `admin` TINYINT(1) NOT NULL DEFAULT '0',
   `is_active` TINYINT(1) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 13
 DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
