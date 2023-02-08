@@ -67,7 +67,8 @@ const userController = {
                 nickname: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.pass, 10),
-                image: req.file.filename
+                image: req.file.filename,
+                // admin: 0
             })
             return res.redirect("/user/login");
         }
