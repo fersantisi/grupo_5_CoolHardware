@@ -12,7 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema cool_hardware
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `cool_hardware` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA IF NOT EXISTS `cool_hardware` DEFAULT CHARACTER SET utf8 COLLATE=utf8_general_ci;
 USE `cool_hardware` ;
 
 -- -----------------------------------------------------
@@ -26,8 +26,7 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Brand` (
   `deleted_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -42,8 +41,7 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Category` (
   `deleted_at` TIMESTAMP NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -58,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Product` (
   `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   `modified_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `discount` INT NULL DEFAULT NULL,
-  `image` VARCHAR(255) NULL DEFAULT 'Default.jpg',
+  `image` VARCHAR(255),
   `is_active` TINYINT(1) NULL,
   `category_id` INT NOT NULL,
   `brand_id` INT NOT NULL,
@@ -76,8 +74,7 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`Product` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
 -- -----------------------------------------------------
@@ -97,8 +94,7 @@ CREATE TABLE IF NOT EXISTS `cool_hardware`.`User` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 13
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_general_ci;
+DEFAULT CHARACTER SET = utf8 COLLATE=utf8_general_ci;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
