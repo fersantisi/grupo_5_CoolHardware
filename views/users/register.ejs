@@ -12,10 +12,10 @@
         <div class="center"></div>
         <h1>Crea tu cuenta</h1>
 
-        <form action="/user/register" method="POST" enctype="multipart/form-data">
+        <form action="/user/register" method="POST" enctype="multipart/form-data" id="form">
             <!-- Username -->
             <div class="txt_field">
-                <input type="text" name="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
+                <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
                 <label>Nombre</label>
                 <span></span>
             </div>
@@ -24,7 +24,7 @@
             <% } %>
             <!-- Nombre y apellido -->
             <div class="txt_field">
-                <input type="text" name="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
+                <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span></span>
                 <label>Apellido</label>
             </div>
@@ -33,7 +33,7 @@
             <% } %>
             <!-- username -->
             <div class="txt_field">
-                <input type="text" name="username" value="<%= locals.oldData ? oldData.username : null %>">
+                <input type="text" name="username" id="username" value="<%= locals.oldData ? oldData.username : null %>">
                 <span></span>
                 <label>Nombre de usuario</label>
             </div>
@@ -45,7 +45,7 @@
             <% } %>
             <!-- email -->
             <div class="txt_field">
-                <input type="text" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <span></span>
                 <label>Email</label>
             </div>
@@ -57,7 +57,7 @@
             <% } %>
             <!-- pass -->
             <div class="txt_field">
-                <input type="password" name="pass">
+                <input type="password" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
             </div>
@@ -65,7 +65,7 @@
                 <p><%= errors.pass.msg %></p>
             <% } %>
             <div class="txt_field">
-                <input type="password" name="passconfirm">
+                <input type="password" name="passconfirm" id="passConfirm">
                 <span></span>
                 <label>Confirmar Contraseña</label>
             </div>
