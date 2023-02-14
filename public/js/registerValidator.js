@@ -1,29 +1,30 @@
-const firstname = document.getElementById("firstname");
-const lastname = document.getElementById("lastname");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const pass = document.getElementById("pass");
-const passConfirm = document.getElementById("passConfirm");
-const form = document.getElementById("form");
-const parrafo = document.getElementById("parrafo");
+const firstname = document.querySelector("#firstname");
+const lastname = document.querySelector("#lastname");
+const username = document.querySelector("#username");
+const email = document.querySelector("#email");
+const pass = document.querySelector("#pass");
+const passConfirm = document.querySelector("#passConfirm");
+const form = document.querySelector("#form");
+const errorElement = document.querySelector(" #errorElement");
 
-const regEx = "^\w+([\.-]*@\w+([\./]?\w+)*(\.\w{2,4})+$)"
-const warnings = ""
-const entrar = false
-parrafo.innerHTML = "" 
-form.addEventListener("submit",e=>{
-    e.preventDefault()
-    if(!regEx.test(email.value)){
-        warnings += ''
-        entrar = true 
+form.addEventListener("submit",(e)=>{
+    let message = []
+    if(firstname.value === '' || firstname === null){
+        message.push("El nombre es necesario") 
     }
-    if(pass.value.length < 8){
-        warnings += ""
-        entrar = true
+    if(lastname.value === '' || lastname === null){
+        message.push("El apellido es necesario") 
     }
-    if(entrar){
-        parrafo.innerHTML = warnings
-    }else{
-        parrafo.innerHTML = "Enviado"
+    if(pass.value.length <= 8){
+        message.push('La contraseña tiene que ser mas larga')
+    }
+    if(pass.value.length >= 20){
+        message.push('La contraseña tiene que ser mas larga')
+    }
+    if(!passConfirm.value === pass){
+        message.push('Las contraseña deben coincidir')
+    }
+    if(message.length > 0){
+        e.preventDefault()
     }
 })

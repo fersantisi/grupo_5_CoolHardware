@@ -20,7 +20,7 @@
                 <span></span>
             </div>
             <% if (locals.errors && errors.firstname) { %>
-                <p><%= errors.firstname.msg %></p>
+                <p  id="erorr"><%= errors.firstname.msg %></p>
             <% } %>
             <!-- Nombre y apellido -->
             <div class="txt_field">
@@ -29,7 +29,7 @@
                 <label>Apellido</label>
             </div>
             <% if (locals.errors && errors.lastname) { %>
-                <p><%= errors.lastname.msg %></p>
+                <p  id="erorr"><%= errors.lastname.msg %></p>
             <% } %>
             <!-- username -->
             <div class="txt_field">
@@ -38,10 +38,10 @@
                 <label>Nombre de usuario</label>
             </div>
             <% if (locals.errors && errors.username) { %>
-                <p><%= errors.username.msg %></p>
+                <p  id="erorr"><%= errors.username.msg %></p>
             <% } %>
             <% if (errorUser) { %>
-                <p><%= errorUser %></p>
+                <p  id="erorr"><%= errorUser %></p>
             <% } %>
             <!-- email -->
             <div class="txt_field">
@@ -50,10 +50,10 @@
                 <label>Email</label>
             </div>
             <% if (locals.errors && errors.email) { %>
-                <p><%= errors.email.msg %></p>
+                <p  id="erorr"><%= errors.email.msg %></p>
             <% } %>
             <% if (errorEmail) { %>
-                <p><%= errorEmail %></p>
+                <p  id="erorr"><%= errorEmail %></p>
             <% } %>
             <!-- pass -->
             <div class="txt_field">
@@ -62,7 +62,7 @@
                 <label>Contraseña</label>
             </div>
             <% if (locals.errors && errors.pass) { %>
-                <p><%= errors.pass.msg %></p>
+                <p  id="erorr"><%= errors.pass.msg %></p>
             <% } %>
             <div class="txt_field">
                 <input type="password" name="passconfirm" id="passConfirm">
@@ -70,7 +70,7 @@
                 <label>Confirmar Contraseña</label>
             </div>
             <% if (locals.errors && errors.passconfirm) { %>
-                <p><%= errors.passconfirm.msg %></p>
+                <p  id="erorr"><%= errors.passconfirm.msg %></p>
             <% } %>
             <div class="up-load">
                 <button type="button" class="btn-warning">
@@ -79,7 +79,7 @@
                 </button>
             </div>
             <% if (locals.errors && errors.avatar) { %>
-                <p><%= errors.avatar.msg %></p>
+                <p  id="erorr"><%= errors.avatar.msg %></p>
             <% } %>
 
             <input type="submit" value="Ingresa" >
@@ -92,6 +92,7 @@
         </form>
     </main>
     <%- include('../partials/footer') %>  
-</body>
 
+    <script src="/js/registerValidator.js" type="text/javascript"></script>
+</body>
 </html>
