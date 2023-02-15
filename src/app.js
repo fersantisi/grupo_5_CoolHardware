@@ -25,6 +25,7 @@ app.use(session({ secret: 'Secret', resave: false, saveUninitialized: false }))
 app.use(userLoggedMiddleware)
 
 app.use(express.static('public'));
+app.set('views', './src/views');
 
 app.use(express.urlencoded({ extended: false }));
 

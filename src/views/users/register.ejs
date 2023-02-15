@@ -15,12 +15,12 @@
         <form action="/user/register" method="POST" enctype="multipart/form-data" id="form">
             <!-- Username -->
             <div class="txt_field">
-                <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
+                <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>" value="">
                 <label>Nombre</label>
                 <span></span>
             </div>
             <% if (locals.errors && errors.firstname) { %>
-                <p  id="errorElement"><%= errors.firstname.msg %></p>
+                <p  id="errorElement"> <%= errors.firstname.msg %></p>
             <% } %>
             <!-- Nombre y apellido -->
             <div class="txt_field">
@@ -37,6 +37,7 @@
                 <span></span>
                 <label>Nombre de usuario</label>
             </div>
+
             <% if (locals.errors && errors.username) { %>
                 <p  id="errorElement"><%= errors.username.msg %></p>
             <% } %>
@@ -72,6 +73,7 @@
             <% if (locals.errors && errors.passconfirm) { %>
                 <p  id="errorElement"><%= errors.passconfirm.msg %></p>
             <% } %>
+            <p id="errorElement"></p>
             <div class="up-load">
                 <button type="button" class="btn-warning">
                     <i class="fa-solid fa-file-arrow-up"></i> Subir un avatar
