@@ -9,7 +9,7 @@
             <div class="center"></div>
             <h1>Creacion de producto</h1>
             
-            <form action="POST">
+            <form action="POST" id="form">
                 <div class="up-load">
                     <button type="button" class="btn-warning">
                         <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
@@ -18,19 +18,19 @@
                 </div>
                 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" id="nameProd" required>
                     <span></span>
                     <label>Ingrese el nombre del producto</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" id="priceProd" required>
                     <span></span>
                     <label>Ingrese el precio del producto</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input type="text" id="stockProd" required>
                     <span></span>
                     <label>Ingrese el stock del producto</label>
                 </div>
@@ -45,6 +45,7 @@
 
     </main>
     <%- include('../partials/footer') %>  
+    <script src="/js/createProductValidator.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
-const db = require('../../database/models')
-const { sequelize } = require("../../database/models");
+const db = require('../database/models')
+const { sequelize } = require("../database/models");
 
 const productController = {
     list: (req, res) =>{

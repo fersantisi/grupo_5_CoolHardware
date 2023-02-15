@@ -2,8 +2,8 @@ const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
 // DB REQUIRE
-const db = require('../../database/models');
-const { sequelize } = require("../../database/models");
+const db = require('../database/models');
+const { sequelize } = require("../database/models");
 
 const userController = {
 

@@ -4,8 +4,8 @@ const mainRouter = require("./routes/mainRouter");
 const methodOverride = require('method-override');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
-const { sequelize } = require("../database/models");
-const User = require("../database/models/User")
+const { sequelize } = require("../src/database/models");
+const User = require("../src/database/models/User")
 
 const PORT = 3030
 
@@ -32,8 +32,10 @@ app.use(express.json());
 
 app.use(methodOverride('_method'));
 
+
 app.set("view engine", "ejs");
 app.use("/", mainRouter);
+
 
 
 
