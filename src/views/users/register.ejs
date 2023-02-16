@@ -18,62 +18,68 @@
                 <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
                 <label>Nombre</label>
                 <span></span>
+                <p id="#error-firstname"></p>
             </div>
             <% if (locals.errors && errors.firstname) { %>
-                <p  id="errorElement"> <%= errors.firstname.msg %></p>
+                <p  > <%= errors.firstname.msg %></p>
             <% } %>
             <!-- Nombre y apellido -->
             <div class="txt_field">
                 <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span></span>
                 <label>Apellido</label>
+                <p id="errormsg"></p>
             </div>
             <% if (locals.errors && errors.lastname) { %>
-                <p  id="errorElement"><%= errors.lastname.msg %></p>
+                <p  ><%= errors.lastname.msg %></p>
             <% } %>
             <!-- username -->
             <div class="txt_field">
                 <input type="text" name="username" id="username" value="<%= locals.oldData ? oldData.username : null %>">
                 <span></span>
                 <label>Nombre de usuario</label>
+                <p id="errormsg"></p>
             </div>
 
             <% if (locals.errors && errors.username) { %>
-                <p  id="errorElement"><%= errors.username.msg %></p>
+                <p  ><%= errors.username.msg %></p>
             <% } %>
             <% if (errorUser) { %>
-                <p  id="errorElement"><%= errorUser %></p>
+                <p  ><%= errorUser %></p>
             <% } %>
             <!-- email -->
             <div class="txt_field">
                 <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <span></span>
                 <label>Email</label>
+                <p id="errormsg"></p>
             </div>
             <% if (locals.errors && errors.email) { %>
-                <p  id="errorElement"><%= errors.email.msg %></p>
+                <p  ><%= errors.email.msg %></p>
             <% } %>
             <% if (errorEmail) { %>
-                <p  id="errorElement"><%= errorEmail %></p>
+                <p  ><%= errorEmail %></p>
             <% } %>
             <!-- pass -->
             <div class="txt_field">
                 <input type="password" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
+                <p id="errormsg"></p>
             </div>
             <% if (locals.errors && errors.pass) { %>
-                <p  id="errorElement"><%= errors.pass.msg %></p>
+                <p  ><%= errors.pass.msg %></p>
             <% } %>
             <div class="txt_field">
                 <input type="password" name="passconfirm" id="passConfirm">
                 <span></span>
                 <label>Confirmar Contraseña</label>
+                <p id="errormsg"></p>
             </div>
             <% if (locals.errors && errors.passconfirm) { %>
-                <p  id="errorElement"><%= errors.passconfirm.msg %></p>
+                <p  ><%= errors.passconfirm.msg %></p>
             <% } %>
-            <p id="errorElement"></p>
+            <p id="errorElement" ></p>
             <div class="up-load">
                 <button type="button" class="btn-warning">
                     <i class="fa-solid fa-file-arrow-up"></i> Subir un avatar
@@ -81,10 +87,10 @@
                 </button>
             </div>
             <% if (locals.errors && errors.avatar) { %>
-                <p  id="errorElement"><%= errors.avatar.msg %></p>
+                <p ><%= errors.avatar.msg %></p>
             <% } %>
 
-            <input type="submit" value="Ingresa" >
+            <input type="submit" value="Ingresa" id="habilitar" disabled="disabled">
             <div class="signup_link">
                 Ya estas registrado? <a href="/user/login">Inicia sesion</a>
             </div>
