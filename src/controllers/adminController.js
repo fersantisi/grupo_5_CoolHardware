@@ -1,6 +1,7 @@
 //DB
 const db = require('../database/models');
 const { sequelize } = require("../database/models");
+const { validationResult } = require('express-validator');
 
 
 const adminController = {
@@ -25,18 +26,24 @@ const adminController = {
 
     create: async (req, res) => {
         console.log('Entre al creador');
-        let categories = {};
-        await db.Category.findAll()
-            .then((result) => {
-                categories = result;
-            });
-        await db.Brand.findAll()
-            .then((brands) => {
-                return res.render('./admin/createProduct', {brands, categories });
-            })
+        let categories = await db.Category.findAll();
+
+        let brands = await db.Brand.findAll();
+        
+        return res.render('./admin/createProduct', {brands, categories });
+            
     },
 
     store: async (req, res) => {
+
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            let categories = await db.Category.findAll();
+
+            let brands = await db.Brand.findAll();
+
+            return res.render('./admin/createProduct', {brands, categories, errors: result.mapped(), oldData: req.body })
+        }
 
         await db.Product.create({
             name: req.body.name,

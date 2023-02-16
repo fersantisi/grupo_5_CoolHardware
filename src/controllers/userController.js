@@ -17,6 +17,10 @@ const userController = {
     },
 
     loginProcess: async (req, res) => {
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            return res.render('./users/login', {error: null, errors: result.mapped(), oldData: req.body })
+        }
         let userFound = await db.User.findOne({ where: { nickname: req.body.user } }, (userFound => {
             return userFound.dataValues.nickname == req.body.user
         }));

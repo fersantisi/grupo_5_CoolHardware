@@ -15,6 +15,9 @@
                     <input type="file" name="avatar">
                 </button>
             </div>
+            <% if (locals.errors && errors.avatar) { %>
+                <p  id="errorElement"> <%= errors.avatar.msg %></p>
+            <% } %>
 
             <div class="select_field">
                 <label class="select_label">Ingrese la marca del producto</label>
@@ -26,12 +29,18 @@
                     <% }) %>
                 </select>
             </div>
+            <% if (locals.errors && errors.brand) { %>
+                <p  id="errorElement"> <%= errors.brand.msg %></p>
+            <% } %>
             
             <div class="txt_field">
-                <input type="text" name="name" required>
+                <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>">
                 <span></span>
                 <label>Ingrese el nombre del producto</label>
             </div>
+            <% if (locals.errors && errors.name) { %>
+                <p  id="errorElement"> <%= errors.name.msg %></p>
+            <% } %>
 
             <div class="select_field">
                 <label class="select_label">Ingrese la categoría del producto</label>
@@ -43,28 +52,40 @@
                     <% }) %>
                 </select>
             </div>
+            <% if (locals.errors && errors.category) { %>
+                <p  id="errorElement"> <%= errors.category.msg %></p>
+            <% } %>
 
             <div class="txt_field">
-                <input type="text" name="stock" required>
+                <input type="text" name="stock" value="<%= locals.oldData ? oldData.stock : null %>">
                 <span></span>
                 <label>Ingrese la cantidad de productos disponibles</label>
             </div>
+            <% if (locals.errors && errors.stock) { %>
+                <p  id="errorElement"> <%= errors.stock.msg %></p>
+            <% } %>
 
             <div class="txt_field">
-                <input type="text" name="price" required>
+                <input type="text" name="price" value="<%= locals.oldData ? oldData.price : null %>">
                 <span></span>
                 <label>Ingrese el precio del producto</label>
             </div>
+            <% if (locals.errors && errors.price) { %>
+                <p  id="errorElement"> <%= errors.price.msg %></p>
+            <% } %>
 
             <div class="txt_field">
-                <input type="text" name="discount" required>
+                <input type="text" name="discount" value="<%= locals.oldData ? oldData.discount : null %>">
                 <span></span>
                 <label>Ingrese el % de descuento del producto</label>
             </div>
 
             <div class="wrapper">
-                <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required></textarea>
+                <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!"><%= locals.oldData ? oldData.description : null %></textarea>
             </div>
+            <% if (locals.errors && errors.description) { %>
+                <p  id="errorElement"> <%= errors.description.msg %></p>
+            <% } %>
 
             <input type="submit" value="Subir producto">
             <div class="signup_link">

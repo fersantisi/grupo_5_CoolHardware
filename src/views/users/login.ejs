@@ -11,18 +11,24 @@
         
         <form action="/user/login" method="POST">
             <div class="txt_field">
-                <input type="text" name="user" id="user" required>
+                <input type="text" name="user" id="user">
                 <span></span>
                 <label> Nombre de usuario</label>
             </div>
+            <% if (locals.errors && errors.user) { %>
+                <p  id="errorElement"> <%= errors.user.msg %></p>
+            <% } %>
             
             <div class="txt_field">
-                <input type="password" name="pass" id="pass" required>
+                <input type="password" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
             </div>
+            <% if (locals.errors && errors.pass) { %>
+                <p  id="errorElement"> <%= errors.pass.msg %></p>
+            <% } %>
             <% if (locals.error) { %>
-                <p><%= error %></p>
+                <p  id="errorElement"> <%= error %></p>
             <% } %>
             <div class="pass">Olvidaste tu contraseña?</div>
             <input type="submit" value="Ingresa">
