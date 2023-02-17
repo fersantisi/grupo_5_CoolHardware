@@ -12,14 +12,14 @@
         <div class="center"></div>
         <h1>Crea tu cuenta</h1>
 
-        <form action="/user/register" method="POST" enctype="multipart/form-data" id="form">
+        <form action="/user/register" method="POST" enctype="multipart/form-data"  class="formulario" id="form">
             <!-- Username -->
             <div class="txt_field">
                 <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
                 <label>Nombre</label>
                 <span></span>
-                <p id="#error-firstname"></p>
-            </div>
+                </div>
+                <div id="inputData"></div>
             <% if (locals.errors && errors.firstname) { %>
                 <p  > <%= errors.firstname.msg %></p>
             <% } %>
@@ -28,8 +28,8 @@
                 <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span></span>
                 <label>Apellido</label>
-                <p id="errormsg"></p>
             </div>
+            <div id="inputData"></div>
             <% if (locals.errors && errors.lastname) { %>
                 <p  ><%= errors.lastname.msg %></p>
             <% } %>
@@ -38,8 +38,8 @@
                 <input type="text" name="username" id="username" value="<%= locals.oldData ? oldData.username : null %>">
                 <span></span>
                 <label>Nombre de usuario</label>
-                <p id="errormsg"></p>
             </div>
+            <div id="inputData"></div>
 
             <% if (locals.errors && errors.username) { %>
                 <p  ><%= errors.username.msg %></p>
@@ -52,8 +52,8 @@
                 <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <span></span>
                 <label>Email</label>
-                <p id="errormsg"></p>
             </div>
+            <div id="inputData"></div>
             <% if (locals.errors && errors.email) { %>
                 <p  ><%= errors.email.msg %></p>
             <% } %>
@@ -65,8 +65,8 @@
                 <input type="password" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
-                <p id="errormsg"></p>
             </div>
+            <div id="inputData"></div>
             <% if (locals.errors && errors.pass) { %>
                 <p  ><%= errors.pass.msg %></p>
             <% } %>
@@ -74,8 +74,8 @@
                 <input type="password" name="passconfirm" id="passConfirm">
                 <span></span>
                 <label>Confirmar Contraseña</label>
-                <p id="errormsg"></p>
             </div>
+            <div id="inputData"></div>
             <% if (locals.errors && errors.passconfirm) { %>
                 <p  ><%= errors.passconfirm.msg %></p>
             <% } %>

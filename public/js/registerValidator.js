@@ -7,7 +7,7 @@ const pass = document.getElementById("pass");
 const passConfirm = document.getElementById("passConfirm");
 const errorP = document.querySelector("#errormsg")
 
-const inputs = [form,firstname,lastname,username,email,pass,passConfirm,]
+const inputs = Array.from(document.querySelectorAll('.formulario input'))
 
 const error = [];
 
@@ -16,18 +16,18 @@ inputs.forEach((input, i)=> {
         const div = e.target.parentElement;
         const errorP = div.lastElementChild
         
-        if (firstname.value === '' || firstname.value === null) {
+        if (e.target.firstname.value === '' || e.target.firstname.value === null) {
             if(!error.includes(i)){
                 error.push(i);
             }
-            errorFirst.innerText = "Error en nombre";
+            errorP.innerText = "Error en nombre";
         }else{
             if(error.lastIndexOf(i) !== -1){
                 error = error.filter(error => error !== i)
             }
-            errorFirst.innerText = "";
+            errorP.innerText = "";
         }
-        if (lastname.value === '' || lastname.value === null) {
+        if (e.target.lastname.value === '' || e.target.lastname.value === null) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -38,7 +38,7 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         }
-        if (username.value === '' || username.value === null) {
+        if (e.target.username.value === '' || e.target.username.value === null) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -49,7 +49,7 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         }
-        if (email.value === '' || email.value === null) {
+        if (e.target.email.value === '' || e.target.email.value === null) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -60,7 +60,7 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         }
-        if (pass.value.length <= 8 || pass.value === '' || pass.value === null) {
+        if (e.target.pass.value.length <= 8 || e.target.pass.value === '' || e.target.pass.value === null) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -71,7 +71,7 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         }
-        if (pass.value.length >= 20) {
+        if (e.target.pass.value.length >= 20) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -82,7 +82,7 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         } 
-        if (!passConfirm.value === pass) {
+        if (!e.target.passConfirm.value === pass) {
             if(!error.includes(i)){
                 error.push(i);
             }
@@ -93,13 +93,17 @@ inputs.forEach((input, i)=> {
             }
             errorP.innerText = '';
         } 
-        if(error){
-            console.log("hay errores");
+        if (error.length > 0) {
             document.getElementById('habilitar').disabled = "disabled"
         }else{
-            console.log("no hay errores");
-            document.getElementById('habilitar').disabled = "";
+            document.getElementById('habilitar').disabled = ""
         }
+
+        inputs.forEach(input => {
+            if(input.value === ''){
+                document.getElementById('habilitar').disabled = "disabled"
+            }
+        });
     });
 });
 
