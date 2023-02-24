@@ -9,27 +9,29 @@
         <div class="center"></div>
         <h1>Inicio de sesion</h1>
         
-        <form action="/user/login" method="POST">
+        <form action="/user/login" method="POST" id="form" > 
             <div class="txt_field">
                 <input type="text" name="user" id="user">
                 <span></span>
                 <label> Nombre de usuario</label>
             </div>
+            <p id="errUser"></p>
             <% if (locals.errors && errors.user) { %>
                 <p  id="errorElement"> <%= errors.user.msg %></p>
-            <% } %>
+            <% } %> 
             
             <div class="txt_field">
                 <input type="password" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
             </div>
-            <% if (locals.errors && errors.pass) { %>
+            <p id="errPass"></p>
+             <% if (locals.errors && errors.pass) { %>
                 <p  id="errorElement"> <%= errors.pass.msg %></p>
             <% } %>
             <% if (locals.error) { %>
                 <p  id="errorElement"> <%= error %></p>
-            <% } %>
+            <% } %> 
             <div class="pass">Olvidaste tu contraseña?</div>
             <input type="submit" value="Ingresa">
             <div class="signup_link">

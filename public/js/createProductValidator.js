@@ -1,22 +1,82 @@
-const form = document.getElementById("form");
-const nameP = document.getElementById("nameProd");
-const price = document.getElementById("priceProd");
-const stock = document.getElementById("stockProd");
+const name = document.getElementById("name");
+const category = document.getElementById("category");
+const stock = document.getElementById("stock");
+const price = document.getElementById("price");
+const iscount = document.getElementById("iscount");
 
 
-const message = []
-form.addEventListener("submit",(e)=>{ 
-    if(nameP.value === '' || nameP === null){
-        message.push("El nombre del producto es necesario") 
+const errName = document.getElementById("errName");
+const errCategory = document.getElementById("errCategory");
+const errStock = document.getElementById("errStock");
+const errPrice = document.getElementById("errPrice");
+const errDiscount = document.getElementById("errDiscount");
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("form").addEventListener('submit', validarFormulario);
+});
+
+function validarFormulario(evento) {
+    evento.preventDefault();
+    let counter = 0;
+    /* name */
+    if (name.value == "") {
+        errName.style.display = "block";
+        errName.innerHTML = "Enter your first name F";
+        name.focus();
+        counter++;
+    } else {
+        errName.style.display = "none";
     }
-    if(!price === String || price <= 0 || !price === Boolean){
-        message.push("Ese precio es invalido")
+    /* Category */
+    if (category.value === "") {
+        errCategory.style.display = "block";
+        errCategory.innerHTML = "Enter your last name F";
+        category.focus();
+        counter++;
+    } else {
+        errCategory.style.display = "none";
     }
-    if(stock === 0){
-        stock.style.toggle("is-active")
+    /* errStock */
+    if (stock.value === "") {
+        errStock.style.display = "block";
+        errStock.innerHTML = "Enter your user name F";
+        stock.focus();
+        counter++;
+    } else {
+        errStock.style.display = "none";
     }
-    if(message.length > 0){
-        e.preventDefault()
-        errorElement.innerText += message.join('')
+    /* Email */
+    const charEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)+\.\S+/.test(email.value);
+    if (email.value === "") {
+        errEmail.style.display = "block";
+        errEmail.innerHTML = "Enter your email F";
+        email.focus();
+        counter++;
+    } else {
+        errEmail.style.display = "none";
     }
-})
+    /* errPrice */
+    if (price.value === "") {
+        errPrice.style.display = "block";
+        errPrice.innerHTML = "Enter your password F";
+        rice.focus();
+        counter++;
+    }  else {
+        errPrice.style.display = "none";
+    }
+    /* Discount */
+    if (discount.value !== pass.value || discount.value === '') {
+        errDiscount.style.display = "block";
+        errDiscount.innerHTML = "Tus contraseñas no coinciden F";
+        discount.focus();
+        counter++;
+    } else {
+        errDiscount.style.display = "none";
+    }
+    console.log(counter);
+    if (counter == 0) {
+        evento.target.submit();
+    }
+
+}
