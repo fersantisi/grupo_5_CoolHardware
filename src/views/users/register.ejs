@@ -19,7 +19,7 @@
                 <label>Nombre</label>
                 <span></span>
                 </div>
-                <div id="inputData"></div>
+                <p id="errFirstname"></p>
             <% if (locals.errors && errors.firstname) { %>
                 <p  > <%= errors.firstname.msg %></p>
             <% } %>
@@ -29,7 +29,7 @@
                 <span></span>
                 <label>Apellido</label>
             </div>
-            <div id="inputData"></div>
+            <p id="errLastname"></p>
             <% if (locals.errors && errors.lastname) { %>
                 <p  ><%= errors.lastname.msg %></p>
             <% } %>
@@ -39,7 +39,7 @@
                 <span></span>
                 <label>Nombre de usuario</label>
             </div>
-            <div id="inputData"></div>
+            <p id="errUsername"></p>
 
             <% if (locals.errors && errors.username) { %>
                 <p  ><%= errors.username.msg %></p>
@@ -53,29 +53,29 @@
                 <span></span>
                 <label>Email</label>
             </div>
-            <div id="inputData"></div>
+            <p id="errEmail"></p>
             <% if (locals.errors && errors.email) { %>
                 <p  ><%= errors.email.msg %></p>
             <% } %>
             <% if (errorEmail) { %>
-                <p  ><%= errorEmail %></p>
+                <p><%= errorEmail %></p>
             <% } %>
             <!-- pass -->
             <div class="txt_field">
-                <input type="password" name="pass" id="pass">
+                <input type="text" name="pass" id="pass">
                 <span></span>
                 <label>Contraseña</label>
             </div>
-            <div id="inputData"></div>
+            <p id="errPass"></p>
             <% if (locals.errors && errors.pass) { %>
                 <p  ><%= errors.pass.msg %></p>
             <% } %>
             <div class="txt_field">
-                <input type="password" name="passconfirm" id="passConfirm">
+                <input type="text" name="passconfirm" id="passConfirm">
                 <span></span>
                 <label>Confirmar Contraseña</label>
             </div>
-            <div id="inputData"></div>
+            <p id="errPassConfirm"></p>
             <% if (locals.errors && errors.passconfirm) { %>
                 <p  ><%= errors.passconfirm.msg %></p>
             <% } %>
@@ -90,13 +90,11 @@
                 <p ><%= errors.avatar.msg %></p>
             <% } %>
 
-            <input type="submit" value="Ingresa" id="habilitar" disabled="disabled">
+            <input type="submit" value="Ingresa" id="habilitar">
             <div class="signup_link">
                 Ya estas registrado? <a href="/user/login">Inicia sesion</a>
             </div>
             
-
-
         </form>
     </main>
     <%- include('../partials/footer') %>  
