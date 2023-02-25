@@ -12,7 +12,7 @@
         <div class="center"></div>
         <h1>Crea tu cuenta</h1>
 
-        <form action="/user/register" method="POST" enctype="multipart/form-data" id="form">
+        <form action="/user/register" method="POST" enctype="multipart/form-data" id="form" >
             <!-- Username -->
             <div class="txt_field">
                 <input type="text" name="firstname" id="firstname" value="<%= locals.oldData ? oldData.firstname : null %>">
@@ -60,9 +60,9 @@
             <% if (errorEmail) { %>
                 <p><%= errorEmail %></p>
             <% } %>
-            <!-- pass -->
+            <!-- pass --------------------------------------------- -->
             <div class="txt_field">
-                <input type="text" name="pass" id="pass">
+                <input type="password" name="pass" id="pass" ><i class="fa-regular fa-eye-slash" id="showPass"></i>
                 <span></span>
                 <label>Contraseña</label>
             </div>
@@ -70,8 +70,9 @@
             <% if (locals.errors && errors.pass) { %>
                 <p  ><%= errors.pass.msg %></p>
             <% } %>
+            <!-- passConfirm -->
             <div class="txt_field">
-                <input type="text" name="passconfirm" id="passConfirm">
+                <input type="password" name="passconfirm" id="passConfirm"> 
                 <span></span>
                 <label>Confirmar Contraseña</label>
             </div>
@@ -98,7 +99,7 @@
         </form>
     </main>
     <%- include('../partials/footer') %>  
-
     <script src="/js/createProductValidator.js" type="text/javascript"></script>
+    <script src="/js/ShowHidePass.js" type="text/javascript"></script>
 </body>
 </html>

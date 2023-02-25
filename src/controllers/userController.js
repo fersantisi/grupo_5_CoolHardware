@@ -15,7 +15,10 @@ const userController = {
         console.log('Entre al register');
         res.render('./users/register', { errorUser: null, errorEmail: null });
     },
-
+    userProfile: (req, res) => {
+        console.log('Entre al userProfile');
+        res.render('./users/userProfile');
+    },
     loginProcess: async (req, res) => {
         const result = validationResult(req)
         if (result.errors.length > 0) {

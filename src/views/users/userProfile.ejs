@@ -1,4 +1,4 @@
-<%- include('../partials/head', {title: product.brand + " " + product.name ,stylesheets: ["/css/detail.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('../partials/head', {title: 'Perfil de usuarios',stylesheets: ["/css/detail.css", "/css/header.css", "/css/footer.css"]}) %>  
 
 <body>
     <%- include('../partials/admin-header') %>   
@@ -8,11 +8,10 @@
             <article class="detail">
                 <div class="contenedor-detail">
                     <div class="img-producto">              
-                        <img class="card-img" src="/images/products/<%= product.image %>" alt="">
+                        <img class="card-img" src="/images/users/<%= user.image %>" alt="">
                     </div>
-                
                     <div class="producto-info">
-                        <h2 class="card-name-producto"><%= product.brand + " " + product.name %></h2>
+                        <h2 class="card-name-producto"><%= user.brand + " " + product.name %></h2>
                         <hr style="border-color:gray">
                         <% if (product.discount > 0) { %>
                             <p class="card-price-linedthrough">$<%= product.price %> </p>

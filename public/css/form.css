@@ -95,7 +95,7 @@ form .select_field {
 .select_field select option {
     color: var(--platinum);
     background-color: var(--dark-liver);
-    
+
 }
 
 .select_field select:focus {
@@ -121,16 +121,16 @@ form .select_field {
 }
 
 .txt_field input:focus~label,
-.txt_field label{
+.txt_field label {
     top: -5px;
     color: var(--blue)
 }
 
-.txt_field input:focus~span::before{
+.txt_field input:focus~span::before {
     width: 100%;
 }
 
-form p{
+form p {
     text-align: left;
     color: orangered
 }
@@ -213,10 +213,13 @@ input[type="submit"]:hover {
     opacity: 0;
 }
 
-/*Tablets*/
-@media (min-width: 426px) {
-}
 
-/*Laptop*/
-@media (min-width: 769px) {
+
+
+.fa-eye-slash {
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
 }

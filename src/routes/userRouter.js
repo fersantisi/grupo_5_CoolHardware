@@ -28,6 +28,10 @@ router.post("/login/", loginValidations, userController.loginProcess);
 router.get("/register/", guestMiddleware, userController.register); 
 router.post("/register/", upload.single('avatar'), registerValidations, userController.store);
 
+//Profile User
+router.get("/userProfile/", userController.userProfile); 
+router.post("/userProfile/", userController.store);
+
 //Logout
 router.get("/logout/", userController.logout)
 

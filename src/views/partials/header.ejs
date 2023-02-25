@@ -3,16 +3,16 @@
         <a href="/"><img src="/images/logo.svg" alt="logo-banner"></a>
     </div>
 
-    <% if (locals.userLogged) { %>
-        <% if (locals.userLogged.admin == 1) { %>
-            <div class="adminbuttom">
+     <% if (locals.userLogged) { %>
+        <% if (locals.userLogged.admin == 1) { %> 
+       <div class="adminbuttom">
                 <a href="/admin">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </a>
             </div>
-        <% } %>
-    <% } %>
-
+         <% } %>
+    <% } %> 
+    
     <nav>
         <section class="nav-left">
             <ul class="sites">
@@ -24,7 +24,7 @@
                         <input type="checkbox" name="menu" id="menu" class="nav-checkbox">
                         <section class="nav-menu">
                             <a href="/products/list" class="nav-item">Productos</a>
-                            <a href="#" class="nav-item">User Profile</a>
+                            <a href="/user/userProfile" class="nav-item">User Profile</a>
                             <a href="#" class="nav-item">About Us</a>
                         </section>
                     </section>
