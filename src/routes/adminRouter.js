@@ -21,15 +21,14 @@ router.get("/userAdmin", adminController.users);
 router.get('/', adminController.admin)
 router.get('/list', adminController.list)
 
-router.get('/manageProduct/:id', adminController.manage);
-router.get('/manageProduct/edit/:id', adminController.edit);
-router.put('/manageProduct/edit/:id', upload.single('avatar'), adminController.update);
-router.delete('/manageProduct/delete/:id', adminController.destroyProduct);
-router.delete('/userAdmin/delete/:id', adminController.destroyUser);
+router.get('/manageProduct/:id/', adminController.manage);
+router.get('/manageProduct/edit/:id/', adminController.edit);
+router.put('/manageProduct/edit/:id/', upload.single('avatar'), adminController.update);
+router.delete('/manageProduct/delete/:id/', adminController.destroyProduct);
+router.delete('/userAdmin/delete/:id/', adminController.destroyUser);
 router.get("/createProduct", adminController.create);
 
-
-
+router.put("/userAdmin/updateAdmin/:id/", adminController.updateAdmin);
 
 
 

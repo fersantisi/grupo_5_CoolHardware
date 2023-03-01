@@ -21,39 +21,66 @@
 
                         <% newUser.forEach((users)=> { %>
                             <tr>
-                                <td class="td-info"><%= users.id %></td>
-                                <td class="td-info"><%= users.first_name %></td>
-                                <td class="td-info"><%= users.last_name %></td>
-                                <td class="td-info"><%= users.nickname %></td>
-                                <td class="td-info"><%= users.email %></td>
-                                <td class="td-info"> 
-                                       
-                                    <div class="container">
-                                        <div class="toggle-btn">
-                                            <div class="inner-circle"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <form style="display: inline-block;" action="/admin/userAdmin/delete/<%= users.id %>?_method=DELETE" method="POST">
+                                <td class="td-info">
+                                    <%= users.id %>
+                                </td>
+                                <td class="td-info">
+                                    <%= users.first_name %>
+                                </td>
+                                <td class="td-info">
+                                    <%= users.last_name %>
+                                </td>
+                                <td class="td-info">
+                                    <%= users.nickname %>
+                                </td>
+                                <td class="td-info">
+                                    <%= users.email %>
+                                </td>
+
+                                <td class="td-info">
+                                    <!-- style="display: flex; justify-content: center; align-content: center;"
+                                            <div class="container">
+                                            <div class="toggle-btn">
+                                                <div class="inner-circle"></div>
+                                            </div>
+                                        </div> -->
+
+                                    <form class="updateAdmin" action="/admin/userAdmin/updateAdmin/<%= users.id %>?_method=PUT"
+                                        method="POST">
+                                        <button class="mod-user">
+                                            <% if (users.admin) { %>
+                                                <i class="fa-solid fa-user-secret"></i>
+                                                <% } else { %>
+                                                    <i class="fa-solid fa-user"></i>
+                                                    <% } %>
+                                        </button>
+                                    </form>
+
+
+                                    <form class="updateAdmin" action="/admin/userAdmin/delete/<%= users.id %>?_method=DELETE"
+                                        method="POST">
                                         <button class="del-user"> <i class="fa-solid fa-trash"></i></button>
                                     </form>
                                 </td>
+
                             </tr>
                             <% }) %>
 
                     </table>
 
-                    <a href="/user/register"><button class="add-user"> Nuevo Usuario <i class="fa-solid fa-plus"></i></button></a>
-                        
-                    <a href="/admin"><button class="continuar">Continuar <i class="fa-solid fa-arrow-right"></i></button></a>
-                                
+                    <a href="/user/register"><button class="add-user"> Nuevo Usuario <i
+                                class="fa-solid fa-plus"></i></button></a>
+
+                    <a href="/admin"><button class="continuar">Continuar <i
+                                class="fa-solid fa-arrow-right"></i></button></a>
+
 
                 </section>
 
-               
+
             </main>
             <%- include('../partials/footer') %>
-            <script src="/js/onOffAdmin.js" type="text/javascript"></script>
+                <script src="/js/onOffAdmin.js" type="text/javascript"></script>
     </body>
 
     </html>
