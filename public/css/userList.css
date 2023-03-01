@@ -34,8 +34,6 @@ th {
 
 .td-info {
     background-color: #aaaaaa;
-    height: 20px;
-
 }
 
 
@@ -71,31 +69,10 @@ button {
     background: var(--blue);
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 1vh;
+.mod-user{
+    background-color: green;
 }
-.toggle-btn {
-    width: 45px;
-    background-color: gray;
-    border-radius: 30px;
-    padding: 6px;
-    transition: all .3s ease-in-out;
-    margin-top: 18px;
-    margin-left: 5px;
-}
-.toggle-btn > .inner-circle {
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: all 300ms ease-in-out;
-}
-.toggle-btn.active {
-    background-color: #00acee;
-}
-.toggle-btn.active > .inner-circle {
-    margin-left: 20px;
-}
+
+/* form .updateAdmin{
+
+} */

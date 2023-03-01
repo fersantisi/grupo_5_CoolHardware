@@ -141,7 +141,25 @@ const adminController = {
 
         res.redirect('/admin/userAdmin');
 
+    },
+    updateAdmin: async (req,res) =>{
+        let isAdmin = 0
+        let user = await db.User.findByPk(req.params.id)
+        if(!user.admin){
+            isAdmin = 1 
+        }
+        await db.User.update({
+           admin: isAdmin
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/admin/userAdmin');
     }
+
+
 
 };
 
