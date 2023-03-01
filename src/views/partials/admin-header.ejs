@@ -6,8 +6,25 @@
     <nav>
         <section class="nav-left">
             <ul class="sites">
-                <li class="nav-icons"><a href="/admin/list"><i class="fas fa-bars"></i></a></li>
-                <li class="nav-icons"><a href="/admin/userAdmin"><i class="fa-solid fa-user-secret"></i></a></li>
+                <nav class="esp-nav">
+                    <section class="nav-container">
+                        <label for="menu" class="nav-label">
+                            <li class="nav-icons"><i class="fas fa-bars"></i></a></li>
+                        </label>
+                        <input type="checkbox" name="menu" id="menu" class="nav-checkbox">
+                        <section class="nav-menu">
+                            <a href="/admin/list" class="nav-item">Productos</a>
+                            <a href="/admin/userAdmin" class="nav-item">User List</a>
+                        </section>
+                    </section>
+                </nav>
+                <% if (locals.isLogged) { %>
+                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>"></li>
+                    <li class="user-name"><h2><%= locals.userLogged.nickname %></h2></li>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i class="fa-solid fa-power-off"></i></a></li>
+                <% } else { %>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i class="fa-solid fa-user"></i></a></li>
+                <% } %>
             </ul>
         </section>
         <section class="nav-right">
