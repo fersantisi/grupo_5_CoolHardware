@@ -81,7 +81,7 @@ form .select_field {
 }
 
 .select_field select {
-    width: 50%;
+    /* width: 50%; */
     color: var(--platinum);
     display: block;
     background-color: transparent;
@@ -89,7 +89,8 @@ form .select_field {
     font-size: 16px;
     border-width: 2px;
     border-color: #adadad;
-    transition: border-color .9s;
+    transition:.9s;
+    border-radius: 10px;
 }
 
 .select_field select option {
@@ -106,7 +107,7 @@ form .select_field {
     color: var(--blue);
     left: 5px;
     position: absolute;
-    top: -40px;
+    top: -30px;
 }
 
 .txt_field span::before {
@@ -190,18 +191,22 @@ input[type="submit"]:hover {
     height: 710px;
 }
 
+.up-load{
+    text-align: left;
+}
+
 .all-form-register form .btn-warning {
     position: relative;
     padding: 11px 16px;
     font-size: 15px;
     line-height: 1.5;
-    border-radius: 3px;
+    border-radius: 5px;
     color: #fff;
     background-color: var(--blue);
     border: 0;
     overflow: hidden;
-    margin-top: 30px;
     display: block;
+    margin-top: 10px;
 }
 
 .btn-warning input[type="file"] {

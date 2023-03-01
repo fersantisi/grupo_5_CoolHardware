@@ -19,12 +19,14 @@
     padding: 11px 16px;
     font-size: 15px;
     line-height: 1.5;
-    border-radius: 3px;
     color: #fff;
-    background-color: var(--blue);
+    background-color: var(--independence);
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
 
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -48,27 +50,42 @@
     color: white;
 }
 
-.wrapper textarea {
-    width: 100%;
-    padding: 0 5px;
-    height: 100px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-    color: white;
-    margin-bottom: 10px;
+.wrapper-text{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-textarea:is(:focus, :valid) {
+.wrapper-text textarea {
+    width: 100%;
+    padding: 14px;
+    height: 100px;
+    font-size: 16px;
+    border: 2px solid var(--platinum);
+    background: none;
+    /* outline: none; */
+    color: white;
+    margin-top: 10px;
+    text-align: left;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+/* textarea:is(:focus, :valid) {
     border-width: 2px;
     padding: 14px;
-    border-color: #4671EA;
+    border: 2px solid var(--platinum);
 }
 
 textarea::-webkit-scrollbarP {
     width: 0px;
-}
+} */
+
+
+
+.wrapper-text textarea:focus {
+    outline-color: #2691d9;
+    transition: 0.9s;
+   }
 
 .all-form-admin {
     z-index: 10;

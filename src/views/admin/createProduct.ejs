@@ -9,21 +9,16 @@
         <h1>Creacion de producto</h1>
         
         <form action="/admin/createProduct" method="POST" enctype="multipart/form-data" id="form">
-            <div class="up-load">
-                <button type="button" class="btn-warning">
-                    <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
-                    <input type="file" name="avatar">
-                </button>
-            </div>
+            
             <% if (locals.errors && errors.avatar) { %>
                 <p  id="errorElement"> <%= errors.avatar.msg %></p>
             <% } %>
 
             <div class="select_field">
-                <label class="select_label">Ingrese la marca del producto</label>
+                <label class="select_label">Selecione la marca del producto:</label>
                 <span></span>
                 <select name="brand">
-                    <option value="">--Seleccioná una marca--</option>
+                    <option value="">-- Marcas --</option>
                     <% brands.forEach((brand) => { %>
                         <option value="<%= brand.id %> "><%= brand.name %> </option>
                     <% }) %>
@@ -36,7 +31,7 @@
             <div class="txt_field">
                 <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>">
                 <span></span>
-                <label>Ingrese el nombre del producto</label>
+                <label>Ingrese el nombre del producto:</label>
             </div>
             <p id="errName"></p>
             <% if (locals.errors && errors.name) { %>
@@ -44,10 +39,10 @@
             <% } %>
 
             <div class="select_field">
-                <label class="select_label">Ingrese la categoría del producto</label>
+                <label class="select_label">Selecione la categoría del producto:</label>
                 <span></span>
                 <select name="category">
-                    <option value="">--Seleccioná una categoría--</option>
+                    <option value="">-- Categorías --</option>
                     <% categories.forEach(category => { %>
                         <option value="<%= category.id %> "><%= category.name %> </option>
                     <% }) %>
@@ -61,7 +56,7 @@
             <div class="txt_field">
                 <input type="text" name="stock" value="<%= locals.oldData ? oldData.stock : null %>">
                 <span></span>
-                <label>Ingrese la cantidad de productos disponibles</label>
+                <label>Ingrese la cantidad de productos disponibles:</label>
             </div>
             <p id="errStock"></p>
             <% if (locals.errors && errors.stock) { %>
@@ -71,7 +66,7 @@
             <div class="txt_field">
                 <input type="text" name="price" value="<%= locals.oldData ? oldData.price : null %>">
                 <span></span>
-                <label>Ingrese el precio del producto</label>
+                <label>Ingrese el precio del producto:</label>
             </div>
             <p id="errPrice"></p>
             <% if (locals.errors && errors.price) { %>
@@ -81,16 +76,23 @@
             <div class="txt_field">
                 <input type="text" name="discount" value="<%= locals.oldData ? oldData.discount : null %>">
                 <span></span>
-                <label>Ingrese el % de descuento del producto</label>
+                <label>Ingrese porcentaje de descuento:</label>
             </div>
 
-            <div class="wrapper">
-                <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!"><%= locals.oldData ? oldData.description : null %></textarea>
+            <div class="wrapper-text">
+                <textarea name="description" placeholder="Ingrese las caracteristicas de su producto"><%= locals.oldData ? oldData.description : null %></textarea>
             </div>
             <p id="errDiscount"></p>
             <% if (locals.errors && errors.description) { %>
                 <p  id="errorElement"> <%= errors.description.msg %></p>
             <% } %>
+
+            <div class="up-load">
+                <button type="button" class="btn-warning">
+                    <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                    <input type="file" name="avatar">
+                </button>
+            </div>
 
             <input type="submit" value="Subir producto">
             <div class="signup_link">
