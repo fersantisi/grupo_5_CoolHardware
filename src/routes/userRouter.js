@@ -29,8 +29,10 @@ router.get("/register/", guestMiddleware, userController.register);
 router.post("/register/", upload.single('avatar'), registerValidations, userController.store);
 
 //Profile User
-router.get("/userProfile/", userController.userProfile); 
-router.post("/userProfile/", userController.store);
+router.get("/userProfile/:id/", userController.userProfile);
+router.get("/userProfile/edit/:id/", userController.editProfile);
+router.put('/userProfile/edit/:id/', userController.updateProfile);
+// router.post("/userProfile/", userController.store);
 
 //Logout
 router.get("/logout/", userController.logout)

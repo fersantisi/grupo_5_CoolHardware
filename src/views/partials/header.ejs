@@ -24,7 +24,11 @@
                         <input type="checkbox" name="menu" id="menu" class="nav-checkbox">
                         <section class="nav-menu">
                             <a href="/products/list" class="nav-item">Productos</a>
-                            <a href="/user/userProfile" class="nav-item">User Profile</a>
+                            <%if (locals.isLogged) { %>
+                                <a href="/user/userProfile/<%= locals.userLogged.id %>" class="nav-item">User Profile</a>
+                            <% } else { %>
+                                <a href="/user/register" class="nav-item">Registrate</a>
+                            <% } %>
                             <a href="#" class="nav-item">About Us</a>
                         </section>
                     </section>

@@ -1,41 +1,27 @@
-<%- include('../partials/head', {title: 'Perfil de usuarios',stylesheets: ["/css/detail.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('../partials/head', {title: user.first_name + " " + user.last_name ,stylesheets: ["/css/detail.css", "/css/header.css", "/css/footer.css"]}) %>  
 
 <body>
-    <%- include('../partials/admin-header') %>   
+    <%- include('../partials/header') %>  
     </header>
     <main>
         <section>
             <article class="detail">
                 <div class="contenedor-detail">
-                    <div class="img-producto">              
+                    <div class="img-producto">
                         <img class="card-img" src="/images/users/<%= user.image %>" alt="">
                     </div>
+                
                     <div class="producto-info">
-                        <h2 class="card-name-producto"><%= user.brand + " " + product.name %></h2>
+                        <h3 class="card-price"><%= user.first_name + " " + user.last_name %></h3>
                         <hr style="border-color:gray">
-                        <% if (product.discount > 0) { %>
-                            <p class="card-price-linedthrough">$<%= product.price %> </p>
-                            <p class="card-price-discount"> <%= product.discount %>% OFF </p>
-                            <h3 class="card-price">$<%= product.price - product.price * product.discount / 100 %></h3>
-                        <% } else { %>
-                            <h3 class="card-price">$<%= product.price %></h3>
-                        <% } %>
+                        <h3 class="card-price"><%= user.nickname %></h3>
                         <hr style="border-color:gray">
-                        <p class="icono"><i class="fas fa-shield-alt"></i>Garantia 12 meses</p>
-                        <p class="icono"><i class="fas fa-check"></i>Stock disponible</p>
-                        <p class="icono"><i class="fas fa-truck"></i>Envíos a todo el país</p>
+                        <h3 class="card-price"><%= user.email %></h3>
                         <hr style="border-color:gray">
-                        <a href="/admin/manageProduct/edit/<%= product.id %>">
-                            <button class="productEdit">Editar <i class="fa-solid fa-pen"></i></button>
+                        <a href="/user/userProfile/edit/<%= user.id %>">
+                            <button class="productEdit">Cambiá tu contraseña <i class="fa-solid fa-pen"></i></button>
                         </a>
-                        <form action="/admin/manageProduct/delete/<%= product.id %>?_method=DELETE" method="POST">
-                            <button class="productDelete">Eliminar <i class="fa-solid fa-trash"></i></button>
-                        </form>
                     </div>
-                </div>
-                <div class="descripcion">
-                    <h3>CARACTERISTICAS GENERALES:</h3>
-                    <p><%= product.description%></p>
                 </div>
             </article>      
         </section>

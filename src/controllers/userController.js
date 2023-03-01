@@ -16,8 +16,36 @@ const userController = {
         res.render('./users/register', { errorUser: null, errorEmail: null });
     },
     userProfile: (req, res) => {
-        console.log('Entre al userProfile');
-        res.render('./users/userProfile');
+        console.log('Entre al user');
+        db.User.findByPk(req.params.id)
+            .then(function(user){
+                res.render('./users/userProfile', {user});
+            })
+            .catch(error => console.log(error))
+    },
+    editProfile: (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then(function (user) {
+                res.render('./users/editUser', {user})
+            })
+            .catch(error => console.log(error))
+
+    },
+    updateProfile: async (req, res) => {
+        const result = validationResult(req)
+        if (result.errors.length > 0) {
+            return res.render('./users/editUser', {error: null, errors: result.mapped(), oldData: req.body })
+        }
+        await db.User.update({
+            password: bcrypt.hashSync(req.body.pass, 10),
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        delete req.session.userLogged
+        res.redirect("/user/login");
     },
     loginProcess: async (req, res) => {
         const result = validationResult(req)
