@@ -1,0 +1,101 @@
+/* Admin view userList */
+:root {
+    --jet: #2e2e2e;
+    --dark-liver: #4c4a52;
+    --rythm: #79799a;
+    --blue-yonder: #5b7395;
+    --independence: #494562;
+    --platinum: #E2E2E2;
+    --blue: #2691d9;
+}
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--jet);
+    border: 2px solid var(--platinum);
+
+}
+
+.list-title {
+    color: var(--platinum);
+    margin: 10px;
+}
+
+th {
+    border-radius: 1px;
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.th-category {
+    background-color: rgb(99, 99, 191);
+}
+
+.td-info {
+    background-color: #aaaaaa;
+    height: 20px;
+
+}
+
+
+button {
+    display: inline-block;
+    align-content: left;
+    width: 20%;
+    height: 25px;
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--platinum);
+    font-weight: 700;
+    outline: none;
+    margin: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
+
+.del-user {
+    background: red;
+    height: 19px;
+    width: 19px;
+    margin-left: 40px;
+}
+
+.add-user {
+    background: var(--blue);
+}
+
+.continuar {
+    background: var(--blue);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1vh;
+}
+.toggle-btn {
+    width: 45px;
+    background-color: gray;
+    border-radius: 30px;
+    padding: 6px;
+    transition: all .3s ease-in-out;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+.toggle-btn > .inner-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+}
+.toggle-btn.active {
+    background-color: #00acee;
+}
+.toggle-btn.active > .inner-circle {
+    margin-left: 20px;
+}
