@@ -83,15 +83,12 @@ button {
     font-size: 1.7em;
 }
 
-
-
-td .paginador {
-
+.paginadorStyle {
     border: 2px solid var(--platinum);
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 17px;
     color: var(--platinum);
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     text-decoration: none;
     list-style: none;

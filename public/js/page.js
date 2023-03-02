@@ -1,10 +1,10 @@
 Paginador = function(divPaginador, tabla)
 {
-    this.miDiv = divPaginador; //un DIV donde irán controles de paginación
-    this.tabla = tabla;           //la tabla a paginar
-    this.tamPagina = 5; //el tamaño de la página (filas por página)
-    this.pagActual = 1;         //asumiendo que se parte en página 1
-    this.paginas = Math.floor((this.tabla.rows.length - 1) / this.tamPagina); //¿?
+    this.miDiv = divPaginador;   
+    this.tabla = tabla;       
+    this.tamPagina = 5;
+    this.pagActual = 1;         
+    this.paginas = Math.floor((this.tabla.rows.length - 1) / this.tamPagina); 
  
     this.SetPagina = function(num)
     {
@@ -12,10 +12,10 @@ Paginador = function(divPaginador, tabla)
             return;
  
         this.pagActual = num;
-        var min = 1 + (this.pagActual - 1) * this.tamPagina;
-        var max = min + this.tamPagina - 1;
+        let min = 1 + (this.pagActual - 1) * this.tamPagina;
+        let max = min + this.tamPagina - 1;
  
-        for(var i = 1; i < this.tabla.rows.length; i++)
+        for(let i = 1; i < this.tabla.rows.length; i++)
         {
             if (i < min || i > max)
                 this.tabla.rows[i].style.display = 'none';
@@ -27,17 +27,13 @@ Paginador = function(divPaginador, tabla)
  
     this.Mostrar = function()
     {
-        //Crear la tabla
-        var tblPaginador = document.createElement('table');
+        let tblPaginador = document.createElement('table');
+        let fil = tblPaginador.insertRow(tblPaginador.rows.length);
  
-        //Agregar una fila a la tabla
-        var fil = tblPaginador.insertRow(tblPaginador.rows.length);
- 
-        //Ahora, agregar las celdas que serán los controles
-        var ant = fil.insertCell(fil.cells.length);
+        let ant = fil.insertCell(fil.cells.length);
         ant.innerHTML = 'Anterior';
-        ant.className = 'paginador'; //con eso le asigno un estilo y una clase al boton
-        var self = this;
+        ant.className = 'paginadorStyle'; 
+        let self = this;
         ant.onclick = function()
         {
             if (self.pagActual == 1)
@@ -45,13 +41,13 @@ Paginador = function(divPaginador, tabla)
             self.SetPagina(self.pagActual - 1);
         }
  
-        var num = fil.insertCell(fil.cells.length);
-        num.innerHTML = ''; //en teoria, aún no se el número de la página
-        num.className = 'paginador';
+        let num = fil.insertCell(fil.cells.length);
+        num.innerHTML = ''; 
+        num.className = 'paginadorStyle';
  
-        var sig = fil.insertCell(fil.cells.length);
+        let sig = fil.insertCell(fil.cells.length);
         sig.innerHTML = 'Siguiente';
-        sig.className = 'paginador';
+        sig.className = 'paginadorStyle';
         sig.onclick = function()
         {
             if (self.pagActual == self.paginas)
@@ -59,7 +55,7 @@ Paginador = function(divPaginador, tabla)
             self.SetPagina(self.pagActual + 1);
         }
  
-        //Como ya tengo mi tabla, puedo agregarla al DIV de los controles
+        
         this.miDiv.appendChild(tblPaginador);
  
     
@@ -70,7 +66,7 @@ Paginador = function(divPaginador, tabla)
     }
 }
 
-var p = new Paginador(
+const p = new Paginador(
     document.getElementById('paginador'),
     document.getElementById('tblDatos'),
     4
