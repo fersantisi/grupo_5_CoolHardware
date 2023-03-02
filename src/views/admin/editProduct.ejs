@@ -12,7 +12,7 @@
             <form action="/admin/manageProduct/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <div class="select_field">
-                    <label class="select_label">Ingrese la marca del producto</label>
+                    <label class="select_label">Selecione la marca del producto:</label>
                     <span></span>
                     <select name="brand">
                         <% brands.forEach(brand => { %>
@@ -24,11 +24,11 @@
                 <div class="txt_field">
                     <input type="text" name="name" value="<%= product.name %>" required>
                     <span></span>
-                    <label>Ingrese el nombre del producto</label>
+                    <label>Ingrese el nombre del producto:</label>
                 </div>
 
                 <div class="select_field">
-                    <label class="select_label">Ingrese la categoría del producto</label>
+                    <label class="select_label">Selecione la categoría del producto:</label>
                     <span></span>
                     <select name="category">
                         <% categories.forEach(category => { %>
@@ -40,13 +40,13 @@
                 <div class="txt_field">
                     <input type="text" name="price" value="<%= product.price %>" required>
                     <span></span>
-                    <label>Ingrese el precio del producto</label>
+                    <label>Ingrese el precio del producto:</label>
                 </div>
 
                 <div class="txt_field">
                     <input type="text" name="discount" value="<%= product.discount %>" required>
                     <span></span>
-                    <label>Ingrese el % de descuento del producto</label>
+                    <label>Ingrese el porcentaje de descuento:</label>
                 </div>
 
                 <div class="wrapper-text">
