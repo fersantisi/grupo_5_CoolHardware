@@ -4,18 +4,12 @@
     <%- include('../partials/admin-header') %>  
 </header>
     <main>
-        <main class="all-form-admin">
+        <main class="all-form">
             <!-- register form -->
             <div class="center"></div>
             <h1>Edición de producto</h1>
             
             <form action="/admin/manageProduct/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                <div class="up-load">
-                    <button type="button" class="btn-warning">
-                        <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
-                        <input type="file" name="avatar" value="<%= product.image %>">
-                    </button>
-                </div>
 
                 <div class="select_field">
                     <label class="select_label">Ingrese la marca del producto</label>
@@ -55,8 +49,15 @@
                     <label>Ingrese el % de descuento del producto</label>
                 </div>
 
-                <div class="wrapper">
+                <div class="wrapper-text">
                     <textarea name="description" placeholder="Escribi las caracteristicas de tu producto!" required><%= product.description %></textarea>
+                </div>
+
+                <div class="up-load">
+                    <button type="button" class="btn-warning">
+                        <i class="fa-solid fa-file-arrow-up"></i> Subir imagen del producto
+                        <input type="file" name="avatar" value="<%= product.image %>">
+                    </button>
                 </div>
 
                 <input type="submit" value="Subir producto">
