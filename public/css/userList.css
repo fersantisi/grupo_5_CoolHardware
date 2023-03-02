@@ -68,20 +68,32 @@ button {
     background: var(--blue);
 }
 
-.updateAdmin{
+.updateAdmin {
     display: inline-block;
 }
 
-.mod-user{
+.mod-user {
     background-color: green;
     height: 40px;
     width: 40px;
 }
 
-.del-user i, .mod-user i {
+.del-user i,
+.mod-user i {
     font-size: 1.7em;
 }
 
-/* form .updateAdmin{
 
-} */
+
+td .paginador {
+
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--platinum);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    background: #2691d9;
+}

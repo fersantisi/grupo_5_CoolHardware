@@ -9,7 +9,7 @@
                 <section class="list">
                     <h1 class="list-title">Administrador de usuarios</h1>
 
-                    <table class="list-container">
+                    <table class="list-container" id="tblDatos">
                         <tr>
                             <th class="th-category">id</th>
                             <th class="th-category">Nombre</th>
@@ -38,15 +38,10 @@
                                 </td>
 
                                 <td class="td-info">
-                                    <!-- style="display: flex; justify-content: center; align-content: center;"
-                                            <div class="container">
-                                            <div class="toggle-btn">
-                                                <div class="inner-circle"></div>
-                                            </div>
-                                        </div> -->
 
-                                    <form class="updateAdmin" action="/admin/userAdmin/updateAdmin/<%= users.id %>?_method=PUT"
-                                        method="POST">
+
+                                    <form class="updateAdmin"
+                                        action="/admin/userAdmin/updateAdmin/<%= users.id %>?_method=PUT" method="POST">
                                         <button class="mod-user">
                                             <% if (users.admin) { %>
                                                 <i class="fa-solid fa-user-secret"></i>
@@ -57,8 +52,8 @@
                                     </form>
 
 
-                                    <form class="updateAdmin" action="/admin/userAdmin/delete/<%= users.id %>?_method=DELETE"
-                                        method="POST">
+                                    <form class="updateAdmin"
+                                        action="/admin/userAdmin/delete/<%= users.id %>?_method=DELETE" method="POST">
                                         <button class="del-user"> <i class="fa-solid fa-trash"></i></button>
                                     </form>
                                 </td>
@@ -75,12 +70,13 @@
                                 class="fa-solid fa-arrow-right"></i></button></a>
 
 
+                    <div id="paginador" class="paginador"></div>
                 </section>
 
 
             </main>
             <%- include('../partials/footer') %>
-                <script src="/js/onOffAdmin.js" type="text/javascript"></script>
+                <script src="/js/page.js" type="text/javascript"></script>
     </body>
 
     </html>
