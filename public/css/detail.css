@@ -129,7 +129,8 @@ article.detail div.descripcion h3 {
         margin: auto 0;
        
     }
-    main section article div.img-producto img.card-img{  
+    main section article div.img-producto img.card-img,
+    main section article div.img-user img.card-img{  
         min-height: 280px;
         min-width: 280px;
         max-width: 281px;
