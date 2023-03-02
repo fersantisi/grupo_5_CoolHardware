@@ -7,7 +7,7 @@ article.detail {
 main section div.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 main section article div.img-producto {
@@ -22,6 +22,16 @@ main section article div.img-producto .card-img {
     min-width: 300px;
     max-width: 301px;
     max-height: 301px;
+}
+
+main section article div.img-user {
+    /* margin: auto; */
+    width: 50%;
+}
+
+main section article div.img-user .card-img {
+    width: 50%;
+    clip-path: circle();
 }
 
 main section article div.producto-info {
@@ -105,11 +115,12 @@ article.detail div.descripcion h3 {
 
     main section article.detail{
         margin-top: 30px;
+        padding: 0 40px;
     }
 
     main section article.detail div.contenedor-detail{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     main section article div.img-producto {

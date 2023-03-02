@@ -32,7 +32,10 @@
             <% if (locals.error) { %>
                 <p  id="errorElement"> <%= error %></p>
             <% } %> 
-            <div class="pass">Olvidaste tu contraseña?</div>
+            <div class="remindMe">
+                <label for="remindMe">Recordame </label>
+                <input type="checkbox" name="remindMe">
+            </div>
             <input type="submit" value="Ingresa">
             <div class="signup_link">
                 No tenes cuenta? <a href="/user/register">Crea tu cuenta</a>

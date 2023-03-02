@@ -59,7 +59,9 @@ const userController = {
         if (userFound) {
             if (bcrypt.compareSync(req.body.pass, userFound.password)) {
                 req.session.userLogged = userFound.dataValues;
-                console.log(req.session)
+                if (req.body.remindMe) {
+                    res.cookie('remindMe', userFound.dataValues.id, {maxAge: 3600000})
+                }
                 return res.redirect('/')
             } else {
                 return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
@@ -67,7 +69,6 @@ const userController = {
         } else {
             return res.render('./users/login', { error: 'Tus credenciales no son válidas' })
         }
-        console.log(req.session)
     },
 
 

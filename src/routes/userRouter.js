@@ -7,7 +7,6 @@ const registerValidations = require('../middlewares/validatorRegisterMiddleware'
 const loginValidations = require('../middlewares/validatorLoginMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware')
 
-
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, '../../public/images/users')); 
