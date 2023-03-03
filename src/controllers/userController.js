@@ -44,6 +44,7 @@ const userController = {
                 id: req.params.id
             }
         })
+        res.clearCookie('remindMe')
         delete req.session.userLogged
         res.redirect("/user/login");
     },
@@ -111,6 +112,7 @@ const userController = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('remindMe')
         delete req.session.userLogged
         return res.redirect('/');
     }

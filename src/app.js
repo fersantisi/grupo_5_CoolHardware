@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const mainRouter = require("./routes/mainRouter");
 const methodOverride = require('method-override');
+var cookieParser = require('cookie-parser')
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const remindMeMiddleware = require("./middlewares/remindMeMiddleware");
 const { sequelize } = require("../src/database/models");
 const User = require("../src/database/models/User")
 
@@ -21,6 +23,10 @@ sequelize.authenticate()
     })
     
 app.use(session({ secret: 'Secret', resave: false, saveUninitialized: false }))
+
+app.use(cookieParser());
+
+app.use(remindMeMiddleware)
 
 app.use(userLoggedMiddleware)
 
