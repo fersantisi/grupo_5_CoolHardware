@@ -1,3 +1,4 @@
+// Este enrutador nos redirige a todas las rutas para el usuario comun 
 const express = require('express');
 const router = express.Router();
 const mainController = require("../controllers/mainController");

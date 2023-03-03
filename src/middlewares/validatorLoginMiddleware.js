@@ -1,3 +1,4 @@
+// Esta funcion valida que los campos del formulario de login no esten vacios
 const { body } = require('express-validator');
 
 const validations = [

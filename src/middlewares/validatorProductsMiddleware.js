@@ -1,3 +1,5 @@
+// // Esta funcion valida que los campos del formulario de productos no esten vacios
+
 const { body } = require('express-validator');
 const path = require('path');
 

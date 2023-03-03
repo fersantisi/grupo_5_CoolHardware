@@ -1,11 +1,14 @@
+// Esta funcion se utiliza en el listado de productos y en el administrador de usuarios nos permite ver diferentes cantidades de items para no tener una contaminacion visual gigante y que la pagina no sea interminable en backscroll
 Paginador = function(divPaginador, tabla)
 {
+    // Aca creamos las tablas donde se enceuntrasn los botones y definimos la pagina en la que iniciamos y la cantidad de items que queremos mostrar 
     this.miDiv = divPaginador;   
     this.tabla = tabla;       
     this.tamPagina = 5;
     this.pagActual = 1;         
     this.paginas = Math.floor((this.tabla.rows.length - 1) / this.tamPagina); 
  
+    // Esta funcion implementa la logica que utilizamos para cambiar de pagina 
     this.SetPagina = function(num)
     {
         if (num < 0 || num > this.paginas)
@@ -25,6 +28,7 @@ Paginador = function(divPaginador, tabla)
         this.miDiv.firstChild.rows[0].cells[1].innerHTML = this.pagActual;
     }
  
+    // Aca otorgamos estilos y hacemos que las paginas cambien restandole 1 o sumandole segun corresponda a donde queramos llegar 
     this.Mostrar = function()
     {
         let tblPaginador = document.createElement('table');
@@ -65,7 +69,7 @@ Paginador = function(divPaginador, tabla)
         this.SetPagina(this.pagActual);
     }
 }
-
+    // Estees el elemento que utlizamos para renderizar nuestros botones en la pagina 
 const p = new Paginador(
     document.getElementById('paginador'),
     document.getElementById('tblDatos'),
