@@ -234,7 +234,7 @@ input[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
-    justify-content: right;
+    justify-content: center;
 }
 
 .remindMe label{
