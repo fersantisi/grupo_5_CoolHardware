@@ -44,10 +44,12 @@
         </section>
         <section class="nav-right">
             <ul class="sites">
-                <div class="search-bar">
-                    <li class="nav-input"><input type="text" placeholder="Buscar aquí"></li>
-                    <li class="nav-icons"><button><i class="fas fa-search"></i></button></i></li>
-                </div>
+                <form action="/products/list/search" method="GET">
+                    <div class="search-bar">
+                        <li class="nav-input"><input type="text" name="search" placeholder="Buscar aquí"></li>
+                        <li class="nav-icons"><button type="submit"><i class="fas fa-search"></i></button></i></li>
+                    </div>
+                </form>
                 <li class="nav-icons"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </section>

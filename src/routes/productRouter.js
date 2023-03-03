@@ -5,6 +5,7 @@ const productController = require("../controllers/productController");
 
 router.get("/list", productController.list)
 router.get("/detail/:id/", productController.productos);
+router.get('/list/search/', productController.search)
 
 
 
