@@ -237,6 +237,7 @@ nav button {
     background: none;
     border: none;
     padding-top: 1.5px;
+    cursor: pointer;
 }
 
 nav button .fa-search {
