@@ -3,55 +3,64 @@
         <a href="/"><img src="/images/logo.svg" alt="logo-banner"></a>
     </div>
 
-     <% if (locals.userLogged) { %>
-        <% if (locals.userLogged.admin == 1) { %> 
-       <div class="adminbuttom">
+    <% if (locals.userLogged) { %>
+        <% if (locals.userLogged.admin==1) { %>
+            <div class="adminbuttom">
                 <a href="/admin">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
                 </a>
             </div>
-         <% } %>
-    <% } %> 
-    
-    <nav>
-        <section class="nav-left">
-            <ul class="sites">
-                <nav class="esp-nav">
-                    <section class="nav-container">
-                        <label for="menu" class="nav-label">
-                            <li class="nav-icons"><i class="fas fa-bars"></i></a></li>
-                        </label>
-                        <input type="checkbox" name="menu" id="menu" class="nav-checkbox">
-                        <section class="nav-menu">
-                            <a href="/products/list" class="nav-item">Productos</a>
-                            <%if (locals.isLogged) { %>
-                                <a href="/user/userProfile/<%= locals.userLogged.id %>" class="nav-item">User Profile</a>
-                            <% } else { %>
-                                <a href="/user/register" class="nav-item">Registrate</a>
-                            <% } %>
-                            <a href="#" class="nav-item">About Us</a>
-                        </section>
-                    </section>
-                </nav>
-                <% if (locals.isLogged) { %>
-                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>"></li>
-                    <li class="user-name"><h2><%= locals.userLogged.nickname %></h2></li>
-                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i class="fa-solid fa-power-off"></i></a></li>
-                <% } else { %>
-                    <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i class="fa-solid fa-user"></i></a></li>
+            <% } %>
                 <% } %>
-            </ul>
-        </section>
-        <section class="nav-right">
-            <ul class="sites">
-                <form action="/products/list/search" method="GET">
-                    <div class="search-bar">
-                        <li class="nav-input"><input type="text" name="search" placeholder="Buscar aquí"></li>
-                        <li class="nav-icons"><button type="submit"><i class="fas fa-search"></i></button></i></li>
-                    </div>
-                </form>
-                <li class="nav-icons"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </section>
-    </nav>
+
+                    <nav>
+                        <section class="nav-left">
+                            <ul class="sites">
+                                <nav class="esp-nav">
+                                    <section class="nav-container">
+                                        <label for="menu" class="nav-label">
+                                            <li class="nav-icons"><i class="fas fa-bars"></i></a></li>
+                                        </label>
+                                        <input type="checkbox" name="menu" id="menu" class="nav-checkbox">
+                                        <section class="nav-menu">
+                                            <a href="/products/list" class="nav-item">Productos</a>
+                                            <%if (locals.isLogged) { %>
+                                                <a href="/user/userProfile/<%= locals.userLogged.id %>"
+                                                    class="nav-item">User Profile</a>
+                                                <% } else { %>
+                                                    <a href="/user/register" class="nav-item">Registrate</a>
+                                                    <% } %>
+                                                        <a href="#" class="nav-item">About Us</a>
+                                        </section>
+                                    </section>
+                                </nav>
+                                <% if (locals.isLogged) { %>
+                                    <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>">
+                                    </li>
+                                    <li class="user-name">
+                                        <h2>
+                                            <%= locals.userLogged.nickname %>
+                                        </h2>
+                                    </li>
+                                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i
+                                                class="fa-solid fa-power-off"></i></a></li>
+                                    <% } else { %>
+                                        <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i
+                                                    class="fa-solid fa-user"></i></a></li>
+                                        <% } %>
+                            </ul>
+                        </section>
+                        <section class="nav-right">
+                            <ul class="sites">
+                                <form action="/products/list/search" method="GET" id="form">
+                                    <div class="search-bar">
+                                        <li class="nav-input"><input type="text" name="search" placeholder="Buscar aquí" id="search"></li>
+                                        <li class="nav-icons"><button type="submit"><i class="fas fa-search"></i></button></i></li>
+                                    </div>
+                                </form>
+                                <li class="nav-icons"><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <script src="/js/blankSearch.js" type="text/javascript"></script>
 </header>

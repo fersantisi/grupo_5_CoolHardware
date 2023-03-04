@@ -10,7 +10,6 @@ const productController = {
     })
     .then(function(products){
         console.log('Entre al product list');
-        console.log(products);
         res.render('./products/list', {products});    
     })},
 
@@ -20,7 +19,6 @@ const productController = {
             include: ['brand', 'category']
         })
         .then(function(product){
-            console.log(product);
             res.render('./products/detail', {product});
         })
         .catch(error => console.log(error))
@@ -37,7 +35,6 @@ const productController = {
         },
             include: ['brand', 'category']
         })
-        console.log(products);
         res.render('./products/list', {products});    
     }
 }
