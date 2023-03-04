@@ -74,7 +74,8 @@ article.card button{
 }
 
 .search-error{
-    margin: 10px
+    margin: 20px 30px;
+    color: var(--platinum);
 }
 
 

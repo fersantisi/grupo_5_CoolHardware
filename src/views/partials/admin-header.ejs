@@ -1,8 +1,9 @@
 <header>
-    <div class = "logo">
-        <a href="/admin"><img src = "/images/logo.svg" alt = "logo-banner"></a> 
+    <div class="logo">
+        <a href="/admin"><img src="/images/logo.svg" alt="logo-banner"></a>
     </div>
-    <div class="adminbuttom"><a href="/"><i class="fa-solid fa-screwdriver-wrench" style="color: var(--blue);"></i></a></div>
+    <div class="adminbuttom"><a href="/"><i class="fa-solid fa-screwdriver-wrench" style="color: var(--blue);"></i></a>
+    </div>
     <nav>
         <section class="nav-left">
             <ul class="sites">
@@ -20,20 +21,31 @@
                 </nav>
                 <% if (locals.isLogged) { %>
                     <li class="user-avatar"><img src="/images/users/<%= locals.userLogged.image %>"></li>
-                    <li class="user-name"><h2><%= locals.userLogged.nickname %></h2></li>
-                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i class="fa-solid fa-power-off"></i></a></li>
-                <% } else { %>
-                    <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i class="fa-solid fa-user"></i></a></li>
-                <% } %>
+                    <li class="user-name">
+                        <h2>
+                            <%= locals.userLogged.nickname %>
+                        </h2>
+                    </li>
+                    <li class="nav-icons"><a class="nav-icons-href" href="/user/logout"><i
+                                class="fa-solid fa-power-off"></i></a></li>
+                    <% } else { %>
+                        <li class="nav-icons"><a class="nav-icons-href" href="/user/login"><i
+                                    class="fa-solid fa-user"></i></a></li>
+                        <% } %>
             </ul>
         </section>
         <section class="nav-right">
             <ul class="sites">
-                <div class="search-bar">
-                    <li class="nav-input"><input type="text" placeholder="Buscar aquí"></li>
-                    <li class="nav-icons"><button><i class="fas fa-search"></i></button></i></li>
-                </div>
+                <form action="/admin/list/search" method="GET" id="form">
+                    <div class="search-bar">
+                        <li class="nav-input"><input type="text" name="search" placeholder="Buscar aquí" id="search">
+                        </li>
+                        <li class="nav-icons"><button type="submit"><i class="fas fa-search"></i></button></i></li>
+                    </div>
+                </form>
                 <li class="nav-icons"><a href="/admin/createProduct"><i class="fa-solid fa-plus"></i></a></li>
             </ul>
         </section>
     </nav>
+    <script src="/js/blankSearch.js" type="text/javascript"></script>
+</header>

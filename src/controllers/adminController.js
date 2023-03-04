@@ -2,6 +2,7 @@
 const db = require('../database/models');
 const { sequelize } = require("../database/models");
 const { validationResult } = require('express-validator');
+const Op = db.Sequelize.Op;
 
 
 const adminController = {
@@ -157,6 +158,19 @@ const adminController = {
             }
         })
         res.redirect('/admin/userAdmin');
+    },
+    search: async (req,res) => {
+        let products = await db.Product.findAll({
+            where: {
+                [Op.or]:{
+                name: {[Op.like]:`%${req.query.search}%`},
+                '$category.name$': {[Op.like]:`%${req.query.search}%`},
+                '$brand.name$': {[Op.like]:`%${req.query.search}%`},
+                }
+        },
+            include: ['brand', 'category']
+        })
+        res.render('./admin/adminList', {products});    
     }
 
 

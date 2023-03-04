@@ -21,6 +21,7 @@ const upload = multer({storage: storage});
 // Ruta principal del admin
 router.get('/', adminController.admin)
 router.get('/list', adminController.list)
+router.get('/list/search/', adminController.search)
 
 
 // Ruta de Creacion de productos 

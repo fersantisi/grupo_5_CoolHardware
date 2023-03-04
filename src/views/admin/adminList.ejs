@@ -1,4 +1,4 @@
-<%- include('../partials/head', {title: "CoolHardware", stylesheets: ["/css/index.css", "/css/header.css", "/css/footer.css"]}) %>  
+<%- include('../partials/head', {title: "CoolHardware", stylesheets: ["/css/index.css", "/css/header.css", "/css/footer.css", "/css/wrapper.css"]}) %>  
 
 <body>
     <%- include('../partials/admin-header') %>    
@@ -31,8 +31,14 @@
                         </a>
                     </article>
                 <% }) %>
+
+                <% if (products.length == 0) { %>
+                    <h1 class="search-error">No hay productos que coincidan con tu búsqueda</h1>
+                <% } %>
+                
             </div>
         </section>
+        <div class="push"></div>
     </main>
     <%- include('../partials/footer') %>  
 </body>
