@@ -1,0 +1,16 @@
+html, body {
+    height: 85%;
+}
+
+main {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -170px; 
+}
+
+footer, .push {
+    height: 170px; 
+}
+
+
