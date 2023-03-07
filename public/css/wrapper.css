@@ -13,4 +13,14 @@ footer, .push {
     height: 170px; 
 }
 
-
+.paginadorStyle {
+    border: 2px solid var(--platinum);
+    border-radius: 20px;
+    font-size: 17px;
+    color: var(--platinum);
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    background: #2691d9;
+}

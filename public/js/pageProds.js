@@ -4,7 +4,7 @@ Paginador = function(divPaginador, tabla)
     // Aca creamos las tablas donde se enceuntrasn los botones y definimos la pagina en la que iniciamos y la cantidad de items que queremos mostrar 
     this.miDiv = divPaginador;   
     this.tabla = tabla;       
-    this.tamPagina = 4;
+    this.tamPagina = 8;
     this.pagActual = 1;         
     this.paginas = Math.floor((this.tabla.rows.length - 1) / this.tamPagina); 
  

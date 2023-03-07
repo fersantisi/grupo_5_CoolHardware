@@ -1,5 +1,4 @@
-<%- include('../partials/head', {title: 'Admnistrador de usuarios' , stylesheets:
-    ["/css/detail.css","/css/admin.css", "/css/header.css" , "/css/footer.css" ,"/css/userList.css"]}) %>
+<%- include('../partials/head', {title: 'Admnistrador de usuarios' , stylesheets:["/css/detail.css","/css/admin.css", "/css/header.css" , "/css/footer.css" ,"/css/userList.css"]}) %>
 
     <body>
         <%- include('../partials/admin-header') %>
@@ -39,14 +38,14 @@
 
                                 <td class="td-info">
 
-                                    
+
                                     <form class="updateAdmin"
                                         action="/admin/userAdmin/updateAdmin/<%= users.id %>?_method=PUT" method="POST">
                                         <button class="mod-user">
                                             <% if (users.admin) { %>
                                                 <i class="fa-solid fa-user-secret"></i>
                                                 <% } else { %>
-                                                    <i class="fa-solid fa-user" ></i>
+                                                    <i class="fa-solid fa-user"></i>
                                                     <% } %>
                                         </button>
                                     </form>
@@ -69,8 +68,9 @@
                     <a href="/admin"><button class="continuar">Continuar <i
                                 class="fa-solid fa-arrow-right"></i></button></a>
 
-
-                    <div id="paginador" class="paginador"></div>
+                    
+                        <div id="paginador" class="paginador"></div>
+                
 
                 </section>
 
