@@ -46,6 +46,12 @@ const adminController = {
             return res.render('./admin/createProduct', {brands, categories, errors: result.mapped(), oldData: req.body })
         }
 
+        if (!req.file) {
+            req.file = {
+                filename: 'Default.png'
+            };
+        }
+
         await db.Product.create({
             name: req.body.name,
             description: req.body.description,
@@ -72,7 +78,7 @@ const adminController = {
     manage: (req, res) => {
         console.log('Entre a administrador de producto');
         db.Product.findByPk(req.params.id, {
-            include: ['brand']
+            include: ['brand', 'category']
         })
             .then(function (product) {
                 res.render('./admin/manageProduct', { product });
@@ -103,6 +109,12 @@ const adminController = {
     },
 
     update: async (req, res) => {
+        if (!req.file) {
+            let oldProductData = await db.Product.findByPk(req.params.id)
+            req.file = {
+                filename: oldProductData.image
+            };
+        }
         await db.Product.update({
             name: req.body.name,
             description: req.body.description,

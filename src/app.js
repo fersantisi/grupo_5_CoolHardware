@@ -7,7 +7,8 @@ const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const remindMeMiddleware = require("./middlewares/remindMeMiddleware");
 const { sequelize } = require("../src/database/models");
-const User = require("../src/database/models/User")
+const cors = require('cors');
+
 
 const PORT = 3030
 
@@ -38,6 +39,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(methodOverride('_method'));
+
+app.use(cors())
 
 
 app.set("view engine", "ejs");

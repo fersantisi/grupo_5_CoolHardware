@@ -43,6 +43,9 @@ module.exports = function (sequelize, DataTypes) {
         image: {
             type:  DataTypes.STRING
         },
+        created_at:{
+            type: DataTypes.DATE
+        }
     }
 
     let config = {

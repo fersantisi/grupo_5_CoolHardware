@@ -12,6 +12,7 @@
                     </div>
                 
                     <div class="producto-info">
+                        <h2 class="card-name-producto"><%= product.category.name %></h2>
                         <h2 class="card-name-producto"><%= product.brand.name + " " + product.name %></h2>
                         <hr style="border-color:gray">
                         <% if (product.discount > 0) { %>
