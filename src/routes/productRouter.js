@@ -8,5 +8,4 @@ router.get("/detail/:id/", productController.productos);
 router.get('/list/search/', productController.search)
 
 
-
 module.exports = router;

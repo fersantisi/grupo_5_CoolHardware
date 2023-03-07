@@ -91,12 +91,13 @@ form .select_field {
     border-color: #adadad;
     transition:.9s;
     border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .select_field select option {
     color: var(--platinum);
     background-color: var(--dark-liver);
-
 }
 
 .select_field select:focus {
